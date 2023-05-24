@@ -6082,6 +6082,8 @@ z"/>
         
           
         
+          
+        
       
       
         
@@ -6165,19 +6167,73 @@ z"/>
         
           
         
-          
-        
-          
-        
       
       
         <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
-          Git & GitHub
+          Deep Learning
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Deep Learning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Deep%20Learning/Concepts/" class="md-nav__link">
+        Concepts
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          Git & GitHub
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6">
           <span class="md-nav__icon md-icon"></span>
           Git & GitHub
         </label>
@@ -6245,7 +6301,7 @@ z"/>
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
       
       
         
@@ -6253,13 +6309,13 @@ z"/>
         
       
       
-        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
           Markdown
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_6">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_7">
           <span class="md-nav__icon md-icon"></span>
           Markdown
         </label>
@@ -6299,7 +6355,7 @@ z"/>
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" checked>
       
       
         
@@ -6307,13 +6363,13 @@ z"/>
         
       
       
-        <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
           Pytorch
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_3_7">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_8">
           <span class="md-nav__icon md-icon"></span>
           Pytorch
         </label>
@@ -6376,19 +6432,6 @@ z"/>
   <a href="#autograd" class="md-nav__link">
     Autograd
   </a>
-  
-    <nav class="md-nav" aria-label="Autograd">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    梯度
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -6459,19 +6502,6 @@ z"/>
     Autograd
   </a>
   
-    <nav class="md-nav" aria-label="Autograd">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    梯度
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -6519,27 +6549,13 @@ z"/>
 <p>Pytorch 的一大作用就是可以代替 Numpy 库，所以首先介绍 Tensors ，也就是张量，它相当于 Numpy 的多维数组(ndarrays)。两者的区别就是 Tensors 可以应用到 GPU 上加快计算速度。</p>
 <h2 id="autograd">Autograd<a class="headerlink" href="#autograd" title="Permanent link">&para;</a></h2>
 <p>对于 Pytorch 的神经网络来说，非常关键的一个库就是 <code>autograd</code> ，它主要是提供了对 Tensors 上所有运算操作的自动微分功能，也就是计算梯度的功能。它属于 <code>define-by-run</code> 类型框架，即反向传播操作的定义是根据代码的运行方式，因此每次迭代都可以是不同的。</p>
-<h3 id="_1">梯度<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
-<p>我们可以连结一个多元函数对其所有变量的偏导数, 以得到该函数的梯度 (gradient) 向量。具体而言, 设函数 <span class="arithmatex">\(f: \mathbb{R}^n \rightarrow \mathbb{R}\)</span> 的输入是 <span class="arithmatex">\(一\)</span> 个 <span class="arithmatex">\(n\)</span> 维向量 <span class="arithmatex">\(\mathbf{x}=\left[x_1, x_2, \ldots, x_n\right]^{\top}\)</span>, 并且输出是一个标量。函数 <span class="arithmatex">\(f(\mathbf{x})\)</span> 相对于 <span class="arithmatex">\(\mathbf{x}\)</span> 的梯度是一个包含 <span class="arithmatex">\(n\)</span> 个偏导数的向量:</p>
-<div class="arithmatex">\[
-\nabla_{\mathbf{x}} f(\mathbf{x})=\left[\frac{\partial f(\mathbf{x})}{\partial x_1}, \frac{\partial f(\mathbf{x})}{\partial x_2}, \ldots, \frac{\partial f(\mathbf{x})}{\partial x_n}\right]^{\top}
-\]</div>
-<p>其中 <span class="arithmatex">\(\nabla_{\mathbf{x}} f(\mathbf{x})\)</span> 通常在没有歧义时被 <span class="arithmatex">\(\nabla f(\mathbf{x})\)</span> 取代。</p>
-<p>假设 <span class="arithmatex">\(\mathrm{x}\)</span> 为 <span class="arithmatex">\(n\)</span> 维向量, 在微分多元函数时经常使用以下规则:</p>
-<ul>
-<li>对于所有 <span class="arithmatex">\(\mathbf{A} \in \mathbb{R}^{m \times n}\)</span>, 都有 <span class="arithmatex">\(\nabla_{\mathbf{x}} \mathbf{A} \mathbf{x}=\mathbf{A}^{\top}\)</span></li>
-<li>对于所有 <span class="arithmatex">\(\mathbf{A} \in \mathbb{R}^{n \times m}\)</span>, 都有 <span class="arithmatex">\(\nabla_{\mathbf{x}} \mathbf{x}^{\top} \mathbf{A}=\mathbf{A}\)</span></li>
-<li>对于所有 <span class="arithmatex">\(\mathbf{A} \in \mathbb{R}^{n \times n}\)</span>, 都有 <span class="arithmatex">\(\nabla_{\mathbf{x}} \mathbf{x}^{\top} \mathbf{A} \mathbf{x}=\left(\mathbf{A}+\mathbf{A}^{\top}\right) \mathbf{x}\)</span></li>
-<li><span class="arithmatex">\(\nabla_{\mathbf{x}}\|\mathbf{x}\|^2=\nabla_{\mathbf{x}} \mathbf{x}^{\top} \mathbf{x}=2 \mathbf{x}\)</span>  (<a href="https://math.stackexchange.com/questions/132415/vector-derivation-of-xtx">P.S. Vector derivation of <span class="arithmatex">\(x^Tx\)</span></a>)</li>
-</ul>
-<p>同样, 对于任何矩阵 <span class="arithmatex">\(\mathbf{X}\)</span>, 都有 <span class="arithmatex">\(\nabla_{\mathbf{X}}\|\mathbf{X}\|_F^2=2 \mathbf{X}\)</span> 。</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 12, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 24, 2023</span>
       
         <br>
         Created:
