@@ -6571,9 +6571,11 @@ z"/>
 <h3 id="type">type(必须)<a class="headerlink" href="#type" title="Permanent link">&para;</a></h3>
 <ul>
 <li>feat：新功能（feature）</li>
-<li>fix/to：修复bug</li>
+<li>fix/to：修复bug<ul>
 <li>fix：产生diff并自动修复此问题。适合于一次提交直接修复问题</li>
 <li>to：只产生diff不自动修复此问题。适合于多次提交。最终修复问题提交时使用fix</li>
+</ul>
+</li>
 <li>docs：文档（documentation）</li>
 <li>style：格式（不影响代码运行的变动），仅仅修改了空格、格式缩进等等</li>
 <li>refactor：重构（即不是新增功能，也不是修改bug的代码变动）</li>

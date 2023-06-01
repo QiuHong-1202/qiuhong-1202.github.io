@@ -6371,21 +6371,8 @@ z"/>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#_19" class="md-nav__link">
-    
-  </a>
-  
-    <nav class="md-nav" aria-label="">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
     使用丢弃法
   </a>
   
@@ -6393,6 +6380,53 @@ z"/>
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    数值稳定性
+  </a>
+  
+    <nav class="md-nav" aria-label="数值稳定性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    网络的梯度
+  </a>
+  
+    <nav class="md-nav" aria-label="网络的梯度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mlp" class="md-nav__link">
+    MLP 的例子
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    梯度爆炸
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    权重初始化
+  </a>
   
 </li>
         
@@ -6794,21 +6828,8 @@ z"/>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#_19" class="md-nav__link">
-    
-  </a>
-  
-    <nav class="md-nav" aria-label="">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
     使用丢弃法
   </a>
   
@@ -6816,6 +6837,53 @@ z"/>
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    数值稳定性
+  </a>
+  
+    <nav class="md-nav" aria-label="数值稳定性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    网络的梯度
+  </a>
+  
+    <nav class="md-nav" aria-label="网络的梯度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mlp" class="md-nav__link">
+    MLP 的例子
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    梯度爆炸
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    权重初始化
+  </a>
   
 </li>
         
@@ -6866,8 +6934,10 @@ z"/>
 \]</div>
 <ul>
 <li>上式中的 <span class="arithmatex">\(w_{\text {area }}\)</span> 和 <span class="arithmatex">\(w_{\text {age }}\)</span> 称为权重（weight），权重决定了每个特征对我们预测值的影响。 </li>
-<li><span class="arithmatex">\(b\)</span> 称为偏置（bias）、偏移量（offset） 或截距 (intercept)。 偏置是指当所有特征都取值为 <span class="arithmatex">\(0\)</span> 时, 预测值应该为多少。</li>
+<li><span class="arithmatex">\(b\)</span> 称为偏置（bias）、偏移量（offset） 或截距 (intercept)。 偏置是指当所有特征都取值为 <span class="arithmatex">\(0\)</span> 时, 预测值应该为多少。<ul>
 <li>即使现实中不会有任何房子的面积是 0 或房龄正好是 0 年, 我们仍然需要偏置项。如果没有偏置项, 我们模型的表达能力将受到限制。</li>
+</ul>
+</li>
 <li>严格来说，上式是输入特征的一个仿射变换 (affine transformation）。仿射变换的特点是通过加权和对特征进行线性变换（linear transformation），并通过偏置项来进行平移 (translation)。</li>
 </ul>
 <h3 id="_4">抽象的线性模型<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
@@ -6894,12 +6964,10 @@ z"/>
 \]</div>
 <blockquote>
 <ul>
-<li>
-<p>这就是平方损失</p>
-</li>
-<li>
-<p>常数 <span class="arithmatex">\(\frac{1}{2}\)</span> 不会带来本质的差别，但这样在形式上稍微简单一些 （因为当我们对损失函数求导后常数系数为1）</p>
-</li>
+<li>这就是平方损失</li>
+</ul>
+<ul>
+<li>常数 <span class="arithmatex">\(\frac{1}{2}\)</span> 不会带来本质的差别，但这样在形式上稍微简单一些 （因为当我们对损失函数求导后常数系数为1）</li>
 </ul>
 </blockquote>
 <h2 id="_6">训练数据<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
@@ -6935,9 +7003,9 @@ w^*,b^*=\arg{\min_{w,b}{\ell(X,y,w,b)}}
 \]</div>
 <p>解上式有</p>
 <div class="arithmatex">\[
-\frac{1}{n}(y-Xw)^TX=0 &amp;\\
-y^TX-(w^TX^T)X=0 &amp;\\
-w^T=y^TX(X^TX)^{-1} &amp;\\
+\displaylines{\frac{1}{n}(y-Xw)^TX=0\\
+y^TX-(w^TX^T)X=0 \\
+w^T=y^TX(X^TX)^{-1} \\}
 \]</div>
 <p>于是</p>
 <div class="arithmatex">\[
@@ -6957,8 +7025,10 @@ w^T=y^TX(X^TX)^{-1} &amp;\\
 w_t = w_{t-1} - \eta\frac{\partial{\ell}}{\partial{w_{t-1}}}
 \]</div>
 <ul>
-<li><span class="arithmatex">\(\eta\)</span> 是学习率，也就是每一次梯度下降的步长，它是一个超参数</li>
+<li><span class="arithmatex">\(\eta\)</span> 是学习率，也就是每一次梯度下降的步长，它是一个超参数<ul>
 <li>注意：计算梯度的开销是很大的，在选择学习率时要选择一个合适的值</li>
+</ul>
+</li>
 </ul>
 <blockquote>
 <p>超参数：人为指定的值</p>
@@ -6972,25 +7042,33 @@ w_t = w_{t-1} - \eta\frac{\partial{\ell}}{\partial{w_{t-1}}}
 <ul>
 <li>训练误差：模型在训练数据上的误差</li>
 <li>泛化误差：模型在新数据上的误差</li>
-<li>验证数据集：评估模型好坏的数据集</li>
+<li>验证数据集：评估模型好坏的数据集<ul>
 <li>验证数据集可以用来调整超参数</li>
 <li>很多时候为了方便在代码中直接都叫 <code>test_data</code> 但实际上它是验证数据集</li>
-<li>测试数据集：只用一次的数据集</li>
+</ul>
+</li>
+<li>测试数据集：只用一次的数据集<ul>
 <li>未来的考试</li>
 <li>出价房子的实际成交价</li>
+</ul>
+</li>
 <li><span class="arithmatex">\(K\)</span> 则交叉验证：在训练数据没有那么多的时候，使用它的平均误差判断超参数的好坏</li>
 </ul>
 <h2 id="_12">过拟合和欠拟合<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
 <ul>
-<li>模型容量：拟合各种函数的能力</li>
+<li>模型容量：拟合各种函数的能力<ul>
 <li>低容量的模型难以拟合训练数据</li>
 <li>高容量的模型可以记住所有的训练数据       </li>
-<li>估计模型容量</li>
+</ul>
+</li>
+<li>估计模型容量<ul>
 <li>难以在不同种类的算法之间比较</li>
 <li>模型容量要匹配训练复杂度</li>
 <li>给定一个模型种类，将有两个主要因素<ul>
 <li>参数的个数</li>
 <li>参数值的选择范围</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -7009,17 +7087,21 @@ w_t = w_{t-1} - \eta\frac{\partial{\ell}}{\partial{w_{t-1}}}
 </ul>
 <h4 id="_14">使用均方范数作为柔性限制<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
 <ul>
-<li>对每个 <span class="arithmatex">\(\theta\)</span>, 都可以找到 <span class="arithmatex">\(\lambda\)</span> 使得之前的目标函数（使用均方范数作为硬性限制）等价于下面的公式</li>
+<li>对每个 <span class="arithmatex">\(\theta\)</span>, 都可以找到 <span class="arithmatex">\(\lambda\)</span> 使得之前的目标函数（使用均方范数作为硬性限制）等价于下面的公式<ul>
 <li>可以通过拉格朗日乘子来证明</li>
 <li>后面的项可以被成为惩罚项 (penalty)</li>
+</ul>
+</li>
 </ul>
 <div class="arithmatex">\[
 \min \ell(\mathbf{w}, b)+\frac{\lambda}{2}\|\mathbf{w}\|^2
 \]</div>
 <ul>
-<li>超参数 <span class="arithmatex">\(\lambda\)</span> 控制了正则项的重要程度</li>
+<li>超参数 <span class="arithmatex">\(\lambda\)</span> 控制了正则项的重要程度<ul>
 <li><span class="arithmatex">\(\lambda=0\)</span> ：无作用</li>
 <li><span class="arithmatex">\(\lambda \rightarrow \infty, \mathbf{w}^* \rightarrow \mathbf{0}\)</span></li>
+</ul>
+</li>
 </ul>
 <h4 id="_15">参数更新法则<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
 <ul>
@@ -7047,9 +7129,11 @@ w_t = w_{t-1} - \eta\frac{\partial{\ell}}{\partial{w_{t-1}}}
 <ul>
 <li>一个好的模型需要对输入的数据的扰动健壮</li>
 <li>使用有噪音的数据等价于 Tikhonov 正则（随机噪音可以防止过拟合）</li>
-<li>丢弃法：在层之间加入噪音</li>
+<li>丢弃法：在层之间加入噪音<ul>
 <li>将一些输出项随机置为 <span class="arithmatex">\(0\)</span> 来控制模型的复杂度</li>
 <li>丢弃概率是控制模型复杂度的超参数</li>
+</ul>
+</li>
 </ul>
 <h4 id="_18">无偏差的加入噪音<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
 <ul>
@@ -7064,8 +7148,7 @@ E(x')=x
 <div class="arithmatex">\[
 x_i^{\prime}= \begin{cases}0 &amp; \text { with probablity } p \\ \frac{x_i}{1-p} &amp; \text { otherise }\end{cases}
 \]</div>
-<h3 id="_19"><a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
-<h4 id="_20">使用丢弃法<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
+<h4 id="_19">使用丢弃法<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
 <ul>
 <li>训练时的丢弃法：通常将丢弃法用在训练时隐藏全连接层的输出上</li>
 <li>常作用在 MLP 的隐藏层输出上</li>
@@ -7078,9 +7161,69 @@ x_i^{\prime}= \begin{cases}0 &amp; \text { with probablity } p \\ \frac{x_i}{1-p
 \mathbf{y} &amp; =\operatorname{softmax}(\mathbf{o})
 \end{aligned}
 \]</div>
-<p><img alt="image-20230530143326431" src="F:\Project\Site\CS-Document\docs\Tutorial\Deep Learning\assets\image-20230530143326431.png" /></p>
+<p><img alt="image-20230530143326431" src="../assets/image-20230530143326431.png" /></p>
 <ul>
 <li>推理中的丢弃法：直接返回输入，等价于不使用 dropout</li>
+</ul>
+<h2 id="_20">数值稳定性<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h2>
+<h3 id="_21">网络的梯度<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<ul>
+<li>考虑如下的 <span class="arithmatex">\(d\)</span> 层神经网络</li>
+</ul>
+<div class="arithmatex">\[
+h^t = f_t(h^{t-1}) \quad \text{and} \quad y=\ell \circ f_d \circ \ldots \circ f_1(\mathbf{x})
+\]</div>
+<ul>
+<li>计算损失 <span class="arithmatex">\(\ell\)</span> 关于参数 <span class="arithmatex">\(\textbf{W}_t\)</span> 的梯度，根据链式法则有<ul>
+<li>所有的中间项都是向量对向量求导，得到的结果是矩阵，在这个过程中，需要做大量的矩阵乘法</li>
+<li>这就带来了两个常见的数值稳定性问题：梯度爆炸和梯度消失</li>
+</ul>
+</li>
+</ul>
+<div class="arithmatex">\[
+\frac{\partial \ell}{\partial \mathbf{W}^t}=\frac{\partial \ell}{\partial \mathbf{h}^d} \frac{\partial \mathbf{h}^d}{\partial \mathbf{h}^{d-1}} \ldots \frac{\partial \mathbf{h}^{t+1}}{\partial \mathbf{h}^t} \frac{\partial \mathbf{h}^t}{\partial \mathbf{W}^t}
+\]</div>
+<h4 id="mlp">MLP 的例子<a class="headerlink" href="#mlp" title="Permanent link">&para;</a></h4>
+<p>对于 MLP （省略偏置项）</p>
+<ul>
+<li><span class="arithmatex">\(f_t\left(\mathbf{h}^{t-1}\right)=\sigma\left(\mathbf{W}^t \mathbf{h}^{t-1}\right) \quad\)</span> <span class="arithmatex">\(\sigma\)</span>  是激活函数</li>
+<li><span class="arithmatex">\(\frac{\partial \mathbf{h}^t}{\partial \mathbf{h}^{t-1}}=\operatorname{diag}\left(\sigma^{\prime}\left(\mathbf{W}^t \mathbf{h}^{t-1}\right)\right)\left(W^t\right)^T \quad \sigma^{\prime}\)</span> 是 <span class="arithmatex">\(\sigma\)</span> 的导数函数</li>
+</ul>
+<p>所以有</p>
+<div class="arithmatex">\[
+\begin{equation}
+\prod_{i=t}^{d-1} \frac{\partial \mathbf{h}^{i+1}}{\partial \mathbf{h}^i}=\prod_{i=t}^{d-1} \operatorname{diag}\left(\sigma^{\prime}\left(\mathbf{W}^i \mathbf{h}^{i-1}\right)\right)\left(W^i\right)^T
+\end{equation}
+\]</div>
+<h4 id="_22">梯度爆炸<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
+<ul>
+<li>如果使用 ReLU 作为上式的激活函数，有</li>
+</ul>
+<div class="arithmatex">\[
+\sigma(x)=\max (0, x) \quad \text { and } \quad \sigma^{\prime}(x)=\left\{\begin{array}{lc}
+1 &amp; \text { if } x&gt;0 \\
+0 &amp; \text { otherwise }
+\end{array}\right.
+\]</div>
+<p><span class="arithmatex">\(\prod_{i=t}^{d-1} \frac{\partial \mathbf{h}^{i+1}}{\partial \mathbf{h}^i}=\prod_{i=t}^{d-1} \operatorname{diag}\left(\sigma^{\prime}\left(\mathbf{W}^i \mathbf{h}^{i-1}\right)\right)\left(W^i\right)^T\)</span> 中的一些元素会来自于 <span class="arithmatex">\(\prod_{i=t}^{d-1}\left(W^i\right)^T\)</span> ，如果 <span class="arithmatex">\(d-t\)</span> 很大，值将会很大</p>
+<p>梯度爆炸带来的问题</p>
+<ul>
+<li>梯度超值域：常用的 16bit 精度的浮点数范围仅在（ <span class="arithmatex">\(6\mathbf{e}^{-5} \sim 6\mathbf{e}^4\)</span> ）之间</li>
+<li>模型对学习率敏感，在梯度很大时<ul>
+<li><span class="arithmatex">\(\text{learning rate} \uparrow \quad \longrightarrow\quad w \uparrow \quad \longrightarrow \quad \nabla \uparrow\)</span></li>
+<li><span class="arithmatex">\(\text{learning rate} \downarrow \quad \longrightarrow \quad \text{训练无进展}\)</span></li>
+</ul>
+</li>
+</ul>
+<h3 id="_23">权重初始化<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<ul>
+<li>在合理值区间里随机初始参数</li>
+<li>训练开始的时候更容易有数值不稳定<ul>
+<li>远离最优解的地方损失函数表面可能 很复杂</li>
+<li>最优解附近表面会比较平</li>
+</ul>
+</li>
+<li>使用 <span class="arithmatex">\(\mathcal{N}(0,0.01)\)</span> 来初始可能对小网络没问题, 但不能保证深度神经网络</li>
 </ul>
 
   <hr>
@@ -7088,7 +7231,7 @@ x_i^{\prime}= \begin{cases}0 &amp; \text { with probablity } p \\ \frac{x_i}{1-p
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 31, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 1, 2023</span>
       
         <br>
         Created:
