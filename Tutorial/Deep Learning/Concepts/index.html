@@ -6366,29 +6366,22 @@ z"/>
 </li>
         
           <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
-    丢弃法
+  <a href="#dropout" class="md-nav__link">
+    丢弃法 Dropout
   </a>
   
-    <nav class="md-nav" aria-label="丢弃法">
+    <nav class="md-nav" aria-label="丢弃法 Dropout">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
-    动机
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
+  <a href="#_16" class="md-nav__link">
     无偏差的加入噪音
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
+  <a href="#_17" class="md-nav__link">
     使用丢弃法
   </a>
   
@@ -6405,7 +6398,7 @@ z"/>
 </li>
       
         <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
+  <a href="#_18" class="md-nav__link">
     数值稳定性
   </a>
   
@@ -6413,7 +6406,7 @@ z"/>
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_21" class="md-nav__link">
+  <a href="#_19" class="md-nav__link">
     网络的梯度
   </a>
   
@@ -6428,8 +6421,15 @@ z"/>
 </li>
         
           <li class="md-nav__item">
-  <a href="#_22" class="md-nav__link">
+  <a href="#_20" class="md-nav__link">
     梯度爆炸
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    梯度消失
   </a>
   
 </li>
@@ -6440,7 +6440,7 @@ z"/>
 </li>
         
           <li class="md-nav__item">
-  <a href="#_23" class="md-nav__link">
+  <a href="#_22" class="md-nav__link">
     权重初始化
   </a>
   
@@ -6448,6 +6448,13 @@ z"/>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#latent-space-code" class="md-nav__link">
+    Latent Space &amp; Code
+  </a>
   
 </li>
       
@@ -6823,29 +6830,22 @@ z"/>
 </li>
         
           <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
-    丢弃法
+  <a href="#dropout" class="md-nav__link">
+    丢弃法 Dropout
   </a>
   
-    <nav class="md-nav" aria-label="丢弃法">
+    <nav class="md-nav" aria-label="丢弃法 Dropout">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
-    动机
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
+  <a href="#_16" class="md-nav__link">
     无偏差的加入噪音
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
+  <a href="#_17" class="md-nav__link">
     使用丢弃法
   </a>
   
@@ -6862,7 +6862,7 @@ z"/>
 </li>
       
         <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
+  <a href="#_18" class="md-nav__link">
     数值稳定性
   </a>
   
@@ -6870,7 +6870,7 @@ z"/>
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_21" class="md-nav__link">
+  <a href="#_19" class="md-nav__link">
     网络的梯度
   </a>
   
@@ -6885,8 +6885,15 @@ z"/>
 </li>
         
           <li class="md-nav__item">
-  <a href="#_22" class="md-nav__link">
+  <a href="#_20" class="md-nav__link">
     梯度爆炸
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    梯度消失
   </a>
   
 </li>
@@ -6897,7 +6904,7 @@ z"/>
 </li>
         
           <li class="md-nav__item">
-  <a href="#_23" class="md-nav__link">
+  <a href="#_22" class="md-nav__link">
     权重初始化
   </a>
   
@@ -6905,6 +6912,13 @@ z"/>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#latent-space-code" class="md-nav__link">
+    Latent Space &amp; Code
+  </a>
   
 </li>
       
@@ -7140,8 +7154,7 @@ w_t = w_{t-1} - \eta\frac{\partial{\ell}}{\partial{w_{t-1}}}
 <li>权重衰退通过 <span class="arithmatex">\(L_2\)</span> 正则项使得模型参数不会过大，从而控制模型复杂度</li>
 <li>正则项权重是控制模型复杂度的超参数</li>
 </ul>
-<h3 id="_16">丢弃法<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
-<h4 id="_17">动机<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
+<h3 id="dropout">丢弃法 Dropout<a class="headerlink" href="#dropout" title="Permanent link">&para;</a></h3>
 <ul>
 <li>一个好的模型需要对输入的数据的扰动健壮</li>
 <li>使用有噪音的数据等价于 Tikhonov 正则（随机噪音可以防止过拟合）</li>
@@ -7151,7 +7164,7 @@ w_t = w_{t-1} - \eta\frac{\partial{\ell}}{\partial{w_{t-1}}}
 </ul>
 </li>
 </ul>
-<h4 id="_18">无偏差的加入噪音<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<h4 id="_16">无偏差的加入噪音<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
 <ul>
 <li>对 <span class="arithmatex">\(x\)</span> 加入噪音得到 <span class="arithmatex">\(x'\)</span> ，我们希望</li>
 </ul>
@@ -7164,7 +7177,7 @@ E(x')=x
 <div class="arithmatex">\[
 x_i^{\prime}= \begin{cases}0 &amp; \text { with probablity } p \\ \frac{x_i}{1-p} &amp; \text { otherise }\end{cases}
 \]</div>
-<h4 id="_19">使用丢弃法<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<h4 id="_17">使用丢弃法<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
 <ul>
 <li>训练时的丢弃法：通常将丢弃法用在训练时隐藏全连接层的输出上</li>
 <li>常作用在 MLP 的隐藏层输出上</li>
@@ -7181,8 +7194,8 @@ x_i^{\prime}= \begin{cases}0 &amp; \text { with probablity } p \\ \frac{x_i}{1-p
 <ul>
 <li>推理中的丢弃法：直接返回输入，等价于不使用 dropout</li>
 </ul>
-<h2 id="_20">数值稳定性<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h2>
-<h3 id="_21">网络的梯度<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<h2 id="_18">数值稳定性<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
+<h3 id="_19">网络的梯度<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
 <ul>
 <li>考虑如下的 <span class="arithmatex">\(d\)</span> 层神经网络</li>
 </ul>
@@ -7211,7 +7224,7 @@ h^t = f_t(h^{t-1}) \quad \text{and} \quad y=\ell \circ f_d \circ \ldots \circ f_
 \prod_{i=t}^{d-1} \frac{\partial \mathbf{h}^{i+1}}{\partial \mathbf{h}^i}=\prod_{i=t}^{d-1} \operatorname{diag}\left(\sigma^{\prime}\left(\mathbf{W}^i \mathbf{h}^{i-1}\right)\right)\left(W^i\right)^T
 \end{equation}
 \]</div>
-<h4 id="_22">梯度爆炸<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
+<h4 id="_20">梯度爆炸<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
 <ul>
 <li>如果使用 ReLU 作为上式的激活函数，有</li>
 </ul>
@@ -7231,7 +7244,8 @@ h^t = f_t(h^{t-1}) \quad \text{and} \quad y=\ell \circ f_d \circ \ldots \circ f_
 </ul>
 </li>
 </ul>
-<h3 id="_23">权重初始化<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<h4 id="_21">梯度消失<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
+<h3 id="_22">权重初始化<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
 <ul>
 <li>在合理值区间里随机初始参数</li>
 <li>训练开始的时候更容易有数值不稳定<ul>
@@ -7241,13 +7255,18 @@ h^t = f_t(h^{t-1}) \quad \text{and} \quad y=\ell \circ f_d \circ \ldots \circ f_
 </li>
 <li>使用 <span class="arithmatex">\(\mathcal{N}(0,0.01)\)</span> 来初始可能对小网络没问题, 但不能保证深度神经网络</li>
 </ul>
+<h2 id="latent-space-code">Latent Space &amp; Code<a class="headerlink" href="#latent-space-code" title="Permanent link">&para;</a></h2>
+<ul>
+<li>latent code: 为了更好的对数据进行分类或生成，需要对数据的特征进行表示，但是数据有很多特征，这些特征之间相互关联，耦合性较高，导致模型很难弄清楚它们之间的关联，使得学习效率低下，因此需要寻找到这些表面特征之下隐藏的深层次的关系，将这些关系进行解耦，得到的隐藏特征，即 latent code</li>
+<li>latent space: 由 latent code 组成的空间</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 1, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 7, 2023</span>
       
         <br>
         Created:
