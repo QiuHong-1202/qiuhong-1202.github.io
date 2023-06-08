@@ -6317,6 +6317,13 @@ z"/>
 </li>
       
         <li class="md-nav__item">
+  <a href="#mlp" class="md-nav__link">
+    多层感知机 MLP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_11" class="md-nav__link">
     模型选择
   </a>
@@ -6414,7 +6421,7 @@ z"/>
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#mlp" class="md-nav__link">
+  <a href="#mlp_1" class="md-nav__link">
     MLP 的例子
   </a>
   
@@ -6781,6 +6788,13 @@ z"/>
 </li>
       
         <li class="md-nav__item">
+  <a href="#mlp" class="md-nav__link">
+    多层感知机 MLP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_11" class="md-nav__link">
     模型选择
   </a>
@@ -6878,7 +6892,7 @@ z"/>
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#mlp" class="md-nav__link">
+  <a href="#mlp_1" class="md-nav__link">
     MLP 的例子
   </a>
   
@@ -7068,6 +7082,13 @@ w_t = w_{t-1} - \eta\frac{\partial{\ell}}{\partial{w_{t-1}}}
 <div class="arithmatex">\[
 \frac{1}{b}\sum_{i\in I_b}\ell(x_i,y_i,w)
 \]</div>
+<h2 id="mlp">多层感知机 MLP<a class="headerlink" href="#mlp" title="Permanent link">&para;</a></h2>
+<ul>
+<li>也被称作 <strong>前馈神经网络</strong>（feedforward neural network）</li>
+<li><a href="https://zh.d2l.ai/chapter_multilayer-perceptrons/mlp.html">参考</a></li>
+</ul>
+<p>我们可以通过在网络中加入一个或多个隐藏层来克服线性模型的限制, 使其能处理更普遍的函数关系类型。要做到这一点，最简单的方法是将许多全连接层堆叠在一起。每一层都输出到上面的层，直到生成最后的输出。我们可以把前 <span class="arithmatex">\(L-1\)</span> 层看作表示，把最后一层看作线性预测器。这种 架构通常称为<strong>多层感知机</strong>（multilayer perceptron），通常缩写为 MLP。</p>
+<p><img alt="../_images/mlp.svg" src="https://zh.d2l.ai/_images/mlp.svg" /></p>
 <h2 id="_11">模型选择<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
 <ul>
 <li>训练误差：模型在训练数据上的误差</li>
@@ -7212,7 +7233,7 @@ h^t = f_t(h^{t-1}) \quad \text{and} \quad y=\ell \circ f_d \circ \ldots \circ f_
 <div class="arithmatex">\[
 \frac{\partial \ell}{\partial \mathbf{W}^t}=\frac{\partial \ell}{\partial \mathbf{h}^d} \frac{\partial \mathbf{h}^d}{\partial \mathbf{h}^{d-1}} \ldots \frac{\partial \mathbf{h}^{t+1}}{\partial \mathbf{h}^t} \frac{\partial \mathbf{h}^t}{\partial \mathbf{W}^t}
 \]</div>
-<h4 id="mlp">MLP 的例子<a class="headerlink" href="#mlp" title="Permanent link">&para;</a></h4>
+<h4 id="mlp_1">MLP 的例子<a class="headerlink" href="#mlp_1" title="Permanent link">&para;</a></h4>
 <p>对于 MLP （省略偏置项）</p>
 <ul>
 <li><span class="arithmatex">\(f_t\left(\mathbf{h}^{t-1}\right)=\sigma\left(\mathbf{W}^t \mathbf{h}^{t-1}\right) \quad\)</span> <span class="arithmatex">\(\sigma\)</span>  是激活函数</li>
@@ -7245,6 +7266,18 @@ h^t = f_t(h^{t-1}) \quad \text{and} \quad y=\ell \circ f_d \circ \ldots \circ f_
 </li>
 </ul>
 <h4 id="_21">梯度消失<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
+<ul>
+<li>如果使用 sigmoid 作为上式的激活函数，有</li>
+</ul>
+<p><span class="arithmatex">\(<span class="arithmatex">\(
+\sigma(x) = \frac{1}{1+e^{-x}} \quad \sigma'(x)=\sigma(x)(1-\sigma(x)) 
+\)</span>\)</span>
+当输入的值很大时，梯度会很小</p>
+<p>梯度消失带来的问题</p>
+<ul>
+<li><span class="arithmatex">\(\nabla \to 0 \quad \longrightarrow \quad \text{训练无进展}\)</span></li>
+<li>底部的层梯度较小，无法让神经网络更深</li>
+</ul>
 <h3 id="_22">权重初始化<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
 <ul>
 <li>在合理值区间里随机初始参数</li>
@@ -7266,7 +7299,7 @@ h^t = f_t(h^{t-1}) \quad \text{and} \quad y=\ell \circ f_d \circ \ldots \circ f_
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 7, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 8, 2023</span>
       
         <br>
         Created:
