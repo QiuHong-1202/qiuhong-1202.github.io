@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../Concepts/">
+        <link rel="prev" href="../Conv/">
       
       
         <link rel="next" href="../../Git%20%26%20GitHub/Git%20LFS/">
@@ -6193,6 +6193,8 @@ z"/>
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -6215,6 +6217,20 @@ z"/>
     <li class="md-nav__item">
       <a href="../../../Research/Layout/" class="md-nav__link">
         Layout
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Research/Sketch/" class="md-nav__link">
+        Sketch
       </a>
     </li>
   
@@ -6520,6 +6536,8 @@ z"/>
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
@@ -6541,7 +6559,7 @@ z"/>
   
     <li class="md-nav__item">
       <a href="../Attention/" class="md-nav__link">
-        Attention
+        注意力机制和 Transformer
       </a>
     </li>
   
@@ -6556,6 +6574,20 @@ z"/>
     <li class="md-nav__item">
       <a href="../Concepts/" class="md-nav__link">
         Concepts in Deep Learning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Conv/" class="md-nav__link">
+        卷积和卷积神经网络
       </a>
     </li>
   
@@ -6604,6 +6636,20 @@ z"/>
         <li class="md-nav__item">
   <a href="#cpu" class="md-nav__link">
     使用所有 CPU 核心
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    类型标注
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    矩阵相关
   </a>
   
 </li>
@@ -6803,6 +6849,20 @@ z"/>
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    类型标注
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    矩阵相关
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6837,13 +6897,22 @@ z"/>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;NUMEXPR_NUM_THREADS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">cpu_num</span><span class="p">)</span>
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">torch</span><span class="o">.</span><span class="n">set_num_threads</span><span class="p">(</span><span class="n">cpu_num</span><span class="p">)</span>
 </span></code></pre></div>
+<h3 id="_1">类型标注<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># P.S. res: torch.Tensor 是类型标注，帮助IDE推断这是一个tensor类型</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">res</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span> <span class="o">=</span> <span class="n">res</span><span class="p">[:</span><span class="n">min_len</span><span class="p">]</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">ans</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span> <span class="o">=</span> <span class="n">ans</span><span class="p">[:</span><span class="n">min_len</span><span class="p">]</span>
+</span></code></pre></div>
+<h3 id="_2">矩阵相关<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://blog.csdn.net/Fluid_ray/article/details/110733893">torch.reshape</a></li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 16, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 26, 2023</span>
       
         <br>
         Created:

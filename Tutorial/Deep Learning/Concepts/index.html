@@ -12,7 +12,7 @@
         <link rel="prev" href="../Attention/">
       
       
-        <link rel="next" href="../Pytorch/">
+        <link rel="next" href="../Conv/">
       
       <link rel="icon" href="../../../images/snowman-circle.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
@@ -6193,6 +6193,8 @@ z"/>
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -6215,6 +6217,20 @@ z"/>
     <li class="md-nav__item">
       <a href="../../../Research/Layout/" class="md-nav__link">
         Layout
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Research/Sketch/" class="md-nav__link">
+        Sketch
       </a>
     </li>
   
@@ -6520,6 +6536,8 @@ z"/>
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
@@ -6541,7 +6559,7 @@ z"/>
   
     <li class="md-nav__item">
       <a href="../Attention/" class="md-nav__link">
-        Attention
+        注意力机制和 Transformer
       </a>
     </li>
   
@@ -6812,8 +6830,8 @@ z"/>
 </li>
       
         <li class="md-nav__item">
-  <a href="#latent-space-code" class="md-nav__link">
-    Latent Space &amp; Code
+  <a href="#latent-hidden" class="md-nav__link">
+    Latent = hidden
   </a>
   
 </li>
@@ -6829,6 +6847,20 @@ z"/>
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Conv/" class="md-nav__link">
+        卷积和卷积神经网络
+      </a>
     </li>
   
 
@@ -7252,8 +7284,8 @@ z"/>
 </li>
       
         <li class="md-nav__item">
-  <a href="#latent-space-code" class="md-nav__link">
-    Latent Space &amp; Code
+  <a href="#latent-hidden" class="md-nav__link">
+    Latent = hidden
   </a>
   
 </li>
@@ -7616,8 +7648,9 @@ h^t = f_t(h^{t-1}) \quad \text{and} \quad y=\ell \circ f_d \circ \ldots \circ f_
 </li>
 <li>使用 <span class="arithmatex">\(\mathcal{N}(0,0.01)\)</span> 来初始可能对小网络没问题, 但不能保证深度神经网络</li>
 </ul>
-<h2 id="latent-space-code">Latent Space &amp; Code<a class="headerlink" href="#latent-space-code" title="Permanent link">&para;</a></h2>
+<h2 id="latent-hidden">Latent = hidden<a class="headerlink" href="#latent-hidden" title="Permanent link">&para;</a></h2>
 <ul>
+<li><a href="https://ai.stackexchange.com/questions/12499/why-is-it-called-latent-vector">latent vector</a></li>
 <li>latent code: 为了更好的对数据进行分类或生成，需要对数据的特征进行表示，但是数据有很多特征，这些特征之间相互关联，耦合性较高，导致模型很难弄清楚它们之间的关联，使得学习效率低下，因此需要寻找到这些表面特征之下隐藏的深层次的关系，将这些关系进行解耦，得到的隐藏特征，即 latent code</li>
 <li>latent space: 由 latent code 组成的空间</li>
 </ul>
@@ -7635,6 +7668,7 @@ h^t = f_t(h^{t-1}) \quad \text{and} \quad y=\ell \circ f_d \circ \ldots \circ f_
 <h1 id="concept-links">Concept Links<a class="headerlink" href="#concept-links" title="Permanent link">&para;</a></h1>
 <ul>
 <li><a href="https://www.cnblogs.com/luckyplj/p/13378293.html">nn.Module 类与前向传播函数 forward 的理解</a></li>
+<li><a href="https://towardsdatascience.com/learning-on-graphs-with-missing-features-dd34be61b06">Feature Propagation 特征传播</a></li>
 </ul>
 
   <hr>
@@ -7642,7 +7676,7 @@ h^t = f_t(h^{t-1}) \quad \text{and} \quad y=\ell \circ f_d \circ \ldots \circ f_
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 10, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 26, 2023</span>
       
         <br>
         Created:
