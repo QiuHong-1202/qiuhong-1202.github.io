@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../Pytorch/">
+        <link rel="prev" href="../../Sketch/">
       
       
-        <link rel="next" href="../../Git%20%26%20GitHub/Git%20LFS/">
+        <link rel="next" href="../Concepts/">
       
       <link rel="icon" href="../../../images/snowman-circle.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
-        <title>序列和RNN - Hongliang's Wiki</title>
+        <title>注意力机制和 Transformer - Hongliang's Wiki</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rnn" class="md-skip">
+        <a href="#transformer" class="md-skip">
           Skip to content
         </a>
       
@@ -2911,7 +2911,7 @@ z"/>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              序列和RNN
+              注意力机制和 Transformer
             
           </span>
         </div>
@@ -3020,13 +3020,15 @@ z"/>
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../../Research/Layout/" class="md-tabs__link">
+      <a href="../../Layout/" class="md-tabs__link md-tabs__link--active">
         Research
       </a>
     </li>
@@ -3052,15 +3054,13 @@ z"/>
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../../Tutorial/" class="md-tabs__link">
         Tutorial
       </a>
     </li>
@@ -6178,18 +6178,20 @@ z"/>
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
         
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-      
-      
+          
         
           
         
@@ -6202,7 +6204,7 @@ z"/>
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Research
@@ -6215,7 +6217,7 @@ z"/>
   
   
     <li class="md-nav__item">
-      <a href="../../../Research/Layout/" class="md-nav__link">
+      <a href="../../Layout/" class="md-nav__link">
         Layout
       </a>
     </li>
@@ -6229,9 +6231,311 @@ z"/>
   
   
     <li class="md-nav__item">
-      <a href="../../../Research/Sketch/" class="md-nav__link">
+      <a href="../../Sketch/" class="md-nav__link">
         Sketch
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          Deep Learning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Deep Learning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          注意力机制和 Transformer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        注意力机制和 Transformer
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attention-mechanism" class="md-nav__link">
+    Attention Mechanism
+  </a>
+  
+    <nav class="md-nav" aria-label="Attention Mechanism">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    非参注意力池化层
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    参数化的注意力机制
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    注意力分数
+  </a>
+  
+    <nav class="md-nav" aria-label="注意力分数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    扩展到高维度
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    注意力评分函数
+  </a>
+  
+    <nav class="md-nav" aria-label="注意力评分函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additive-attention" class="md-nav__link">
+    Additive Attention
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scaled-dot-product-attention" class="md-nav__link">
+    Scaled Dot-Product Attention
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transfomer" class="md-nav__link">
+    Transfomer
+  </a>
+  
+    <nav class="md-nav" aria-label="Transfomer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#self-attention" class="md-nav__link">
+    Self-Attention
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    位置编码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multihead-attention" class="md-nav__link">
+    多头注意力 Multihead-Attention
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    数学描述
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    有掩码的多头注意力
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    基于位置的前馈网络
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    层归一化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    信息传递
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    预测
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Concepts/" class="md-nav__link">
+        Concepts in Deep Learning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Conv/" class="md-nav__link">
+        Convolution & CNN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pytorch/" class="md-nav__link">
+        Pytorch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RNN/" class="md-nav__link">
+        Sequence & RNN
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -6404,23 +6708,21 @@ z"/>
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
       
       
         
           
             
-          
-        
           
         
           
@@ -6440,7 +6742,7 @@ z"/>
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../">Tutorial</a>
+          <a href="../../../Tutorial/">Tutorial</a>
           
             <label for="__nav_5">
               <span class="md-nav__icon md-icon"></span>
@@ -6448,7 +6750,7 @@ z"/>
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Tutorial
@@ -6463,7 +6765,7 @@ z"/>
   
   
     <li class="md-nav__item">
-      <a href="../../Anaconda/" class="md-nav__link">
+      <a href="../../../Tutorial/Anaconda/" class="md-nav__link">
         Anaconda
       </a>
     </li>
@@ -6477,7 +6779,7 @@ z"/>
   
   
     <li class="md-nav__item">
-      <a href="../../LaTeX/" class="md-nav__link">
+      <a href="../../../Tutorial/LaTeX/" class="md-nav__link">
         LaTeX
       </a>
     </li>
@@ -6491,7 +6793,7 @@ z"/>
   
   
     <li class="md-nav__item">
-      <a href="../../Mkdocs/" class="md-nav__link">
+      <a href="../../../Tutorial/Mkdocs/" class="md-nav__link">
         Mkdocs
       </a>
     </li>
@@ -6505,7 +6807,7 @@ z"/>
   
   
     <li class="md-nav__item">
-      <a href="../../Python%20Syntax/" class="md-nav__link">
+      <a href="../../../Tutorial/Python%20Syntax/" class="md-nav__link">
         Python Syntax
       </a>
     </li>
@@ -6517,22 +6819,18 @@ z"/>
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" checked>
       
       
         
-          
-        
-          
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_6" >
+      
+      
         
           
         
@@ -6543,14 +6841,14 @@ z"/>
       
       
         <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
-          Deep Learning
+          Git & GitHub
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_6">
           <span class="md-nav__icon md-icon"></span>
-          Deep Learning
+          Git & GitHub
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -6560,8 +6858,8 @@ z"/>
   
   
     <li class="md-nav__item">
-      <a href="../Attention/" class="md-nav__link">
-        注意力机制和 Transformer
+      <a href="../../../Tutorial/Git%20%26%20GitHub/Git%20LFS/" class="md-nav__link">
+        Git
       </a>
     </li>
   
@@ -6574,8 +6872,8 @@ z"/>
   
   
     <li class="md-nav__item">
-      <a href="../Concepts/" class="md-nav__link">
-        Concepts in Deep Learning
+      <a href="../../../Tutorial/Git%20%26%20GitHub/Git%20commit%20messages/" class="md-nav__link">
+        Git commit messages
       </a>
     </li>
   
@@ -6588,179 +6886,9 @@ z"/>
   
   
     <li class="md-nav__item">
-      <a href="../Conv/" class="md-nav__link">
-        卷积和卷积神经网络
+      <a href="../../../Tutorial/Git%20%26%20GitHub/Git%20ignore%20template/" class="md-nav__link">
+        Git ignore template
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Pytorch/" class="md-nav__link">
-        Pytorch
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          序列和RNN
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        序列和RNN
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    序列模型
-  </a>
-  
-    <nav class="md-nav" aria-label="序列模型">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    马尔可夫假设
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#latent-variable" class="md-nav__link">
-    潜变量模型 latent variable
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    语言模型
-  </a>
-  
-    <nav class="md-nav" aria-label="语言模型">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    使用计数来建模
-  </a>
-  
-    <nav class="md-nav" aria-label="使用计数来建模">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#n" class="md-nav__link">
-    N元语法
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    循环神经网络
-  </a>
-  
-    <nav class="md-nav" aria-label="循环神经网络">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#perplexity" class="md-nav__link">
-    困惑度（perplexity）
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    梯度裁剪
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lstm" class="md-nav__link">
-    LSTM
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    深层循环神经网络
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    双向循环神经网络
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -6792,102 +6920,16 @@ z"/>
         
           
         
-          
-        
-          
-        
       
       
         <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="0">
-          Git & GitHub
+          Markdown
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_7">
           <span class="md-nav__icon md-icon"></span>
-          Git & GitHub
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Git%20%26%20GitHub/Git%20LFS/" class="md-nav__link">
-        Git
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Git%20%26%20GitHub/Git%20commit%20messages/" class="md-nav__link">
-        Git commit messages
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Git%20%26%20GitHub/Git%20ignore%20template/" class="md-nav__link">
-        Git ignore template
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_8" >
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_5_8" id="__nav_5_8_label" tabindex="0">
-          Markdown
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_8_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_8">
-          <span class="md-nav__icon md-icon"></span>
           Markdown
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
@@ -6898,7 +6940,7 @@ z"/>
   
   
     <li class="md-nav__item">
-      <a href="../../Markdown/Markdown%20%E4%BB%A3%E7%A0%81%E5%9D%97%E9%AB%98%E4%BA%AE%E6%A0%87%E8%AE%B0/" class="md-nav__link">
+      <a href="../../../Tutorial/Markdown/Markdown%20%E4%BB%A3%E7%A0%81%E5%9D%97%E9%AB%98%E4%BA%AE%E6%A0%87%E8%AE%B0/" class="md-nav__link">
         Markdown 代码块高亮标记
       </a>
     </li>
@@ -6946,23 +6988,23 @@ z"/>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    序列模型
+  <a href="#attention-mechanism" class="md-nav__link">
+    Attention Mechanism
   </a>
   
-    <nav class="md-nav" aria-label="序列模型">
+    <nav class="md-nav" aria-label="Attention Mechanism">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    马尔可夫假设
+  <a href="#_1" class="md-nav__link">
+    非参注意力池化层
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#latent-variable" class="md-nav__link">
-    潜变量模型 latent variable
+  <a href="#_2" class="md-nav__link">
+    参数化的注意力机制
   </a>
   
 </li>
@@ -6974,23 +7016,37 @@ z"/>
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    语言模型
+    注意力分数
   </a>
   
-    <nav class="md-nav" aria-label="语言模型">
+    <nav class="md-nav" aria-label="注意力分数">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    使用计数来建模
+    扩展到高维度
   </a>
   
-    <nav class="md-nav" aria-label="使用计数来建模">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    注意力评分函数
+  </a>
+  
+    <nav class="md-nav" aria-label="注意力评分函数">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#n" class="md-nav__link">
-    N元语法
+  <a href="#additive-attention" class="md-nav__link">
+    Additive Attention
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scaled-dot-product-attention" class="md-nav__link">
+    Scaled Dot-Product Attention
   </a>
   
 </li>
@@ -7006,50 +7062,78 @@ z"/>
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    循环神经网络
+  <a href="#transfomer" class="md-nav__link">
+    Transfomer
   </a>
   
-    <nav class="md-nav" aria-label="循环神经网络">
+    <nav class="md-nav" aria-label="Transfomer">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#perplexity" class="md-nav__link">
-    困惑度（perplexity）
+  <a href="#self-attention" class="md-nav__link">
+    Self-Attention
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
-    梯度裁剪
+    位置编码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multihead-attention" class="md-nav__link">
+    多头注意力 Multihead-Attention
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    数学描述
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    有掩码的多头注意力
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    基于位置的前馈网络
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    层归一化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    信息传递
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    预测
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lstm" class="md-nav__link">
-    LSTM
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    深层循环神经网络
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    双向循环神经网络
-  </a>
   
 </li>
       
@@ -7071,161 +7155,204 @@ z"/>
   
 
 
-<h1 id="rnn">序列和RNN<a class="headerlink" href="#rnn" title="Permanent link">&para;</a></h1>
-<h2 id="_1">序列模型<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h1 id="transformer">注意力机制和 Transformer<a class="headerlink" href="#transformer" title="Permanent link">&para;</a></h1>
+<h2 id="attention-mechanism">Attention Mechanism<a class="headerlink" href="#attention-mechanism" title="Permanent link">&para;</a></h2>
 <ul>
-<li>在时间 <span class="arithmatex">\(t\)</span> 观察到 <span class="arithmatex">\(x_t\)</span>, 那么得到 <span class="arithmatex">\(T\)</span> 个不独立的随机变量 <span class="arithmatex">\(\left(x_1, \ldots x_T\right) \sim p(\mathbf{x})\)</span></li>
-<li>使用条件概率展开</li>
+<li>注意力机制的心理学框架：人类根据随意线索和不随意线索来选择注意点<ul>
+<li>随意线索：根据人类主观想法的事物（想读书）</li>
+<li>不随意线索：不根据人类主观想法的线索（眼睛注意到的红色杯子）</li>
 </ul>
-<div class="arithmatex">\[
-p(a, b)=p(a) p(b \mid a)=p(b) p(a \mid b)
-\]</div>
+</li>
+<li>卷积、全连接、池化都只考虑不随意线索</li>
+<li>注意力机制则<strong>显式的</strong>考虑随意线索<ul>
+<li>随意线索被称之为查询（query）</li>
+<li>每一个输入是一个值（value）和不随意线索（key）的对</li>
+<li>通过注意力池化层根据 <strong><em>query</em></strong> 来有偏向性的选择某些输入</li>
+<li>可以一般的写作 <span class="arithmatex">\(f(x)=\sum_i \alpha(x, x_i) y_i\)</span>, 这里 <span class="arithmatex">\(\alpha\left(x, x_i\right)\)</span> 是注意力权重</li>
+</ul>
+</li>
+</ul>
+<h3 id="_1">非参注意力池化层<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <ul>
-<li>对条件概率建模：给定前面的 <span class="arithmatex">\(t-1\)</span> 个数据去预测第 <span class="arithmatex">\(t\)</span> 个数据，可以用以下公式表示<ul>
-<li>对见过的数据建模，也称为<strong>自回归模型</strong></li>
-<li>目标是计算 <span class="arithmatex">\(f(x_1, \ldots x_{t-1})\)</span></li>
+<li>给定数据 <span class="arithmatex">\((x_i,y_i), i=1,...,n\)</span></li>
+<li>平均池化（<span class="arithmatex">\(x\)</span> 为 query）：<span class="arithmatex">\(f(x)=\frac{1}{n}\sum_iy_i\)</span></li>
+<li>Nadaraya-Watson 核回归：<ul>
+<li><span class="arithmatex">\(x\)</span> 为 query</li>
+<li><span class="arithmatex">\(x_i, x_j\)</span> 为 key</li>
+<li><span class="arithmatex">\(y_i\)</span> 为 value</li>
+<li><span class="arithmatex">\(K(x-x_i)\)</span> 为核（kernel），衡量 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(x_i\)</span> 之间距离的函数，会选择和离 <span class="arithmatex">\(x\)</span> 比较近的 <span class="arithmatex">\(x_i\)</span></li>
+<li>变成概率后每一项 <span class="arithmatex">\(y_i\)</span> 就是它的相对重要性</li>
 </ul>
 </li>
 </ul>
 <div class="arithmatex">\[
-p\left(x_t \mid x_1, \ldots x_{t-1}\right)=p\left(x_t \mid f\left(x_1, \ldots x_{t-1}\right)\right)
+f(x)=\sum_{i=1}^n\frac{K(x-x_i)}{\sum_{j=1}^nK(x-x_j)}y_i
 \]</div>
-<h3 id="_2">马尔可夫假设<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<ul>
-<li>假设当前当前数据只跟 <span class="arithmatex">\(\tau\)</span> 个过去数据点相关</li>
-</ul>
-<h3 id="latent-variable">潜变量模型 latent variable<a class="headerlink" href="#latent-variable" title="Permanent link">&para;</a></h3>
-<ul>
-<li>引人潜变量 <span class="arithmatex">\(h_t\)</span> 来表示过去信息 <span class="arithmatex">\(h_t=f\left(x_1, \ldots x_{t-1}\right)\)</span><ul>
-<li>这样 <span class="arithmatex">\(x_t=p\left(x_t \mid h_t\right)\)</span></li>
-</ul>
-</li>
-</ul>
-<h2 id="_3">语言模型<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<ul>
-<li>给定文本序列 <span class="arithmatex">\(x_1, \ldots, x_T\)</span>，语言模型的目标是估计联合概率 <span class="arithmatex">\(p\left(x_1, \ldots, x_T\right)\)</span>，使用统计方法时常采用 <span class="arithmatex">\(n\)</span> 元语法</li>
-</ul>
-<ul>
-<li>它的应用包括：<ul>
-<li>做预训练模型 (eg BERT, GPT-3)</li>
-<li>生成本文, 给定前面几个词, 不断的使用 <span class="arithmatex">\(x_t \sim p\left(x_t \mid x_1, \ldots, x_{t-1}\right)\)</span> 来 生成后续文本</li>
-<li>判断多个序列中哪个更常见, e.g. “to recognize speech” vs "to wreck a nice beach</li>
-</ul>
-</li>
-</ul>
-<h3 id="_4">使用计数来建模<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>看这个序列在文本中出现的次数，除以句子长度</p>
-<ul>
-<li>假设序列长度为 <span class="arithmatex">\(2\)</span> , 我们预测<ul>
-<li>这里 <span class="arithmatex">\(n\)</span> 是总词数, <span class="arithmatex">\(n(x), n\left(x, x^{\prime}\right)\)</span> 是单个单词和连续单词对的出现次数</li>
-</ul>
-</li>
-</ul>
-<div class="arithmatex">\[
-p\left(x, x^{\prime}\right)=p(x) p\left(x^{\prime} \mid x\right)=\frac{n(x)}{n} \frac{n\left(x, x^{\prime}\right)}{n(x)}
-\]</div>
-<ul>
-<li>很容易拓展到长为 <span class="arithmatex">\(3\)</span> 的情况</li>
-</ul>
-<div class="arithmatex">\[
-p\left(x, x^{\prime}, x^{\prime \prime}\right)=p(x) p\left(x^{\prime} \mid x\right) p\left(x^{\prime \prime} \mid x, x^{\prime}\right)=\frac{n(x)}{n} \frac{n\left(x, x^{\prime}\right)}{n(x)} \frac{n\left(x, x^{\prime}, x^{\prime \prime}\right)}{n\left(x, x^{\prime}\right)}
-\]</div>
-<h4 id="n">N元语法<a class="headerlink" href="#n" title="Permanent link">&para;</a></h4>
-<ul>
-<li>当序列很长时, 因为文本量不够大, 很可能 <span class="arithmatex">\(n\left(x_1, \ldots, x_T\right) \leq 1\)</span></li>
-<li>使用马尔科夫假设可以缓解这个问题</li>
-</ul>
-<p>一元语法 (<span class="arithmatex">\(\tau = 0\)</span>) :
-$$
-\begin{aligned}
-p\left(x_1, x_2, x_3, x_4\right) &amp; =p\left(x_1\right) p\left(x_2\right) p\left(x_3\right) p\left(x_4\right) \
-&amp; =\frac{n\left(x_1\right)}{n} \frac{n\left(x_2\right)}{n} \frac{n\left(x_3\right)}{n} \frac{n\left(x_4\right)}{n} \</p>
-<p>\end{aligned}
-<span class="arithmatex">\(<span class="arithmatex">\(
-二元语法 (\)</span>\tau = 1\)</span>) :
-<span class="arithmatex">\(<span class="arithmatex">\(
-\begin{aligned}
-p\left(x_1, x_2, x_3, x_4\right) &amp; =p\left(x_1\right) p\left(x_2 \mid x_1\right) p\left(x_3 \mid x_2\right) p\left(x_4 \mid x_3\right) \\
-&amp; =\frac{n\left(x_1\right)}{n} \frac{n\left(x_1, x_2\right)}{n\left(x_1\right)} \frac{n\left(x_2, x_3\right)}{n\left(x_2\right)} \frac{n\left(x_3, x_4\right)}{n\left(x_3\right)}
-\end{aligned}
-\)</span>\)</span>
-三元语法  (<span class="arithmatex">\(\tau = 2\)</span>) : 
-<span class="arithmatex">\(<span class="arithmatex">\(
-p\left(x_1, x_2, x_3, x_4\right)=p\left(x_1\right) p\left(x_2 \mid x_1\right) p\left(x_3 \mid x_1, x_2\right) p\left(x_4 \mid x_2, x_3\right)
-\)</span>\)</span></p>
-<h2 id="_5">循环神经网络<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<p><img alt="image-20230627103006908" src="../assets/image-20230627103006908.png" /></p>
-<ul>
-<li>当前时刻的输出是要去预测当前时刻的观察，输出发生在观察之前，隐变量由 <span class="arithmatex">\(t-1\)</span> 时刻的观察更新</li>
-<li>比较 <span class="arithmatex">\(o_t\)</span> 和 <span class="arithmatex">\(x_t\)</span> 来计算损失</li>
-<li>更新隐藏状态： <span class="arithmatex">\(\mathbf{h}_t=\phi\left(\mathbf{W}_{h h} \mathbf{h}_{t-1}+\mathbf{W}_{h x} \mathbf{x}_{t-1}+\mathbf{b}_h\right)\)</span><ul>
-<li><span class="arithmatex">\(\mathbf{W}_{h h}\)</span>：表示 <span class="arithmatex">\(h\to h\)</span> 的更新</li>
-<li><span class="arithmatex">\(\mathbf{W}_{h x}\)</span>：表示 <span class="arithmatex">\(x\to h\)</span> 的更新</li>
-<li>去掉 <span class="arithmatex">\(\mathbf{W}_{h h} \mathbf{h}_{t-1}\)</span> 就是 MLP</li>
-</ul>
-</li>
-<li>输出： <span class="arithmatex">\(\mathbf{o}_t=\phi\left(\mathbf{W}_{h o} \mathbf{h}_t+\mathbf{b}_o\right)\)</span></li>
-</ul>
-<h3 id="perplexity">困惑度（perplexity）<a class="headerlink" href="#perplexity" title="Permanent link">&para;</a></h3>
-<ul>
-<li>衡量一个语言模型的好坏可以用平均交叉熵</li>
-</ul>
-<div class="arithmatex">\[
-\pi=\frac{1}{n} \sum_{i=1}^n-\log p\left(x_t \mid x_{t-1}, \ldots\right)
-\]</div>
-<p><span class="arithmatex">\(p\)</span> 是语言模型的预测概率, <span class="arithmatex">\(x_t\)</span> 是真实词</p>
-<ul>
-<li>历史原因NLP使用困惑度 <span class="arithmatex">\(\exp (\pi)\)</span> 来衡量, 是平均每次可能选项</li>
-<li><span class="arithmatex">\(1\)</span> 表示完美, 无穷大是最差情况</li>
-</ul>
-<h3 id="_6">梯度裁剪<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<ul>
-<li>迭代中计算这 <span class="arithmatex">\(T\)</span> 个时间步上的梯度, 在反向传播过程中产 生长度为 <span class="arithmatex">\(O(T)\)</span> 的矩阵乘法链, 导致数值不稳定</li>
-<li>梯度裁剪能有效预防梯度爆炸<ul>
-<li>如果梯度长度超过 <span class="arithmatex">\(\theta\)</span>，那么投影回长度 <span class="arithmatex">\(\theta\)</span></li>
-</ul>
-</li>
-</ul>
-<div class="arithmatex">\[
-\mathbf{g} \leftarrow \min \left(1, \frac{\theta}{\|\mathbf{g}\|}\right) \mathbf{g}
-\]</div>
-<h2 id="lstm">LSTM<a class="headerlink" href="#lstm" title="Permanent link">&para;</a></h2>
-<ul>
-<li>包含了长期记忆 <span class="arithmatex">\(c_t\)</span> 的 RNN，当前输出不仅仅由 <span class="arithmatex">\(x_{t-1}\)</span> 和 <span class="arithmatex">\(s_{t}\)</span> 得到，还由长期记忆 <span class="arithmatex">\(c_t\)</span> 控制</li>
-</ul>
-<p><img alt="image-20230627110624920" src="../assets/image-20230627110624920.png" /></p>
-<ul>
-<li>forget gate：删除长期记忆的过程<ul>
-<li>过滤重要特征，忽略无关信息</li>
-</ul>
-</li>
-<li>input gate：增添长期记忆的过程<ul>
-<li>sigmoid：对内容进行选择</li>
-<li>tanh: 相当于对信息进行整理</li>
-</ul>
-</li>
-</ul>
-<p><img alt="image-20230627110748935" src="../assets/image-20230627110748935.png" /></p>
-<h2 id="_7">深层循环神经网络<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
-<ul>
-<li>深度循环神经网络使用多个隐藏层来获得更多的非线性性</li>
-</ul>
-<p><img alt="image-20230627133639908" src="../assets/image-20230627133639908.png" /></p>
-<h2 id="_8">双向循环神经网络<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
-<ul>
-<li>动机：未来很重要，过去和未来的上下文不同，结果可能很不一样，截止目前 RNN 只看过去的信息</li>
-<li>双向 RNN：包含一个前向 RNN hidden layer、一个后向 RNN hidden layer，通过合并两个 hidden state 得到输出</li>
-<li><strong>不好做预测</strong>：双向循环神经网络通过反向更新的隐藏层来利用方向时间信息，通常用来对序列抽取特征、填空，而不是预测末来</li>
-</ul>
-<p><img alt="../_images/birnn.svg" src="https://zh.d2l.ai/_images/birnn.svg" /></p>
+<p>如果使用高斯核 <span class="arithmatex">\(K(u)=\frac{1}{\sqrt{2 \pi}} \exp \left(-\frac{u^2}{2}\right)\)</span> ，那么</p>
 <div class="arithmatex">\[
 \begin{aligned}
-&amp; \overrightarrow{\mathbf{H}}_t=\phi\left(\mathbf{X}_t \mathbf{W}_{x h}^{(f)}+\overrightarrow{\mathbf{H}}_{t-1} \mathbf{W}_{h h}^{(f)}+\mathbf{b}_h^{(f)}\right) \\
-&amp; \overleftarrow{\mathbf{H}}_t=\phi\left(\mathbf{X}_t \mathbf{W}_{x h}^{(b)}+\overleftarrow{\mathbf{H}}_{t+1} \mathbf{W}_{h h}^{(b)}+\mathbf{b}_h^{(b)}\right) \\
-&amp; \mathbf{H}_t=\left[\overrightarrow{\mathbf{H}}_t \overleftarrow{\mathbf{H}}_t\right] \\
-&amp; \mathbf{O}_t=\mathbf{H}_t \mathbf{W}_{h q}+\mathbf{b}_q
+f(x) &amp; =\sum_{i=1}^n \frac{\exp \left(-\frac{1}{2}\left(x-x_i\right)^2\right)}{\sum_{j=1}^n \exp \left(-\frac{1}{2}\left(x-x_j\right)^2\right)} y_i \\
+&amp; =\sum_{i=1}^n \operatorname{softmax}\left(-\frac{1}{2}\left(x-x_i\right)^2\right) y_i
 \end{aligned}
 \]</div>
+<h3 id="_2">参数化的注意力机制<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>在之前的基础上引入可以学习的 <span class="arithmatex">\(w\)</span> （此处为标量）</li>
+</ul>
+<div class="arithmatex">\[
+f(x)=\sum_{i=1}^n \operatorname{softmax}\left(-\frac{1}{2}\left(\left(x-x_i\right) w\right)^2\right) y_i
+\]</div>
+<h2 id="_3">注意力分数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>注意力权重：注意力分数的 softmax 结果，也是注意力机制中的注意力评分函数</li>
+<li>注意力分数：是 query 和 key 的相似度，也就是没有归一化 (softmax) 的注意力权重</li>
+</ul>
+<p><img alt="image-20230608095919674" src="../assets/image-20230608095919674.png" /></p>
+<ul>
+<li>计算注意力汇聚的输出为值的加权和</li>
+</ul>
+<p><img alt="../_images/attention-output.svg" src="https://zh.d2l.ai/_images/attention-output.svg" /></p>
+<h3 id="_4">扩展到高维度<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>用数学语言描述, 假设有一个查询 <span class="arithmatex">\(\mathbf{q} \in \mathbb{R}^q\)</span> 和 <span class="arithmatex">\(m\)</span> 个 “键一值" 对 <span class="arithmatex">\(\left(\mathbf{k}_1, \mathbf{v}_1\right), \ldots,\left(\mathbf{k}_m, \mathbf{v}_m\right)\)</span>, 其中 <span class="arithmatex">\(\mathbf{k}_i \in \mathbb{R}^k, \mathbf{v}_i \in \mathbb{R}^v\)</span> 。注意力汇聚函数 <span class="arithmatex">\(f\)</span> 就被表示成值的加权和:</p>
+<div class="arithmatex">\[
+f\left(\mathbf{q},\left(\mathbf{k}_1, \mathbf{v}_1\right), \ldots,\left(\mathbf{k}_m, \mathbf{v}_m\right)\right)=\sum_{i=1}^m \alpha\left(\mathbf{q}, \mathbf{k}_i\right) \mathbf{v}_i \in \mathbb{R}^v,
+\]</div>
+<p>其中查询 <span class="arithmatex">\(\mathbf{q}\)</span> 和键 <span class="arithmatex">\(\mathbf{k}_i\)</span> 的注意力权重（标量）是通过注意力评分函数 <span class="arithmatex">\(a\)</span> 将两个向量映射成标量, 再经过 softmax 运算得到的:</p>
+<div class="arithmatex">\[
+\alpha\left(\mathbf{q}, \mathbf{k}_i\right)=\operatorname{softmax}\left(a\left(\mathbf{q}, \mathbf{k}_i\right)\right)=\frac{\exp \left(a\left(\mathbf{q}, \mathbf{k}_i\right)\right)}{\sum_{j=1}^m \exp \left(a\left(\mathbf{q}, \mathbf{k}_j\right)\right)} \in \mathbb{R} .
+\]</div>
+<p>如上所示，<strong>选择不同的注意力评分函数 <span class="arithmatex">\(a\)</span> 会导致不同的注意力汇聚操作</strong>。</p>
+<h3 id="_5">注意力评分函数<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h4 id="additive-attention">Additive Attention<a class="headerlink" href="#additive-attention" title="Permanent link">&para;</a></h4>
+<ul>
+<li>可学参数：<span class="arithmatex">\(\mathbf{W}_k \in \mathbb{R}^{h \times k}, \mathbf{W}_q \in \mathbb{R}^{h \times q}, \mathbf{v} \in \mathbb{R}^h\)</span></li>
+<li>将 query 和 key 连结起来后输入到一个多层感知机（MLP）中， 感知机包含一个隐藏层，其隐藏单元数是一个超参数 <span class="arithmatex">\(h\)</span>。通过使用 <span class="arithmatex">\(\tanh\)</span> 作为激活函数</li>
+<li>适用于查询和键是不同长度的矢量</li>
+</ul>
+<div class="arithmatex">\[
+a(\mathbf{k}, \mathbf{q})=\mathbf{v}^T \tanh \left(\mathbf{W}_k \mathbf{k}+\mathbf{W}_q \mathbf{q}\right)
+\]</div>
+<h4 id="scaled-dot-product-attention">Scaled Dot-Product Attention<a class="headerlink" href="#scaled-dot-product-attention" title="Permanent link">&para;</a></h4>
+<ul>
+<li>如果 query 和 key 都是同样的长度 <span class="arithmatex">\(\mathbf{q}, \mathbf{k}_i \in \mathbb{R}^d\)</span>，<span class="arithmatex">\(d\)</span> 是 query 和 key 的长度，那么</li>
+<li>其实就是直接对 query 和 key 做点积</li>
+</ul>
+<div class="arithmatex">\[
+a\left(\mathbf{q}, \mathbf{k}_{\mathbf{i}}\right)=\left\langle\mathbf{q}, \mathbf{k}_{\mathbf{i}}\right\rangle / \sqrt{d}
+\]</div>
+<ul>
+<li>向量化版本<ul>
+<li><span class="arithmatex">\(\mathbf{Q} \in \mathbb{R}^{n \times d}, \mathbf{K} \in \mathbb{R}^{m \times d}, \mathbf{V} \in \mathbb{R}^{m \times v}\)</span></li>
+<li>注意力分数: <span class="arithmatex">\(a(\mathbf{Q}, \mathbf{K})=\mathbf{Q}\mathbf{K}^T / \sqrt{d} \in \mathbb{R}^{n \times m}\)</span></li>
+<li>注意力池化: <span class="arithmatex">\(f=\operatorname{softmax}(a(\mathbf{Q}, \mathbf{K})) \mathbf{V} \in \mathbb{R}^{n \times v}\)</span></li>
+</ul>
+</li>
+</ul>
+<h2 id="transfomer">Transfomer<a class="headerlink" href="#transfomer" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Transfomer 是纯使用注意力的 encoder-decoder</li>
+<li>encoder-decoder 都有 <span class="arithmatex">\(n\)</span> 个 transformer 块</li>
+</ul>
+<p><img alt="../_images/transformer.svg" src="https://zh.d2l.ai/_images/transformer.svg" /></p>
+<h3 id="self-attention">Self-Attention<a class="headerlink" href="#self-attention" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>自注意力描述了如何选择 key, value, query</p>
+</blockquote>
+<ul>
+<li>给定序列 <span class="arithmatex">\(\mathbf{x}_1, \ldots, \mathbf{x}_n, \forall \mathbf{x}_i \in \mathbb{R}^d\)</span></li>
+<li>自注意力池化层将 <span class="arithmatex">\(\mathbf{x}_i\)</span> 当做 key, value, query 来对序列抽取特征得到 <span class="arithmatex">\(\mathbf{y}_1, \ldots, \mathbf{y}_n\)</span>，这里有</li>
+</ul>
+<div class="arithmatex">\[
+\mathbf{y}_i=f\left(\mathbf{x}_i\left(\mathbf{x}_1, \mathbf{x}_1\right), \ldots,\left(\mathbf{x}_n, \mathbf{x}_n\right)\right) \in \mathbb{R}^d
+\]</div>
+<p><img alt="image-20230608105229550" src="../assets/image-20230608105229550.png" /></p>
+<h3 id="_6">位置编码<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>自注意力机制没有记录位置信息</li>
+<li>加入位置信息方法：位置编码</li>
+<li>位置编码将位置信息注入到输入中（不在模型中加），让输入的内容具有位置信息<ul>
+<li>假设长度为 <span class="arithmatex">\(n\)</span> 的序列是 <span class="arithmatex">\(\mathbf{X} \in \mathbb{R}^{n \times d}\)</span> ，那么使用位置编码矩阵 <span class="arithmatex">\(\mathbf{P} \in \mathbb{R}^{n \times d}\)</span> 来输出 <span class="arithmatex">\(\mathbf{X}+\mathbf{P}\)</span> 作为自编码输入</li>
+<li><span class="arithmatex">\(\mathbf{P}\)</span> 的元素如下计算（偶数行和奇数行的区别）：<span class="arithmatex">\(p_{i, 2 j}=\sin \left(\frac{i}{10000^{2 j / d}}\right), \quad p_{i, 2 j+1}=\cos \left(\frac{i}{10000^{2 j / d}}\right)\)</span></li>
+<li>使用正弦和余弦函数的好处：编码的是相对的位置信息</li>
+</ul>
+</li>
+</ul>
+<h3 id="multihead-attention">多头注意力 Multihead-Attention<a class="headerlink" href="#multihead-attention" title="Permanent link">&para;</a></h3>
+<ul>
+<li>对同一key, value, query, 希望抽取不同的信息<ul>
+<li>例如短距离关系和长距离关系</li>
+</ul>
+</li>
+<li>多头注意力使用 <span class="arithmatex">\(h\)</span> 个独立的注意力池化<ul>
+<li>合并各个头 (head) 输出得到最终输出</li>
+</ul>
+</li>
+</ul>
+<p><img alt="../_images/multi-head-attention.svg" src="https://zh.d2l.ai/_images/multi-head-attention.svg" /></p>
+<h3 id="_7">数学描述<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>在实现多头注意力之前, 让我们用数学语言将这个模型形式化地描述出来。给定查询 <span class="arithmatex">\(\mathbf{q} \in \mathbb{R}^{d_q}\)</span> 、键 <span class="arithmatex">\(\mathbf{k} \in \mathbb{R}^{d_k}\)</span> 和 值 <span class="arithmatex">\(\mathbf{v} \in \mathbb{R}^{d_v}\)</span>, 每个注意力头 <span class="arithmatex">\(\mathbf{h}_i\)</span> ( <span class="arithmatex">\(i=1, \ldots, h)\)</span> 的计算方法为:</p>
+<div class="arithmatex">\[
+\mathbf{h}_i=f\left(\mathbf{W}_i^{(q)} \mathbf{q}, \mathbf{W}_i^{(k)} \mathbf{k}, \mathbf{W}_i^{(v)} \mathbf{v}\right) \in \mathbb{R}^{p v}
+\]</div>
+<ul>
+<li>其中, 可学习的参数包括 <span class="arithmatex">\(\mathbf{W}_i^{(q)} \in \mathbb{R}^{p q \times d_q} 、 \mathbf{W}_i^{(k)} \in \mathbb{R}^{p k \times d k}\)</span> 和 <span class="arithmatex">\(\mathbf{W}_i^{(v)} \in \mathbb{R}^{p v \times d v}\)</span>, 以及代表注意力汇聚的函数 <span class="arithmatex">\(f\)</span></li>
+<li><span class="arithmatex">\(f\)</span> 可以是加性注意力和缩放点积注意力</li>
+<li>多头注意力的输出需要经过另一个线性转换, 它对应着 <span class="arithmatex">\(h\)</span> 个头连结后的结果, 因此其可学习参数是<span class="arithmatex">\(\mathbf{W}_o \in \mathbb{R}^{p_o \times h p_v}\)</span></li>
+</ul>
+<div class="arithmatex">\[
+\mathbf{W}_o\left[\begin{array}{c}
+\mathbf{h}_1 \\
+\vdots \\
+\mathbf{h}_h
+\end{array}\right] \in \mathbb{R}^{p_o}
+\]</div>
+<h3 id="_8">有掩码的多头注意力<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>decoder 对序列中的一个元素输出时，不应该考虑此元素之后的元素</li>
+<li>这可以通过掩码来实现，也就是计算 <span class="arithmatex">\(\mathbf{x_i}\)</span> 的输出时，假装当前的序列长度仅为 <span class="arithmatex">\(i\)</span></li>
+</ul>
+<h3 id="_9">基于位置的前馈网络<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>其实就是全连接层，<span class="arithmatex">\(b\)</span> 是 batch size，<span class="arithmatex">\(n\)</span> 是序列长度，<span class="arithmatex">\(d\)</span> 是维度</li>
+<li>对序列中的每个元素做全连接，把序列中的每一个 <span class="arithmatex">\(x_i\)</span> 当作一个样本，网络做如下操作<ul>
+<li>将输入形状由 <span class="arithmatex">\((b, n, d)\)</span> 变换成 <span class="arithmatex">\((b n, d)\)</span> </li>
+<li>作用两个全连接层</li>
+<li>输出形状由 <span class="arithmatex">\((b n, d)\)</span> 变化回 <span class="arithmatex">\((b, n, d)\)</span></li>
+</ul>
+</li>
+<li>等价于两层核窗口为 1 的一维卷积层</li>
+</ul>
+<h3 id="_10">层归一化<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>批量归一化（batch norm）对每个特征/通道里元素进行归一化<ul>
+<li>不适合序列长度会变的 NLP 应用</li>
+</ul>
+</li>
+<li>层归一化（layer norm）对每个样本里的元素进行归一化</li>
+</ul>
+<p><img alt="image-20230608143539565" src="../assets/image-20230608143539565.png" /></p>
+<h3 id="_11">信息传递<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>信息怎么从 encoder 传到 decoder</p>
+</blockquote>
+<ul>
+<li>对于编码器中的输出 <span class="arithmatex">\(\mathbf{y}_1, \ldots, \mathbf{y}_n\)</span></li>
+<li>将其作为解码中第 <span class="arithmatex">\(i\)</span> 个Transformer块中多头注意力的key和value<ul>
+<li>它的 query 来自目标序列</li>
+<li>之前的两个 Multi-head attention 采用的是自注意力 </li>
+</ul>
+</li>
+<li>意味着编码器和解码器中块的个数和输出维度都是一样的</li>
+</ul>
+<h3 id="_12">预测<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>预测第 <span class="arithmatex">\(t+1\)</span> 个输出时</li>
+<li>解码器中输入前 <span class="arithmatex">\(t\)</span> 个预测值<ul>
+<li>在自注意力中, 前 <span class="arithmatex">\(t\)</span> 个预测值作为 key 和 value, 第 <span class="arithmatex">\(t\)</span> 个预测值还作为 query，输出第 <span class="arithmatex">\(t+1\)</span> 时刻的预测</li>
+</ul>
+</li>
+</ul>
+<p><img alt="image-20230608144358885" src="../assets/image-20230608144358885.png" /></p>
 
   <hr>
 <div class="md-source-file">
@@ -7236,7 +7363,7 @@ p\left(x_1, x_2, x_3, x_4\right)=p\left(x_1\right) p\left(x_2 \mid x_1\right) p\
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 27, 2023</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 6, 2023</span>
       
     
   </small>
@@ -7286,7 +7413,7 @@ p\left(x_1, x_2, x_3, x_4\right)=p\left(x_1\right) p\left(x_2 \mid x_1\right) p\
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.path", "navigation.tracking", "navigation.indexes", "navigation.top", "navigation.expand", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.fac441b0.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
