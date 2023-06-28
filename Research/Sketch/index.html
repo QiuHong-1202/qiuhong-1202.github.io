@@ -6895,6 +6895,7 @@ z"/>
 </ul>
 <ul>
 <li><code>[BMVC20]</code> <strong>SketchHealer</strong>: A Graph-to-Sequence Network for Recreating Partial Human Sketches<ul>
+<li>功能：sketch healing</li>
 <li>架构：GCN-based encoder，LSTM decoder</li>
 </ul>
 </li>
@@ -6902,14 +6903,14 @@ z"/>
 <ul>
 <li><code>[ICCV21]</code> <strong>SketchLattice</strong>: Latticed Representation for Sketch Manipulation<ul>
 <li>功能：sketch healing、基于图像的草图合成</li>
-<li>架构：GCN encoder，LSTM decoder</li>
+<li>架构：利用一个网格图 (Lattice Graph) 对草图图像进行采样以生成草图的网格表示，GCN-based encoder，LSTM decoder</li>
 </ul>
 </li>
 </ul>
 <ul>
 <li><code>[IJCV22]</code> <strong>SketchHealer-2.0</strong>: Generative Sketch Healing<ul>
 <li>功能：sketch healing（对于随机缺失的笔画 <span class="arithmatex">\(p_{mask}\)</span> 进行重绘，作者特意强调了自己的任务是修复并且和 SketchRNN 不改变原有笔画的预测任务 <code>completion</code> 不同）</li>
-<li>架构：利用一个网格图 (Lattice Graph) 对草图图像进行采样以生成草图的网格表示，GCN-based encoder，LSTM decoder</li>
+<li>架构：GCN encoder，LSTM decoder</li>
 <li>和 <code>SketchHealer1.0</code> 相比，增加了一个 <code>Perceptual Metric</code> </li>
 </ul>
 </li>
@@ -6941,7 +6942,7 @@ z"/>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 26, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 28, 2023</span>
       
         <br>
         Created:
