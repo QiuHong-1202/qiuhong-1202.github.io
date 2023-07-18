@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../../Sketch/">
+        <link rel="prev" href="../../Deep%20Learning/Sequence%20%26%20RNN/">
       
       
-        <link rel="next" href="../Concepts/">
+        <link rel="next" href="../../../Script/">
       
       <link rel="icon" href="../../../images/snowman-circle.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
-        <title>Attention & Transformer - Hongliang's Wiki</title>
+        <title>[EG20] Integer Grid Sketch Simplification and Vectorization - Hongliang's Wiki</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#attention-transformer" class="md-skip">
+        <a href="#background" class="md-skip">
           Skip to content
         </a>
       
@@ -2911,7 +2911,7 @@ z"/>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Attention & Transformer
+              [EG20] Integer Grid Sketch Simplification and Vectorization
             
           </span>
         </div>
@@ -6197,6 +6197,8 @@ z"/>
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -6243,16 +6245,16 @@ z"/>
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
       
       
         
@@ -6273,10 +6275,120 @@ z"/>
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_3">
           <span class="md-nav__icon md-icon"></span>
           Deep Learning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Deep%20Learning/Attention%20%26%20Transformer/" class="md-nav__link">
+        Attention & Transformer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Deep%20Learning/Concepts%20in%20Deep%20Learning/" class="md-nav__link">
+        Concepts in Deep Learning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Deep%20Learning/Convolution%20%26%20CNN/" class="md-nav__link">
+        Convolution & CNN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Deep%20Learning/Pytorch/" class="md-nav__link">
+        Pytorch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Deep%20Learning/Sequence%20%26%20RNN/" class="md-nav__link">
+        Sequence & RNN
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          Paper Reading
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Paper Reading
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -6292,16 +6404,14 @@ z"/>
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Attention & Transformer
+          [EG20] Integer Grid Sketch Simplification and Vectorization
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Attention & Transformer
+        [EG20] Integer Grid Sketch Simplification and Vectorization
       </a>
       
         
@@ -6309,8 +6419,6 @@ z"/>
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -6320,23 +6428,58 @@ z"/>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#attention-mechanism" class="md-nav__link">
-    Attention Mechanism
+  <a href="#background" class="md-nav__link">
+    Background
   </a>
   
-    <nav class="md-nav" aria-label="Attention Mechanism">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-work" class="md-nav__link">
+    Related Work
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method" class="md-nav__link">
+    Method
+  </a>
+  
+    <nav class="md-nav" aria-label="Method">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    非参注意力池化层
+  <a href="#framework-overview" class="md-nav__link">
+    Framework Overview
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    参数化的注意力机制
+  <a href="#pre-processing" class="md-nav__link">
+    pre-processing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grid-based-vectorization-frame-field" class="md-nav__link">
+    Grid-Based Vectorization: Frame Field
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametrization" class="md-nav__link">
+    Parametrization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extraction-fitting" class="md-nav__link">
+    Extraction &amp; Fitting
   </a>
   
 </li>
@@ -6347,125 +6490,9 @@ z"/>
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    注意力分数
+  <a href="#result" class="md-nav__link">
+    Result
   </a>
-  
-    <nav class="md-nav" aria-label="注意力分数">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    扩展到高维度
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    注意力评分函数
-  </a>
-  
-    <nav class="md-nav" aria-label="注意力评分函数">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#additive-attention" class="md-nav__link">
-    Additive Attention
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scaled-dot-product-attention" class="md-nav__link">
-    Scaled Dot-Product Attention
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#transfomer" class="md-nav__link">
-    Transfomer
-  </a>
-  
-    <nav class="md-nav" aria-label="Transfomer">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#self-attention" class="md-nav__link">
-    Self-Attention
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    位置编码
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multihead-attention" class="md-nav__link">
-    多头注意力 Multihead-Attention
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    数学描述
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    有掩码的多头注意力
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    基于位置的前馈网络
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    层归一化
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    信息传递
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    预测
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -6473,62 +6500,6 @@ z"/>
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Concepts/" class="md-nav__link">
-        Concepts in Deep Learning
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Conv/" class="md-nav__link">
-        Convolution & CNN
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Pytorch/" class="md-nav__link">
-        Pytorch
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../RNN/" class="md-nav__link">
-        Sequence & RNN
-      </a>
     </li>
   
 
@@ -6978,8 +6949,6 @@ z"/>
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -6988,23 +6957,58 @@ z"/>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#attention-mechanism" class="md-nav__link">
-    Attention Mechanism
+  <a href="#background" class="md-nav__link">
+    Background
   </a>
   
-    <nav class="md-nav" aria-label="Attention Mechanism">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-work" class="md-nav__link">
+    Related Work
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method" class="md-nav__link">
+    Method
+  </a>
+  
+    <nav class="md-nav" aria-label="Method">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    非参注意力池化层
+  <a href="#framework-overview" class="md-nav__link">
+    Framework Overview
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    参数化的注意力机制
+  <a href="#pre-processing" class="md-nav__link">
+    pre-processing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grid-based-vectorization-frame-field" class="md-nav__link">
+    Grid-Based Vectorization: Frame Field
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametrization" class="md-nav__link">
+    Parametrization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extraction-fitting" class="md-nav__link">
+    Extraction &amp; Fitting
   </a>
   
 </li>
@@ -7015,125 +7019,9 @@ z"/>
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    注意力分数
+  <a href="#result" class="md-nav__link">
+    Result
   </a>
-  
-    <nav class="md-nav" aria-label="注意力分数">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    扩展到高维度
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    注意力评分函数
-  </a>
-  
-    <nav class="md-nav" aria-label="注意力评分函数">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#additive-attention" class="md-nav__link">
-    Additive Attention
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scaled-dot-product-attention" class="md-nav__link">
-    Scaled Dot-Product Attention
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#transfomer" class="md-nav__link">
-    Transfomer
-  </a>
-  
-    <nav class="md-nav" aria-label="Transfomer">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#self-attention" class="md-nav__link">
-    Self-Attention
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    位置编码
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multihead-attention" class="md-nav__link">
-    多头注意力 Multihead-Attention
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    数学描述
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    有掩码的多头注意力
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    基于位置的前馈网络
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    层归一化
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    信息传递
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    预测
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -7155,215 +7043,131 @@ z"/>
   
 
 
-<h1 id="attention-transformer">Attention &amp; Transformer<a class="headerlink" href="#attention-transformer" title="Permanent link">&para;</a></h1>
-<h2 id="attention-mechanism">Attention Mechanism<a class="headerlink" href="#attention-mechanism" title="Permanent link">&para;</a></h2>
+  <h1>[EG20] Integer Grid Sketch Simplification and Vectorization</h1>
+
+<h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
 <ul>
-<li>注意力机制的心理学框架：人类根据随意线索和不随意线索来选择注意点<ul>
-<li>随意线索：根据人类主观想法的事物（想读书）</li>
-<li>不随意线索：不根据人类主观想法的线索（眼睛注意到的红色杯子）</li>
+<li>sketch vectorization: convert a bitmap line drawing into a compact set of parametric curves</li>
+<li>challenges:<ul>
+<li>over-sketching</li>
+<li>junctions 交叉</li>
+<li>noise</li>
 </ul>
 </li>
-<li>卷积、全连接、池化都只考虑不随意线索</li>
-<li>注意力机制则<strong>显式的</strong>考虑随意线索<ul>
-<li>随意线索被称之为查询（query）</li>
-<li>每一个输入是一个值（value）和不随意线索（key）的对</li>
-<li>通过注意力池化层根据 <strong><em>query</em></strong> 来有偏向性的选择某些输入</li>
-<li>可以一般的写作 <span class="arithmatex">\(f(x)=\sum_i \alpha(x, x_i) y_i\)</span>, 这里 <span class="arithmatex">\(\alpha\left(x, x_i\right)\)</span> 是注意力权重</li>
-</ul>
-</li>
-</ul>
-<h3 id="_1">非参注意力池化层<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
-<ul>
-<li>给定数据 <span class="arithmatex">\((x_i,y_i), i=1,...,n\)</span></li>
-<li>平均池化（<span class="arithmatex">\(x\)</span> 为 query）：<span class="arithmatex">\(f(x)=\frac{1}{n}\sum_iy_i\)</span></li>
-<li>Nadaraya-Watson 核回归：<ul>
-<li><span class="arithmatex">\(x\)</span> 为 query</li>
-<li><span class="arithmatex">\(x_i, x_j\)</span> 为 key</li>
-<li><span class="arithmatex">\(y_i\)</span> 为 value</li>
-<li><span class="arithmatex">\(K(x-x_i)\)</span> 为核（kernel），衡量 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(x_i\)</span> 之间距离的函数，会选择和离 <span class="arithmatex">\(x\)</span> 比较近的 <span class="arithmatex">\(x_i\)</span></li>
-<li>变成概率后每一项 <span class="arithmatex">\(y_i\)</span> 就是它的相对重要性</li>
+<li>existing methods: use 2 steps<ul>
+<li>segment the drawing into individual curves</li>
+<li>fit a parametric spline on each curve</li>
 </ul>
 </li>
 </ul>
-<div class="arithmatex">\[
-f(x)=\sum_{i=1}^n\frac{K(x-x_i)}{\sum_{j=1}^nK(x-x_j)}y_i
-\]</div>
-<p>如果使用高斯核 <span class="arithmatex">\(K(u)=\frac{1}{\sqrt{2 \pi}} \exp \left(-\frac{u^2}{2}\right)\)</span> ，那么</p>
-<div class="arithmatex">\[
-\begin{aligned}
-f(x) &amp; =\sum_{i=1}^n \frac{\exp \left(-\frac{1}{2}\left(x-x_i\right)^2\right)}{\sum_{j=1}^n \exp \left(-\frac{1}{2}\left(x-x_j\right)^2\right)} y_i \\
-&amp; =\sum_{i=1}^n \operatorname{softmax}\left(-\frac{1}{2}\left(x-x_i\right)^2\right) y_i
-\end{aligned}
-\]</div>
-<h3 id="_2">参数化的注意力机制<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
-<li>在之前的基础上引入可以学习的 <span class="arithmatex">\(w\)</span> （此处为标量）</li>
-</ul>
-<div class="arithmatex">\[
-f(x)=\sum_{i=1}^n \operatorname{softmax}\left(-\frac{1}{2}\left(\left(x-x_i\right) w\right)^2\right) y_i
-\]</div>
-<h2 id="_3">注意力分数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<ul>
-<li>注意力权重：注意力分数的 softmax 结果，也是注意力机制中的注意力评分函数</li>
-<li>注意力分数：是 query 和 key 的相似度，也就是没有归一化 (softmax) 的注意力权重</li>
-</ul>
-<p><img alt="image-20230608095919674" src="../assets/image-20230608095919674.png" /></p>
-<ul>
-<li>计算注意力汇聚的输出为值的加权和</li>
-</ul>
-<p><img alt="../_images/attention-output.svg" src="https://zh.d2l.ai/_images/attention-output.svg" /></p>
-<h3 id="_4">扩展到高维度<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>用数学语言描述, 假设有一个查询 <span class="arithmatex">\(\mathbf{q} \in \mathbb{R}^q\)</span> 和 <span class="arithmatex">\(m\)</span> 个 “键一值" 对 <span class="arithmatex">\(\left(\mathbf{k}_1, \mathbf{v}_1\right), \ldots,\left(\mathbf{k}_m, \mathbf{v}_m\right)\)</span>, 其中 <span class="arithmatex">\(\mathbf{k}_i \in \mathbb{R}^k, \mathbf{v}_i \in \mathbb{R}^v\)</span> 。注意力汇聚函数 <span class="arithmatex">\(f\)</span> 就被表示成值的加权和:</p>
-<div class="arithmatex">\[
-f\left(\mathbf{q},\left(\mathbf{k}_1, \mathbf{v}_1\right), \ldots,\left(\mathbf{k}_m, \mathbf{v}_m\right)\right)=\sum_{i=1}^m \alpha\left(\mathbf{q}, \mathbf{k}_i\right) \mathbf{v}_i \in \mathbb{R}^v,
-\]</div>
-<p>其中查询 <span class="arithmatex">\(\mathbf{q}\)</span> 和键 <span class="arithmatex">\(\mathbf{k}_i\)</span> 的注意力权重（标量）是通过注意力评分函数 <span class="arithmatex">\(a\)</span> 将两个向量映射成标量, 再经过 softmax 运算得到的:</p>
-<div class="arithmatex">\[
-\alpha\left(\mathbf{q}, \mathbf{k}_i\right)=\operatorname{softmax}\left(a\left(\mathbf{q}, \mathbf{k}_i\right)\right)=\frac{\exp \left(a\left(\mathbf{q}, \mathbf{k}_i\right)\right)}{\sum_{j=1}^m \exp \left(a\left(\mathbf{q}, \mathbf{k}_j\right)\right)} \in \mathbb{R} .
-\]</div>
-<p>如上所示，<strong>选择不同的注意力评分函数 <span class="arithmatex">\(a\)</span> 会导致不同的注意力汇聚操作</strong>。</p>
-<h3 id="_5">注意力评分函数<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<h4 id="additive-attention">Additive Attention<a class="headerlink" href="#additive-attention" title="Permanent link">&para;</a></h4>
-<ul>
-<li>可学参数：<span class="arithmatex">\(\mathbf{W}_k \in \mathbb{R}^{h \times k}, \mathbf{W}_q \in \mathbb{R}^{h \times q}, \mathbf{v} \in \mathbb{R}^h\)</span></li>
-<li>将 query 和 key 连结起来后输入到一个多层感知机（MLP）中， 感知机包含一个隐藏层，其隐藏单元数是一个超参数 <span class="arithmatex">\(h\)</span>。通过使用 <span class="arithmatex">\(\tanh\)</span> 作为激活函数</li>
-<li>适用于查询和键是不同长度的矢量</li>
-</ul>
-<div class="arithmatex">\[
-a(\mathbf{k}, \mathbf{q})=\mathbf{v}^T \tanh \left(\mathbf{W}_k \mathbf{k}+\mathbf{W}_q \mathbf{q}\right)
-\]</div>
-<h4 id="scaled-dot-product-attention">Scaled Dot-Product Attention<a class="headerlink" href="#scaled-dot-product-attention" title="Permanent link">&para;</a></h4>
-<ul>
-<li>如果 query 和 key 都是同样的长度 <span class="arithmatex">\(\mathbf{q}, \mathbf{k}_i \in \mathbb{R}^d\)</span>，<span class="arithmatex">\(d\)</span> 是 query 和 key 的长度，那么</li>
-<li>其实就是直接对 query 和 key 做点积</li>
-</ul>
-<div class="arithmatex">\[
-a\left(\mathbf{q}, \mathbf{k}_{\mathbf{i}}\right)=\left\langle\mathbf{q}, \mathbf{k}_{\mathbf{i}}\right\rangle / \sqrt{d}
-\]</div>
-<ul>
-<li>向量化版本<ul>
-<li><span class="arithmatex">\(\mathbf{Q} \in \mathbb{R}^{n \times d}, \mathbf{K} \in \mathbb{R}^{m \times d}, \mathbf{V} \in \mathbb{R}^{m \times v}\)</span></li>
-<li>注意力分数: <span class="arithmatex">\(a(\mathbf{Q}, \mathbf{K})=\mathbf{Q}\mathbf{K}^T / \sqrt{d} \in \mathbb{R}^{n \times m}\)</span></li>
-<li>注意力池化: <span class="arithmatex">\(f=\operatorname{softmax}(a(\mathbf{Q}, \mathbf{K})) \mathbf{V} \in \mathbb{R}^{n \times v}\)</span></li>
+<li>Cons of others method: can not deal with the condition of parallel sketch(merge)<ul>
+<li>A possible fix: use the preprocess method (deep network)<ul>
+<li>Break the topology</li>
+<li>Fail to merge some of strokes</li>
 </ul>
 </li>
 </ul>
-<h2 id="transfomer">Transfomer<a class="headerlink" href="#transfomer" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Transfomer 是纯使用注意力的 encoder-decoder</li>
-<li>encoder-decoder 都有 <span class="arithmatex">\(n\)</span> 个 transformer 块</li>
+</li>
 </ul>
-<p><img alt="../_images/transformer.svg" src="https://zh.d2l.ai/_images/transformer.svg" /></p>
-<h3 id="self-attention">Self-Attention<a class="headerlink" href="#self-attention" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p>自注意力描述了如何选择 key, value, query</p>
-</blockquote>
+<p><img alt="image-20230718100949621" src="../assets/image-20230718100949621.png" /></p>
+<p><img alt="image-20230718174517469" src="../assets/image-20230718174517469.png" /></p>
+<p><img alt="image-20230718174523131" src="../assets/image-20230718174523131.png" /></p>
 <ul>
-<li>给定序列 <span class="arithmatex">\(\mathbf{x}_1, \ldots, \mathbf{x}_n, \forall \mathbf{x}_i \in \mathbb{R}^d\)</span></li>
-<li>自注意力池化层将 <span class="arithmatex">\(\mathbf{x}_i\)</span> 当做 key, value, query 来对序列抽取特征得到 <span class="arithmatex">\(\mathbf{y}_1, \ldots, \mathbf{y}_n\)</span>，这里有</li>
+<li>Advantage: nearby strokes with similar directions get snapped to the same grid isoline &amp; junction get snapped to the vertices of the grid</li>
+<li>Idea: vectorization via parameterization</li>
+<li>Inspiration: quad meshing</li>
 </ul>
+<h2 id="related-work">Related Work<a class="headerlink" href="#related-work" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20230718174412856" src="../assets/image-20230718174412856.png" /></p>
+<ul>
+<li>[Noris et al., 2013] relies on a skeleton, requiring clean input.</li>
+<li>[Favreau et al., 2016] use region based skeleton, which is more robust to over sketching. However, this optimization can only merge consecutive curves, not parallel ones.</li>
+<li>[Bessmeltsev and Solomon, 2019], which vectorizes line drawings by tracing streamlines along a frame field aligned with the input drawing.</li>
+</ul>
+<h2 id="method">Method<a class="headerlink" href="#method" title="Permanent link">&para;</a></h2>
+<ul>
+<li>使用 grid isoline 拟合 sketch</li>
+</ul>
+<h3 id="framework-overview">Framework Overview<a class="headerlink" href="#framework-overview" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Compute a <strong><em>frame field</em></strong> to recover the two local dominant directions at each pixel</li>
+<li>Use <strong><em>frame field</em></strong> to guide a grid-based parametrization whose isolines snap to strokes</li>
+<li>Tracing the isolines tangential to the strokes gives a <strong><em>parametrized topological graph</em></strong> of the drawing</li>
+<li>Fit a network of vector curves using graph in step 3</li>
+</ul>
+<h3 id="pre-processing">pre-processing<a class="headerlink" href="#pre-processing" title="Permanent link">&para;</a></h3>
+<ul>
+<li>idea: discretize the input domain(by using black pixels) [Bessmeltsev and Solomon 2019]</li>
+<li>Locate the strokes, estimate their width, and generate a triangle mesh around them that will serve as support for the parametrization.</li>
+<li>identify stroke pixels by thresholding the input image</li>
+<li>discretize the image space via a triangulation that we compute using TRIANGLE [She96].</li>
+<li>define a narrow band by selecting triangles with a barycenter at a distance less than <span class="arithmatex">\(\beta \omega\)</span> from a stroke pixel.<ul>
+<li><span class="arithmatex">\(\omega\)</span> : average stroke width</li>
+<li><span class="arithmatex">\(\beta\)</span> : resolution-independent ( <span class="arithmatex">\(0.0 \sim 0.3\)</span> for clean input, <span class="arithmatex">\(0,5 \sim 1.2\)</span> for over-sketched input)</li>
+</ul>
+</li>
+</ul>
+<p><img alt="image-20230718174540698" src="../assets/image-20230718174540698.png" /></p>
+<p><img alt="image-20230718174544980" src="../assets/image-20230718174544980.png" /></p>
+<h3 id="grid-based-vectorization-frame-field">Grid-Based Vectorization: Frame Field<a class="headerlink" href="#grid-based-vectorization-frame-field" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Compute a frame field representing the two dominant directions at each point in the vicinity of the drawing</li>
+<li>Frame field computation using energy formulation proposed by Bessmeltsev and Solomon<ul>
+<li>combines three terms responsible for aligning the frame field with the strokes of the drawing, smoothing the frame field away from the strokes, and a regularizer encouraging the frame field to form orthogonal crosses rather than to collapse to a line field.</li>
+</ul>
+</li>
+</ul>
+<h3 id="parametrization">Parametrization<a class="headerlink" href="#parametrization" title="Permanent link">&para;</a></h3>
 <div class="arithmatex">\[
-\mathbf{y}_i=f\left(\mathbf{x}_i\left(\mathbf{x}_1, \mathbf{x}_1\right), \ldots,\left(\mathbf{x}_n, \mathbf{x}_n\right)\right) \in \mathbb{R}^d
+\text { minimize } E[f]=E_{\text {field-aligned }}+\mu E_{\text {snap }}+\varepsilon E_{\text {reg }} \text { s.t. } f \text { is seamless }
 \]</div>
-<p><img alt="image-20230608105229550" src="../assets/image-20230608105229550.png" /></p>
-<h3 id="_6">位置编码<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<ul>
-<li>自注意力机制没有记录位置信息</li>
-<li>加入位置信息方法：位置编码</li>
-<li>位置编码将位置信息注入到输入中（不在模型中加），让输入的内容具有位置信息<ul>
-<li>假设长度为 <span class="arithmatex">\(n\)</span> 的序列是 <span class="arithmatex">\(\mathbf{X} \in \mathbb{R}^{n \times d}\)</span> ，那么使用位置编码矩阵 <span class="arithmatex">\(\mathbf{P} \in \mathbb{R}^{n \times d}\)</span> 来输出 <span class="arithmatex">\(\mathbf{X}+\mathbf{P}\)</span> 作为自编码输入</li>
-<li><span class="arithmatex">\(\mathbf{P}\)</span> 的元素如下计算（偶数行和奇数行的区别）：<span class="arithmatex">\(p_{i, 2 j}=\sin \left(\frac{i}{10000^{2 j / d}}\right), \quad p_{i, 2 j+1}=\cos \left(\frac{i}{10000^{2 j / d}}\right)\)</span></li>
-<li>使用正弦和余弦函数的好处：编码的是相对的位置信息</li>
-</ul>
-</li>
-</ul>
-<h3 id="multihead-attention">多头注意力 Multihead-Attention<a class="headerlink" href="#multihead-attention" title="Permanent link">&para;</a></h3>
-<ul>
-<li>对同一key, value, query, 希望抽取不同的信息<ul>
-<li>例如短距离关系和长距离关系</li>
-</ul>
-</li>
-<li>多头注意力使用 <span class="arithmatex">\(h\)</span> 个独立的注意力池化<ul>
-<li>合并各个头 (head) 输出得到最终输出</li>
-</ul>
-</li>
-</ul>
-<p><img alt="../_images/multi-head-attention.svg" src="https://zh.d2l.ai/_images/multi-head-attention.svg" /></p>
-<h3 id="_7">数学描述<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<p>在实现多头注意力之前, 让我们用数学语言将这个模型形式化地描述出来。给定查询 <span class="arithmatex">\(\mathbf{q} \in \mathbb{R}^{d_q}\)</span> 、键 <span class="arithmatex">\(\mathbf{k} \in \mathbb{R}^{d_k}\)</span> 和 值 <span class="arithmatex">\(\mathbf{v} \in \mathbb{R}^{d_v}\)</span>, 每个注意力头 <span class="arithmatex">\(\mathbf{h}_i\)</span> ( <span class="arithmatex">\(i=1, \ldots, h)\)</span> 的计算方法为:</p>
+<p>- <span class="arithmatex">\(E_{\text {field-aligned }}\)</span>: a frame should be mapped to the canonical frame, and have a parameter control how many strokes should be merged</p>
+<p><img alt="image-20230718174607307" src="../assets/image-20230718174607307.png" /></p>
 <div class="arithmatex">\[
-\mathbf{h}_i=f\left(\mathbf{W}_i^{(q)} \mathbf{q}, \mathbf{W}_i^{(k)} \mathbf{k}, \mathbf{W}_i^{(v)} \mathbf{v}\right) \in \mathbb{R}^{p v}
+E_{\text {align }}=\sum_{T \in \mathcal{T}}\left\|\mathcal{J}_f \tilde{\phi}-\mathrm{I}\right\|_{\mathrm{F}}^2
+\]</div>
+<p>- <span class="arithmatex">\(\mu E_{\text {snap }}\)</span>: snapping grid to the isoline (intuition: nearby strokes can be grouped together by assigning them to the same, quantized isoline of the parametrization.)
+    - 每个三角面片都有两个 direction <span class="arithmatex">\(u, v\)</span> ，其中一个 direction 会被选择为 tangent direction
+    - 假设一个三角面片的 tangent direction 为 <span class="arithmatex">\(u ， u\)</span> 要尽可能的靠近参数空间中的 isoline，另一个 direction 会被施加约束
+    - Additional integer variable <span class="arithmatex">\((i, j)\)</span> : 表示参数空间中的 isoline
+    - 此项被定义为一个 soft constraint，使得 stroke 三角形的受约束参数受到其最近 integer variable 的吸引
+    - 注: 这里的 additional integer variable 并不是一个三角面片一个，而是决定好一个三角面片之后，周围的三角面片使用同样的 additional integer variable</p>
+<p><img alt="image-20230718174746682" src="../assets/image-20230718174746682.png" /></p>
+<div class="arithmatex">\[
+E_{\text {snap }}=\sum_{c \in \mathcal{C}_{\mathrm{c}}} w_{\text {snap }}\|u-\bar{u}\|^2+\sum_{c \in \mathcal{C}_t} w_{\text {snap }}\|v-\bar{v}\|^2
 \]</div>
 <ul>
-<li>其中, 可学习的参数包括 <span class="arithmatex">\(\mathbf{W}_i^{(q)} \in \mathbb{R}^{p q \times d_q} 、 \mathbf{W}_i^{(k)} \in \mathbb{R}^{p k \times d k}\)</span> 和 <span class="arithmatex">\(\mathbf{W}_i^{(v)} \in \mathbb{R}^{p v \times d v}\)</span>, 以及代表注意力汇聚的函数 <span class="arithmatex">\(f\)</span></li>
-<li><span class="arithmatex">\(f\)</span> 可以是加性注意力和缩放点积注意力</li>
-<li>多头注意力的输出需要经过另一个线性转换, 它对应着 <span class="arithmatex">\(h\)</span> 个头连结后的结果, 因此其可学习参数是<span class="arithmatex">\(\mathbf{W}_o \in \mathbb{R}^{p_o \times h p_v}\)</span></li>
-</ul>
-<div class="arithmatex">\[
-\mathbf{W}_o\left[\begin{array}{c}
-\mathbf{h}_1 \\
-\vdots \\
-\mathbf{h}_h
-\end{array}\right] \in \mathbb{R}^{p_o}
-\]</div>
-<h3 id="_8">有掩码的多头注意力<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<ul>
-<li>decoder 对序列中的一个元素输出时，不应该考虑此元素之后的元素</li>
-<li>这可以通过掩码来实现，也就是计算 <span class="arithmatex">\(\mathbf{x_i}\)</span> 的输出时，假装当前的序列长度仅为 <span class="arithmatex">\(i\)</span></li>
-</ul>
-<h3 id="_9">基于位置的前馈网络<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<ul>
-<li>其实就是全连接层，<span class="arithmatex">\(b\)</span> 是 batch size，<span class="arithmatex">\(n\)</span> 是序列长度，<span class="arithmatex">\(d\)</span> 是维度</li>
-<li>对序列中的每个元素做全连接，把序列中的每一个 <span class="arithmatex">\(x_i\)</span> 当作一个样本，网络做如下操作<ul>
-<li>将输入形状由 <span class="arithmatex">\((b, n, d)\)</span> 变换成 <span class="arithmatex">\((b n, d)\)</span> </li>
-<li>作用两个全连接层</li>
-<li>输出形状由 <span class="arithmatex">\((b n, d)\)</span> 变化回 <span class="arithmatex">\((b, n, d)\)</span></li>
-</ul>
-</li>
-<li>等价于两层核窗口为 1 的一维卷积层</li>
-</ul>
-<h3 id="_10">层归一化<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
-<ul>
-<li>批量归一化（batch norm）对每个特征/通道里元素进行归一化<ul>
-<li>不适合序列长度会变的 NLP 应用</li>
-</ul>
-</li>
-<li>层归一化（layer norm）对每个样本里的元素进行归一化</li>
-</ul>
-<p><img alt="image-20230608143539565" src="../assets/image-20230608143539565.png" /></p>
-<h3 id="_11">信息传递<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p>信息怎么从 encoder 传到 decoder</p>
-</blockquote>
-<ul>
-<li>对于编码器中的输出 <span class="arithmatex">\(\mathbf{y}_1, \ldots, \mathbf{y}_n\)</span></li>
-<li>将其作为解码中第 <span class="arithmatex">\(i\)</span> 个Transformer块中多头注意力的key和value<ul>
-<li>它的 query 来自目标序列</li>
-<li>之前的两个 Multi-head attention 采用的是自注意力 </li>
-</ul>
-</li>
-<li>意味着编码器和解码器中块的个数和输出维度都是一样的</li>
-</ul>
-<h3 id="_12">预测<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
-<ul>
-<li>预测第 <span class="arithmatex">\(t+1\)</span> 个输出时</li>
-<li>解码器中输入前 <span class="arithmatex">\(t\)</span> 个预测值<ul>
-<li>在自注意力中, 前 <span class="arithmatex">\(t\)</span> 个预测值作为 key 和 value, 第 <span class="arithmatex">\(t\)</span> 个预测值还作为 query，输出第 <span class="arithmatex">\(t+1\)</span> 时刻的预测</li>
+<li>Choose Tangent Direction<ul>
+<li>trace the streamlines in each of the two frame field directions</li>
+<li>count the number of black pixels encountered by each streamline</li>
+<li>direction with more black pixels is the tangent direction</li>
+<li>Note: black dots correspond to cases when the two pixel counts are very close, in which cas we leave the triangle unlabelled and we don't use it for snapping</li>
 </ul>
 </li>
 </ul>
-<p><img alt="image-20230608144358885" src="../assets/image-20230608144358885.png" /></p>
+<p><img alt="image-20230718175024482" src="../assets/image-20230718175024482.png" /></p>
+<p>- <span class="arithmatex">\(\varepsilon E_{r e g}:\)</span> L2 regression</p>
+<h3 id="extraction-fitting">Extraction &amp; Fitting<a class="headerlink" href="#extraction-fitting" title="Permanent link">&para;</a></h3>
+<ul>
+<li>QEx [Ebke et al.: "QEx: Robust Quad Mesh Extraction", ACMIOG (SIGGRAPH Asia) 2013.]</li>
+<li>only extract tangent edges (identified using the tangent labels)</li>
+</ul>
+<p><img alt="image-20230718175148466" src="../assets/image-20230718175148466.png" /></p>
+<h2 id="result">Result<a class="headerlink" href="#result" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20230718175105610" src="../assets/image-20230718175105610.png" /></p>
+<p><img alt="image-20230718175111470" src="../assets/image-20230718175111470.png" /></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 27, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 18, 2023</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 6, 2023</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 18, 2023</span>
       
     
   </small>
@@ -7413,7 +7217,7 @@ a\left(\mathbf{q}, \mathbf{k}_{\mathbf{i}}\right)=\left\langle\mathbf{q}, \mathb
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.path", "navigation.tracking", "navigation.indexes", "navigation.top", "navigation.expand", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

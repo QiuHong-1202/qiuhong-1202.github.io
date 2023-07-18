@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../Attention/">
+        <link rel="prev" href="../Pytorch/">
       
       
-        <link rel="next" href="../Conv/">
+        <link rel="next" href="../../Paper%20Reading/%5BEG20%5D%20Integer-Grid%20Sketch%20Simplification%20and%20Vectorization/">
       
       <link rel="icon" href="../../../images/snowman-circle.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
-        <title>Concepts in Deep Learning - Hongliang's Wiki</title>
+        <title>Sequence & RNN - Hongliang's Wiki</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#concepts-in-deep-learning" class="md-skip">
+        <a href="#sequence-rnn" class="md-skip">
           Skip to content
         </a>
       
@@ -2911,7 +2911,7 @@ z"/>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Concepts in Deep Learning
+              Sequence & RNN
             
           </span>
         </div>
@@ -6197,6 +6197,8 @@ z"/>
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -6286,7 +6288,7 @@ z"/>
   
   
     <li class="md-nav__item">
-      <a href="../Attention/" class="md-nav__link">
+      <a href="../Attention%20%26%20Transformer/" class="md-nav__link">
         Attention & Transformer
       </a>
     </li>
@@ -6298,357 +6300,11 @@ z"/>
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Concepts in Deep Learning
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Concepts%20in%20Deep%20Learning/" class="md-nav__link">
         Concepts in Deep Learning
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    梯度
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    线性模型
-  </a>
-  
-    <nav class="md-nav" aria-label="线性模型">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    线性模型的实例
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    抽象的线性模型
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    损失函数
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    训练数据
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    参数学习
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    基本优化方法
-  </a>
-  
-    <nav class="md-nav" aria-label="基本优化方法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    梯度下降
-  </a>
-  
-    <nav class="md-nav" aria-label="梯度下降">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    学习率
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#batch" class="md-nav__link">
-    小批量 (batch) 随机梯度下降
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mlp" class="md-nav__link">
-    多层感知机 MLP
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    模型选择
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    过拟合和欠拟合
-  </a>
-  
-    <nav class="md-nav" aria-label="过拟合和欠拟合">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#weight-decay" class="md-nav__link">
-    权重衰退 Weight Decay
-  </a>
-  
-    <nav class="md-nav" aria-label="权重衰退 Weight Decay">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    使用均方范数作为硬性限制
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    使用均方范数作为柔性限制
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
-    参数更新法则
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dropout" class="md-nav__link">
-    丢弃法 Dropout
-  </a>
-  
-    <nav class="md-nav" aria-label="丢弃法 Dropout">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
-    无偏差的加入噪音
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
-    使用丢弃法
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
-    数值稳定性
-  </a>
-  
-    <nav class="md-nav" aria-label="数值稳定性">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
-    网络的梯度
-  </a>
-  
-    <nav class="md-nav" aria-label="网络的梯度">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mlp_1" class="md-nav__link">
-    MLP 的例子
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
-    梯度爆炸
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_21" class="md-nav__link">
-    梯度消失
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_22" class="md-nav__link">
-    权重初始化
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#latent-hidden-variable" class="md-nav__link">
-    Latent &amp; hidden variable
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_23" class="md-nav__link">
-    前向和反向传播
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#encoder-decoder" class="md-nav__link">
-    Encoder &amp; Decoder 架构
-  </a>
-  
-    <nav class="md-nav" aria-label="Encoder &amp; Decoder 架构">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#general" class="md-nav__link">
-    General
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cnn" class="md-nav__link">
-    CNN
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rnn" class="md-nav__link">
-    RNN
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fine-tuning" class="md-nav__link">
-    微调 Fine-tuning
-  </a>
-  
-    <nav class="md-nav" aria-label="微调 Fine-tuning">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_24" class="md-nav__link">
-    重用分类器权重
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_25" class="md-nav__link">
-    固定一些层
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -6660,7 +6316,7 @@ z"/>
   
   
     <li class="md-nav__item">
-      <a href="../Conv/" class="md-nav__link">
+      <a href="../Convolution%20%26%20CNN/" class="md-nav__link">
         Convolution & CNN
       </a>
     </li>
@@ -6686,10 +6342,206 @@ z"/>
               
   
   
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Sequence & RNN
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Sequence & RNN
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    序列模型
+  </a>
+  
+    <nav class="md-nav" aria-label="序列模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    马尔可夫假设
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#latent-variable" class="md-nav__link">
+    潜变量模型 latent variable
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    语言模型
+  </a>
+  
+    <nav class="md-nav" aria-label="语言模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    使用计数来建模
+  </a>
+  
+    <nav class="md-nav" aria-label="使用计数来建模">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#n" class="md-nav__link">
+    N元语法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    循环神经网络
+  </a>
+  
+    <nav class="md-nav" aria-label="循环神经网络">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perplexity" class="md-nav__link">
+    困惑度（perplexity）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    梯度裁剪
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lstm" class="md-nav__link">
+    LSTM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    深层循环神经网络
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    双向循环神经网络
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          Paper Reading
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Paper Reading
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
   
     <li class="md-nav__item">
-      <a href="../RNN/" class="md-nav__link">
-        Sequence & RNN
+      <a href="../../Paper%20Reading/%5BEG20%5D%20Integer-Grid%20Sketch%20Simplification%20and%20Vectorization/" class="md-nav__link">
+        [EG20] Integer Grid Sketch Simplification and Vectorization
       </a>
     </li>
   
@@ -7151,30 +7003,56 @@ z"/>
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    梯度
+    序列模型
   </a>
+  
+    <nav class="md-nav" aria-label="序列模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    马尔可夫假设
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#latent-variable" class="md-nav__link">
+    潜变量模型 latent variable
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    线性模型
+  <a href="#_3" class="md-nav__link">
+    语言模型
   </a>
   
-    <nav class="md-nav" aria-label="线性模型">
+    <nav class="md-nav" aria-label="语言模型">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    线性模型的实例
+  <a href="#_4" class="md-nav__link">
+    使用计数来建模
+  </a>
+  
+    <nav class="md-nav" aria-label="使用计数来建模">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#n" class="md-nav__link">
+    N元语法
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    抽象的线性模型
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
@@ -7185,279 +7063,49 @@ z"/>
       
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
-    损失函数
+    循环神经网络
   </a>
+  
+    <nav class="md-nav" aria-label="循环神经网络">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perplexity" class="md-nav__link">
+    困惑度（perplexity）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    梯度裁剪
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    训练数据
+  <a href="#lstm" class="md-nav__link">
+    LSTM
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
-    参数学习
+    深层循环神经网络
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
-    基本优化方法
+    双向循环神经网络
   </a>
-  
-    <nav class="md-nav" aria-label="基本优化方法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    梯度下降
-  </a>
-  
-    <nav class="md-nav" aria-label="梯度下降">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    学习率
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#batch" class="md-nav__link">
-    小批量 (batch) 随机梯度下降
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mlp" class="md-nav__link">
-    多层感知机 MLP
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    模型选择
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    过拟合和欠拟合
-  </a>
-  
-    <nav class="md-nav" aria-label="过拟合和欠拟合">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#weight-decay" class="md-nav__link">
-    权重衰退 Weight Decay
-  </a>
-  
-    <nav class="md-nav" aria-label="权重衰退 Weight Decay">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    使用均方范数作为硬性限制
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    使用均方范数作为柔性限制
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
-    参数更新法则
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dropout" class="md-nav__link">
-    丢弃法 Dropout
-  </a>
-  
-    <nav class="md-nav" aria-label="丢弃法 Dropout">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
-    无偏差的加入噪音
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
-    使用丢弃法
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
-    数值稳定性
-  </a>
-  
-    <nav class="md-nav" aria-label="数值稳定性">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
-    网络的梯度
-  </a>
-  
-    <nav class="md-nav" aria-label="网络的梯度">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mlp_1" class="md-nav__link">
-    MLP 的例子
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
-    梯度爆炸
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_21" class="md-nav__link">
-    梯度消失
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_22" class="md-nav__link">
-    权重初始化
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#latent-hidden-variable" class="md-nav__link">
-    Latent &amp; hidden variable
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_23" class="md-nav__link">
-    前向和反向传播
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#encoder-decoder" class="md-nav__link">
-    Encoder &amp; Decoder 架构
-  </a>
-  
-    <nav class="md-nav" aria-label="Encoder &amp; Decoder 架构">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#general" class="md-nav__link">
-    General
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cnn" class="md-nav__link">
-    CNN
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rnn" class="md-nav__link">
-    RNN
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fine-tuning" class="md-nav__link">
-    微调 Fine-tuning
-  </a>
-  
-    <nav class="md-nav" aria-label="微调 Fine-tuning">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_24" class="md-nav__link">
-    重用分类器权重
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_25" class="md-nav__link">
-    固定一些层
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -7479,440 +7127,172 @@ z"/>
   
 
 
-<h1 id="concepts-in-deep-learning">Concepts in Deep Learning<a class="headerlink" href="#concepts-in-deep-learning" title="Permanent link">&para;</a></h1>
-<h2 id="_1">梯度<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>我们可以连结一个多元函数对其所有变量的偏导数, 以得到该函数的梯度 (gradient) 向量。具体而言, 设函数 <span class="arithmatex">\(f: \mathbb{R}^n \rightarrow \mathbb{R}\)</span> 的输入是 <span class="arithmatex">\(一\)</span> 个 <span class="arithmatex">\(n\)</span> 维向量 <span class="arithmatex">\(\mathbf{x}=\left[x_1, x_2, \ldots, x_n\right]^{\top}\)</span>, 并且输出是一个标量。函数 <span class="arithmatex">\(f(\mathbf{x})\)</span> 相对于 <span class="arithmatex">\(\mathbf{x}\)</span> 的梯度是一个包含 <span class="arithmatex">\(n\)</span> 个偏导数的向量:</p>
-<div class="arithmatex">\[
-\nabla_{\mathbf{x}} f(\mathbf{x})=\left[\frac{\partial f(\mathbf{x})}{\partial x_1}, \frac{\partial f(\mathbf{x})}{\partial x_2}, \ldots, \frac{\partial f(\mathbf{x})}{\partial x_n}\right]^{\top}
-\]</div>
-<p>其中 <span class="arithmatex">\(\nabla_{\mathbf{x}} f(\mathbf{x})\)</span> 通常在没有歧义时被 <span class="arithmatex">\(\nabla f(\mathbf{x})\)</span> 取代。</p>
-<p>假设 <span class="arithmatex">\(\mathrm{x}\)</span> 为 <span class="arithmatex">\(n\)</span> 维向量, 在微分多元函数时经常使用以下规则:</p>
+<h1 id="sequence-rnn">Sequence &amp; RNN<a class="headerlink" href="#sequence-rnn" title="Permanent link">&para;</a></h1>
+<h2 id="_1">序列模型<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>对于所有 <span class="arithmatex">\(\mathbf{A} \in \mathbb{R}^{m \times n}\)</span>, 都有 <span class="arithmatex">\(\nabla_{\mathbf{x}} \mathbf{A} \mathbf{x}=\mathbf{A}^{\top}\)</span></li>
-<li>对于所有 <span class="arithmatex">\(\mathbf{A} \in \mathbb{R}^{n \times m}\)</span>, 都有 <span class="arithmatex">\(\nabla_{\mathbf{x}} \mathbf{x}^{\top} \mathbf{A}=\mathbf{A}\)</span></li>
-<li>对于所有 <span class="arithmatex">\(\mathbf{A} \in \mathbb{R}^{n \times n}\)</span>, 都有 <span class="arithmatex">\(\nabla_{\mathbf{x}} \mathbf{x}^{\top} \mathbf{A} \mathbf{x}=\left(\mathbf{A}+\mathbf{A}^{\top}\right) \mathbf{x}\)</span></li>
-<li><span class="arithmatex">\(\nabla_{\mathbf{x}}\|\mathbf{x}\|^2=\nabla_{\mathbf{x}} \mathbf{x}^{\top} \mathbf{x}=2 \mathbf{x}\)</span>  (<a href="https://math.stackexchange.com/questions/132415/vector-derivation-of-xtx">P.S. Vector derivation of <span class="arithmatex">\(x^Tx\)</span></a>)</li>
+<li>在时间 <span class="arithmatex">\(t\)</span> 观察到 <span class="arithmatex">\(x_t\)</span>, 那么得到 <span class="arithmatex">\(T\)</span> 个不独立的随机变量 <span class="arithmatex">\(\left(x_1, \ldots x_T\right) \sim p(\mathbf{x})\)</span></li>
+<li>使用条件概率展开</li>
 </ul>
-<p>同样, 对于任何矩阵 <span class="arithmatex">\(\mathbf{X}\)</span>, 都有 <span class="arithmatex">\(\nabla_{\mathbf{X}}\|\mathbf{X}\|_F^2=2 \mathbf{X}\)</span> 。</p>
-<h2 id="_2">线性模型<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="_3">线性模型的实例<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>考虑一个房屋的价格的线性假设 [P.S. 指目标（房屋价格）可以表示为特征（面积和房龄）的加权和] </p>
 <div class="arithmatex">\[
-\text { price }=w_{\text {area }} \cdot \text { area }+w_{\text {age }} \cdot \text { age }+b
+p(a, b)=p(a) p(b \mid a)=p(b) p(a \mid b)
 \]</div>
 <ul>
-<li>上式中的 <span class="arithmatex">\(w_{\text {area }}\)</span> 和 <span class="arithmatex">\(w_{\text {age }}\)</span> 称为权重（weight），权重决定了每个特征对我们预测值的影响。 </li>
-<li><span class="arithmatex">\(b\)</span> 称为偏置（bias）、偏移量（offset） 或截距 (intercept)。 偏置是指当所有特征都取值为 <span class="arithmatex">\(0\)</span> 时, 预测值应该为多少。<ul>
-<li>即使现实中不会有任何房子的面积是 0 或房龄正好是 0 年, 我们仍然需要偏置项。如果没有偏置项, 我们模型的表达能力将受到限制。</li>
+<li>对条件概率建模：给定前面的 <span class="arithmatex">\(t-1\)</span> 个数据去预测第 <span class="arithmatex">\(t\)</span> 个数据，可以用以下公式表示<ul>
+<li>对见过的数据建模，也称为<strong>自回归模型</strong></li>
+<li>目标是计算 <span class="arithmatex">\(f(x_1, \ldots x_{t-1})\)</span></li>
 </ul>
 </li>
-<li>严格来说，上式是输入特征的一个仿射变换 (affine transformation）。仿射变换的特点是通过加权和对特征进行线性变换（linear transformation），并通过偏置项来进行平移 (translation)。</li>
-</ul>
-<h3 id="_4">抽象的线性模型<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>对于 <span class="arithmatex">\(n\)</span> 维输入 <span class="arithmatex">\([x_1,x_2...x_n]^T\)</span>，线性模型有 <span class="arithmatex">\(n\)</span> 维权重 <span class="arithmatex">\([w_1,w_2...w_n]^T\)</span> 和一个标量偏差 <span class="arithmatex">\(b\)</span></p>
-<p>当输入包含 <span class="arithmatex">\(d\)</span> 个特征时，预测结果 <span class="arithmatex">\(\hat{y}\)</span> 可以表示为</p>
-<div class="arithmatex">\[
-\hat{y}=w_1 x_1+\ldots+w_d x_d+b
-\]</div>
-<p>[向量版本] 将所有特征放到向量 <span class="arithmatex">\(\mathbf{x} \in \mathbb{R}^d\)</span> 中, 并将所有权重放到向量 <span class="arithmatex">\(\mathbf{w} \in \mathbb{R}^d\)</span> 中, 我们可以用点积形式来简洁地表达模型：</p>
-<div class="arithmatex">\[
-\hat{y}=\mathbf{w}^{\top} \mathbf{x}+b .
-\]</div>
-<blockquote>
-<p>下面将通过这个例子描述概念</p>
-</blockquote>
-<h2 id="_5">损失函数<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<ul>
-<li>衡量预估质量的指标，越小越好</li>
-<li>通过比较真实值和预估值的方式实现，例如房屋的实际售价和估价</li>
-<li>e.g. 假设 <span class="arithmatex">\(y\)</span> 是真实值，<span class="arithmatex">\(\hat{y}\)</span> 是估计值，我们可以比较</li>
 </ul>
 <div class="arithmatex">\[
-\ell(y, \hat{y})=\frac{1}{2}(y-\hat{y})^2
+p\left(x_t \mid x_1, \ldots x_{t-1}\right)=p\left(x_t \mid f\left(x_1, \ldots x_{t-1}\right)\right)
 \]</div>
-<blockquote>
+<h3 id="_2">马尔可夫假设<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
-<li>这就是平方损失</li>
+<li>假设当前当前数据只跟 <span class="arithmatex">\(\tau\)</span> 个过去数据点相关</li>
+</ul>
+<h3 id="latent-variable">潜变量模型 latent variable<a class="headerlink" href="#latent-variable" title="Permanent link">&para;</a></h3>
+<ul>
+<li>引人潜变量 <span class="arithmatex">\(h_t\)</span> 来表示过去信息 <span class="arithmatex">\(h_t=f\left(x_1, \ldots x_{t-1}\right)\)</span><ul>
+<li>这样 <span class="arithmatex">\(x_t=p\left(x_t \mid h_t\right)\)</span></li>
+</ul>
+</li>
+</ul>
+<h2 id="_3">语言模型<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>给定文本序列 <span class="arithmatex">\(x_1, \ldots, x_T\)</span>，语言模型的目标是估计联合概率 <span class="arithmatex">\(p\left(x_1, \ldots, x_T\right)\)</span>，使用统计方法时常采用 <span class="arithmatex">\(n\)</span> 元语法</li>
 </ul>
 <ul>
-<li>常数 <span class="arithmatex">\(\frac{1}{2}\)</span> 不会带来本质的差别，但这样在形式上稍微简单一些 （因为当我们对损失函数求导后常数系数为1）</li>
+<li>它的应用包括：<ul>
+<li>做预训练模型 (eg BERT, GPT-3)</li>
+<li>生成本文, 给定前面几个词, 不断的使用 <span class="arithmatex">\(x_t \sim p\left(x_t \mid x_1, \ldots, x_{t-1}\right)\)</span> 来 生成后续文本</li>
+<li>判断多个序列中哪个更常见, e.g. “to recognize speech” vs "to wreck a nice beach</li>
 </ul>
-</blockquote>
-<h2 id="_6">训练数据<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<ul>
-<li>收集一些数据点来决定参数值（权重 <span class="arithmatex">\(w\)</span> 和偏差 <span class="arithmatex">\(b\)</span>）</li>
-<li>这就是训练数据，通常越多越好</li>
-<li>假设我们有 <span class="arithmatex">\(n\)</span> 个样本，记 <span class="arithmatex">\(X=[x_1,x_2...x_n]^T, y=[y_1,y_2...y_n]^T\)</span> </li>
+</li>
 </ul>
-<h2 id="_7">参数学习<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h3 id="_4">使用计数来建模<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>看这个序列在文本中出现的次数，除以句子长度</p>
 <ul>
-<li>训练损失：就是对每一个数据上的损失求一个均值</li>
+<li>假设序列长度为 <span class="arithmatex">\(2\)</span> , 我们预测<ul>
+<li>这里 <span class="arithmatex">\(n\)</span> 是总词数, <span class="arithmatex">\(n(x), n\left(x, x^{\prime}\right)\)</span> 是单个单词和连续单词对的出现次数</li>
+</ul>
+</li>
 </ul>
 <div class="arithmatex">\[
-\ell(X,y,w,b)=\frac{1}{2}\times \frac{1}{n}\sum_{i=1}^{n}(y_i-\hat{y_i})^2 = \frac{1}{2n}\sum_{i=1}^{n}(y_i-&lt;x_i,w&gt;-b)^2
-\]</div>
-<p>写成向量形式为</p>
-<div class="arithmatex">\[
-\frac{1}{2n}||y-Xw-b||^2
+p\left(x, x^{\prime}\right)=p(x) p\left(x^{\prime} \mid x\right)=\frac{n(x)}{n} \frac{n\left(x, x^{\prime}\right)}{n(x)}
 \]</div>
 <ul>
-<li>训练目标：找到 <span class="arithmatex">\(w,b\)</span> ，使得 <span class="arithmatex">\(\ell(X,y,w,b)\)</span> 是最小的，可以写成如下形式</li>
+<li>很容易拓展到长为 <span class="arithmatex">\(3\)</span> 的情况</li>
 </ul>
 <div class="arithmatex">\[
-w^*,b^*=\arg{\min_{w,b}{\ell(X,y,w,b)}}
+p\left(x, x^{\prime}, x^{\prime \prime}\right)=p(x) p\left(x^{\prime} \mid x\right) p\left(x^{\prime \prime} \mid x, x^{\prime}\right)=\frac{n(x)}{n} \frac{n\left(x, x^{\prime}\right)}{n(x)} \frac{n\left(x, x^{\prime}, x^{\prime \prime}\right)}{n\left(x, x^{\prime}\right)}
 \]</div>
-<p>线性模型是存在解析解的，我们可以直接求出线性模型的最优解。在求解时，为了方便起见，我们将偏差 <span class="arithmatex">\(b\)</span> 加入权重 <span class="arithmatex">\(w\)</span> 的矩阵中，使其成为一个特征，对于矩阵 <span class="arithmatex">\(X\)</span>，就添加一个全 <span class="arithmatex">\(1\)</span> 的列来保证二者相乘是有效的，于是</p>
-<div class="arithmatex">\[
-\ell(X,y,w,b)=\ell(X,y,w') = \frac{1}{2n}||y-Xw||^2
-\]</div>
-<p>由于这是一个凸函数，最小值在梯度为 <span class="arithmatex">\(0\)</span> 时取到，因此令</p>
-<div class="arithmatex">\[
-\frac{\partial{\ell(X,y,w)}}{\partial{w}}=\frac{1}{n}(y-Xw)^TX= 0
-\]</div>
-<p>解上式有</p>
-<div class="arithmatex">\[
-\displaylines{\frac{1}{n}(y-Xw)^TX=0\\
-y^TX-(w^TX^T)X=0 \\
-w^T=y^TX(X^TX)^{-1} \\}
-\]</div>
-<p>于是</p>
-<div class="arithmatex">\[
+<h4 id="n">N元语法<a class="headerlink" href="#n" title="Permanent link">&para;</a></h4>
+<ul>
+<li>当序列很长时, 因为文本量不够大, 很可能 <span class="arithmatex">\(n\left(x_1, \ldots, x_T\right) \leq 1\)</span></li>
+<li>使用马尔科夫假设可以缓解这个问题</li>
+</ul>
+<p>一元语法 (<span class="arithmatex">\(\tau = 0\)</span>) :
+$$
 \begin{aligned}
- w &amp;= [y^TX(X^TX)^{-1}]^T &amp;\\
- &amp;=[(y^TX)(X^TX)^{-1}]^T&amp;\\
- &amp;=[(X^TX)^{-1}]^T(y^TX)^T&amp;\\
- &amp;=[(X^TX)^{T}]^{-1}(y^TX)^T&amp;\\
- &amp;=(X^TX)^{-1}(X^Ty)&amp;
-\end{aligned}
-\]</div>
-<h2 id="_8">基本优化方法<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
-<p>如果不采用解析做法，或者模型无法使用解析方法求解的时候，需要使用优化的方法来求解</p>
-<h3 id="_9">梯度下降<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<p>在求解参数的时候，对于参数 <span class="arithmatex">\(w\)</span>，对其赋予一个随机初值 <span class="arithmatex">\(w_0\)</span>，在规定的步数 <span class="arithmatex">\(t = t_1,t_2,t_3,...,t_n\)</span> 内，更新 <span class="arithmatex">\(w_{t_i}\)</span> 的值。并且，<span class="arithmatex">\(w_{t}\)</span> 和 <span class="arithmatex">\(w_{t-1}\)</span> 之间有如下关系</p>
-<div class="arithmatex">\[
-w_t = w_{t-1} - \eta\frac{\partial{\ell}}{\partial{w_{t-1}}}
-\]</div>
-<h4 id="_10">学习率<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
-<ul>
-<li><span class="arithmatex">\(\eta\)</span> 是学习率，也就是每一次梯度下降的步长，它是一个超参数<ul>
-<li>注意：计算梯度的开销是很大的，在选择学习率时要选择一个合适的值</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>超参数：人为指定的值</p>
-</blockquote>
-<h3 id="batch">小批量 (batch) 随机梯度下降<a class="headerlink" href="#batch" title="Permanent link">&para;</a></h3>
-<p>由于计算全部样本的梯度开销还是太大，所以采用随机采样 <span class="arithmatex">\(b\)</span> 个样本 <span class="arithmatex">\(i_1,i_2,...,i_b\)</span>  的方法来近似损失，<span class="arithmatex">\(b\)</span> 的值叫做 batch size，它也是一个超参数，小批量随机采样的损失为</p>
-<div class="arithmatex">\[
-\frac{1}{b}\sum_{i\in I_b}\ell(x_i,y_i,w)
-\]</div>
-<h2 id="mlp">多层感知机 MLP<a class="headerlink" href="#mlp" title="Permanent link">&para;</a></h2>
-<ul>
-<li>也被称作 <strong>前馈神经网络</strong>（feedforward neural network）</li>
-<li><a href="https://zh.d2l.ai/chapter_multilayer-perceptrons/mlp.html">参考</a></li>
-</ul>
-<p>我们可以通过在网络中加入一个或多个隐藏层来克服线性模型的限制, 使其能处理更普遍的函数关系类型。要做到这一点，最简单的方法是将许多全连接层堆叠在一起。每一层都输出到上面的层，直到生成最后的输出。我们可以把前 <span class="arithmatex">\(L-1\)</span> 层看作表示，把最后一层看作线性预测器。这种 架构通常称为<strong>多层感知机</strong>（multilayer perceptron），通常缩写为 MLP。</p>
-<p><img alt="../_images/mlp.svg" src="https://zh.d2l.ai/_images/mlp.svg" /></p>
-<h2 id="_11">模型选择<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
-<ul>
-<li>训练误差：模型在训练数据上的误差</li>
-<li>泛化误差：模型在新数据上的误差</li>
-<li>验证数据集：评估模型好坏的数据集<ul>
-<li>验证数据集可以用来调整超参数</li>
-<li>很多时候为了方便在代码中直接都叫 <code>test_data</code> 但实际上它是验证数据集</li>
-</ul>
-</li>
-<li>测试数据集：只用一次的数据集<ul>
-<li>未来的考试</li>
-<li>出价房子的实际成交价</li>
-</ul>
-</li>
-<li><span class="arithmatex">\(K\)</span> 则交叉验证：在训练数据没有那么多的时候，使用它的平均误差判断超参数的好坏</li>
-</ul>
-<h2 id="_12">过拟合和欠拟合<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
-<ul>
-<li>模型容量：拟合各种函数的能力<ul>
-<li>低容量的模型难以拟合训练数据</li>
-<li>高容量的模型可以记住所有的训练数据       </li>
-</ul>
-</li>
-<li>估计模型容量<ul>
-<li>难以在不同种类的算法之间比较</li>
-<li>模型容量要匹配训练复杂度</li>
-<li>给定一个模型种类，将有两个主要因素<ul>
-<li>参数的个数</li>
-<li>参数值的选择范围</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="weight-decay">权重衰退 Weight Decay<a class="headerlink" href="#weight-decay" title="Permanent link">&para;</a></h3>
-<h4 id="_13">使用均方范数作为硬性限制<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
-<ul>
-<li>通过限制参数值的选择范围来控制模型容量 </li>
-</ul>
-<div class="arithmatex">\[
-\min \ell(\mathbf{w}, b)\text{ subject to }\|\mathbf{w}\|^2 \leq \theta
-\]</div>
-<ul>
-<li>其中 <span class="arithmatex">\(\ell\)</span> 为损失函数，<span class="arithmatex">\(\mathbf{w}, b\)</span> 为参数，在最小化 loss 的时候加入一个限制，使得权重 <span class="arithmatex">\(\mathbf{w}\)</span> 的 <span class="arithmatex">\(L_2\)</span> norm 小于 <span class="arithmatex">\(\theta\)</span> </li>
-<li>通常不限制偏移 <span class="arithmatex">\(b\)</span> （但是限不限制都差不多）</li>
-<li>小的 <span class="arithmatex">\(\theta\)</span> 意味着更强的正则项（对 <span class="arithmatex">\(\mathbf{w}\)</span> 值的限制强）</li>
-</ul>
-<h4 id="_14">使用均方范数作为柔性限制<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
-<ul>
-<li>对每个 <span class="arithmatex">\(\theta\)</span>, 都可以找到 <span class="arithmatex">\(\lambda\)</span> 使得之前的目标函数（使用均方范数作为硬性限制）等价于下面的公式<ul>
-<li>可以通过拉格朗日乘子来证明</li>
-<li>后面的项可以被成为惩罚项 (penalty)</li>
-</ul>
-</li>
-</ul>
-<div class="arithmatex">\[
-\min \ell(\mathbf{w}, b)+\frac{\lambda}{2}\|\mathbf{w}\|^2
-\]</div>
-<ul>
-<li>超参数 <span class="arithmatex">\(\lambda\)</span> 控制了正则项的重要程度<ul>
-<li><span class="arithmatex">\(\lambda=0\)</span> ：无作用</li>
-<li><span class="arithmatex">\(\lambda \rightarrow \infty, \mathbf{w}^* \rightarrow \mathbf{0}\)</span></li>
-</ul>
-</li>
-</ul>
-<h4 id="_15">参数更新法则<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
-<ul>
-<li>计算梯度</li>
-</ul>
-<div class="arithmatex">\[
-\frac{\partial}{\partial \mathbf{w}}\left(\ell(\mathbf{w}, b)+\frac{\lambda}{2}\|\mathbf{w}\|^2\right)=\frac{\partial \ell(\mathbf{w}, b)}{\partial \mathbf{w}}+\lambda \mathbf{w}
-\]</div>
-<ul>
-<li>时间 <span class="arithmatex">\(t\)</span> 更新参数</li>
-</ul>
-<div class="arithmatex">\[
+p\left(x_1, x_2, x_3, x_4\right) &amp; =p\left(x_1\right) p\left(x_2\right) p\left(x_3\right) p\left(x_4\right) \
+&amp; =\frac{n\left(x_1\right)}{n} \frac{n\left(x_2\right)}{n} \frac{n\left(x_3\right)}{n} \frac{n\left(x_4\right)}{n} \</p>
+<p>\end{aligned}
+<span class="arithmatex">\(<span class="arithmatex">\(
+二元语法 (\)</span>\tau = 1\)</span>) :
+<span class="arithmatex">\(<span class="arithmatex">\(
 \begin{aligned}
- \mathbf{w}_{t+1} &amp;= \mathbf{w}_{t+1} + \eta\frac{\partial}{\partial \mathbf{w}_t}(\ell(\mathbf{w}, b)+\frac{\lambda}{2}\|\mathbf{w}\|^2) &amp;\\
- &amp;=(1-\eta \lambda) \mathbf{w}_t-\eta \frac{\partial \ell\left(\mathbf{w}_t, b_t\right)}{\partial \mathbf{w}_t}&amp;\\
+p\left(x_1, x_2, x_3, x_4\right) &amp; =p\left(x_1\right) p\left(x_2 \mid x_1\right) p\left(x_3 \mid x_2\right) p\left(x_4 \mid x_3\right) \\
+&amp; =\frac{n\left(x_1\right)}{n} \frac{n\left(x_1, x_2\right)}{n\left(x_1\right)} \frac{n\left(x_2, x_3\right)}{n\left(x_2\right)} \frac{n\left(x_3, x_4\right)}{n\left(x_3\right)}
 \end{aligned}
-\]</div>
-<ul>
-<li>通常 <span class="arithmatex">\(\eta \lambda&lt;1\)</span>, 在深度学习中通常叫做权重衰退</li>
-<li>权重衰退通过 <span class="arithmatex">\(L_2\)</span> 正则项使得模型参数不会过大，从而控制模型复杂度</li>
-<li>正则项权重是控制模型复杂度的超参数</li>
-</ul>
-<h3 id="dropout">丢弃法 Dropout<a class="headerlink" href="#dropout" title="Permanent link">&para;</a></h3>
-<ul>
-<li>一个好的模型需要对输入的数据的扰动健壮</li>
-<li>使用有噪音的数据等价于 Tikhonov 正则（随机噪音可以防止过拟合）</li>
-<li>丢弃法：在层之间加入噪音<ul>
-<li>将一些输出项随机置为 <span class="arithmatex">\(0\)</span> 来控制模型的复杂度</li>
-<li>丢弃概率是控制模型复杂度的超参数</li>
-</ul>
-</li>
-</ul>
-<h4 id="_16">无偏差的加入噪音<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
-<ul>
-<li>对 <span class="arithmatex">\(x\)</span> 加入噪音得到 <span class="arithmatex">\(x'\)</span> ，我们希望</li>
-</ul>
-<div class="arithmatex">\[
-E(x')=x
-\]</div>
-<ul>
-<li>丢弃法对每个元素进行如下扰动</li>
-</ul>
-<div class="arithmatex">\[
-x_i^{\prime}= \begin{cases}0 &amp; \text { with probablity } p \\ \frac{x_i}{1-p} &amp; \text { otherise }\end{cases}
-\]</div>
-<h4 id="_17">使用丢弃法<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
-<ul>
-<li>训练时的丢弃法：通常将丢弃法用在训练时隐藏全连接层的输出上</li>
-<li>常作用在 MLP 的隐藏层输出上</li>
-</ul>
-<div class="arithmatex">\[
-\begin{aligned}
-\mathbf{h} &amp; =\sigma\left(\mathbf{W}_1 \mathbf{x}+\mathbf{b}_1\right) \\
-\mathbf{h}^{\prime} &amp; =\operatorname{dropout}(\mathbf{h}) \\
-\mathbf{o} &amp; =\mathbf{W}_2 \mathbf{h}^{\prime}+\mathbf{b}_2 \\
-\mathbf{y} &amp; =\operatorname{softmax}(\mathbf{o})
-\end{aligned}
-\]</div>
-<p><img alt="image-20230530143326431" src="../assets/image-20230530143326431.png" /></p>
-<ul>
-<li>推理中的丢弃法：直接返回输入，等价于不使用 dropout</li>
-</ul>
-<h2 id="_18">数值稳定性<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
-<h3 id="_19">网络的梯度<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
-<ul>
-<li>考虑如下的 <span class="arithmatex">\(d\)</span> 层神经网络</li>
-</ul>
-<div class="arithmatex">\[
-h^t = f_t(h^{t-1}) \quad \text{and} \quad y=\ell \circ f_d \circ \ldots \circ f_1(\mathbf{x})
-\]</div>
-<ul>
-<li>计算损失 <span class="arithmatex">\(\ell\)</span> 关于参数 <span class="arithmatex">\(\textbf{W}_t\)</span> 的梯度，根据链式法则有<ul>
-<li>所有的中间项都是向量对向量求导，得到的结果是矩阵，在这个过程中，需要做大量的矩阵乘法</li>
-<li>这就带来了两个常见的数值稳定性问题：梯度爆炸和梯度消失</li>
-</ul>
-</li>
-</ul>
-<div class="arithmatex">\[
-\frac{\partial \ell}{\partial \mathbf{W}^t}=\frac{\partial \ell}{\partial \mathbf{h}^d} \frac{\partial \mathbf{h}^d}{\partial \mathbf{h}^{d-1}} \ldots \frac{\partial \mathbf{h}^{t+1}}{\partial \mathbf{h}^t} \frac{\partial \mathbf{h}^t}{\partial \mathbf{W}^t}
-\]</div>
-<h4 id="mlp_1">MLP 的例子<a class="headerlink" href="#mlp_1" title="Permanent link">&para;</a></h4>
-<p>对于 MLP （省略偏置项）</p>
-<ul>
-<li><span class="arithmatex">\(f_t\left(\mathbf{h}^{t-1}\right)=\sigma\left(\mathbf{W}^t \mathbf{h}^{t-1}\right) \quad\)</span> <span class="arithmatex">\(\sigma\)</span>  是激活函数</li>
-<li><span class="arithmatex">\(\frac{\partial \mathbf{h}^t}{\partial \mathbf{h}^{t-1}}=\operatorname{diag}\left(\sigma^{\prime}\left(\mathbf{W}^t \mathbf{h}^{t-1}\right)\right)\left(W^t\right)^T \quad \sigma^{\prime}\)</span> 是 <span class="arithmatex">\(\sigma\)</span> 的导数函数</li>
-</ul>
-<p>所以有</p>
-<div class="arithmatex">\[
-\begin{equation}
-\prod_{i=t}^{d-1} \frac{\partial \mathbf{h}^{i+1}}{\partial \mathbf{h}^i}=\prod_{i=t}^{d-1} \operatorname{diag}\left(\sigma^{\prime}\left(\mathbf{W}^i \mathbf{h}^{i-1}\right)\right)\left(W^i\right)^T
-\end{equation}
-\]</div>
-<h4 id="_20">梯度爆炸<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
-<ul>
-<li>如果使用 ReLU 作为上式的激活函数，有</li>
-</ul>
-<div class="arithmatex">\[
-\sigma(x)=\max (0, x) \quad \text { and } \quad \sigma^{\prime}(x)=\left\{\begin{array}{lc}
-1 &amp; \text { if } x&gt;0 \\
-0 &amp; \text { otherwise }
-\end{array}\right.
-\]</div>
-<p><span class="arithmatex">\(\prod_{i=t}^{d-1} \frac{\partial \mathbf{h}^{i+1}}{\partial \mathbf{h}^i}=\prod_{i=t}^{d-1} \operatorname{diag}\left(\sigma^{\prime}\left(\mathbf{W}^i \mathbf{h}^{i-1}\right)\right)\left(W^i\right)^T\)</span> 中的一些元素会来自于 <span class="arithmatex">\(\prod_{i=t}^{d-1}\left(W^i\right)^T\)</span> ，如果 <span class="arithmatex">\(d-t\)</span> 很大，值将会很大</p>
-<p>梯度爆炸带来的问题</p>
-<ul>
-<li>梯度超值域：常用的 16bit 精度的浮点数范围仅在（ <span class="arithmatex">\(6\mathbf{e}^{-5} \sim 6\mathbf{e}^4\)</span> ）之间</li>
-<li>模型对学习率敏感，在梯度很大时<ul>
-<li><span class="arithmatex">\(\text{learning rate} \uparrow \quad \longrightarrow\quad w \uparrow \quad \longrightarrow \quad \nabla \uparrow\)</span></li>
-<li><span class="arithmatex">\(\text{learning rate} \downarrow \quad \longrightarrow \quad \text{训练无进展}\)</span></li>
-</ul>
-</li>
-</ul>
-<h4 id="_21">梯度消失<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
-<ul>
-<li>如果使用 sigmoid 作为上式的激活函数，有</li>
-</ul>
-<p><span class="arithmatex">\(<span class="arithmatex">\(
-\sigma(x) = \frac{1}{1+e^{-x}} \quad \sigma'(x)=\sigma(x)(1-\sigma(x)) 
 \)</span>\)</span>
-当输入的值很大时，梯度会很小</p>
-<p>梯度消失带来的问题</p>
+三元语法  (<span class="arithmatex">\(\tau = 2\)</span>) : 
+<span class="arithmatex">\(<span class="arithmatex">\(
+p\left(x_1, x_2, x_3, x_4\right)=p\left(x_1\right) p\left(x_2 \mid x_1\right) p\left(x_3 \mid x_1, x_2\right) p\left(x_4 \mid x_2, x_3\right)
+\)</span>\)</span></p>
+<h2 id="_5">循环神经网络<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20230627103006908" src="../assets/image-20230627103006908.png" /></p>
 <ul>
-<li><span class="arithmatex">\(\nabla \to 0 \quad \longrightarrow \quad \text{训练无进展}\)</span></li>
-<li>底部的层梯度较小，无法让神经网络更深</li>
-</ul>
-<h3 id="_22">权重初始化<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
-<ul>
-<li>在合理值区间里随机初始参数</li>
-<li>训练开始的时候更容易有数值不稳定<ul>
-<li>远离最优解的地方损失函数表面可能 很复杂</li>
-<li>最优解附近表面会比较平</li>
+<li>当前时刻的输出是要去预测当前时刻的观察，输出发生在观察之前，隐变量由 <span class="arithmatex">\(t-1\)</span> 时刻的观察更新</li>
+<li>比较 <span class="arithmatex">\(o_t\)</span> 和 <span class="arithmatex">\(x_t\)</span> 来计算损失</li>
+<li>更新隐藏状态： <span class="arithmatex">\(\mathbf{h}_t=\phi\left(\mathbf{W}_{h h} \mathbf{h}_{t-1}+\mathbf{W}_{h x} \mathbf{x}_{t-1}+\mathbf{b}_h\right)\)</span><ul>
+<li><span class="arithmatex">\(\mathbf{W}_{h h}\)</span>：表示 <span class="arithmatex">\(h\to h\)</span> 的更新</li>
+<li><span class="arithmatex">\(\mathbf{W}_{h x}\)</span>：表示 <span class="arithmatex">\(x\to h\)</span> 的更新</li>
+<li>去掉 <span class="arithmatex">\(\mathbf{W}_{h h} \mathbf{h}_{t-1}\)</span> 就是 MLP</li>
 </ul>
 </li>
-<li>使用 <span class="arithmatex">\(\mathcal{N}(0,0.01)\)</span> 来初始可能对小网络没问题, 但不能保证深度神经网络</li>
+<li>输出： <span class="arithmatex">\(\mathbf{o}_t=\phi\left(\mathbf{W}_{h o} \mathbf{h}_t+\mathbf{b}_o\right)\)</span></li>
 </ul>
-<h2 id="latent-hidden-variable">Latent &amp; hidden variable<a class="headerlink" href="#latent-hidden-variable" title="Permanent link">&para;</a></h2>
+<h3 id="perplexity">困惑度（perplexity）<a class="headerlink" href="#perplexity" title="Permanent link">&para;</a></h3>
 <ul>
-<li>latent variable：可以用来指代现实生活中不存在的东西（类别、标号）</li>
-<li>hidden variable：现实生活中存在只是我们没观察到</li>
-<li>为了简单起见都叫 latent 是没有问题的</li>
-<li><a href="https://ai.stackexchange.com/questions/12499/why-is-it-called-latent-vector">latent vector</a></li>
-<li>latent code: 为了更好的对数据进行分类或生成，需要对数据的特征进行表示，但是数据有很多特征，这些特征之间相互关联，耦合性较高，导致模型很难弄清楚它们之间的关联，使得学习效率低下，因此需要寻找到这些表面特征之下隐藏的深层次的关系，将这些关系进行解耦，得到的隐藏特征，即 latent code</li>
-<li>latent space: 由 latent code 组成的空间</li>
-</ul>
-<h2 id="_23">前向和反向传播<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h2>
-<ul>
-<li>前向传播（forward propagation或 forward pass） 指的是：<strong>按顺序（从输入层到输出层）计算和存储神经网络中每层的结果</strong></li>
-</ul>
-<ul>
-<li>反向传播（backward propagation或 backpropagation）指的是<strong>计算神经网络参数梯度的方法</strong>。简言之, 该方法根据微积分中的链式规则, 按相反 的顺序从输出层到输入层遍历网络。该算法存储了计算某些参数梯度时所需的任何中间变量（偏导数）。假设我们有函数 <span class="arithmatex">\(Y=f(X)\)</span> 和 <span class="arithmatex">\(Z =g(Y)\)</span> , 其中输入和输出 <span class="arithmatex">\(X, Y, Z\)</span> 是任意形状的张量。利用链式法则, 我们可以计算 <span class="arithmatex">\(Z\)</span> 关于 <span class="arithmatex">\(X\)</span> 的导数</li>
+<li>衡量一个语言模型的好坏可以用平均交叉熵</li>
 </ul>
 <div class="arithmatex">\[
-\frac{\partial {Z}}{\partial {X}}=\operatorname{prod}\left(\frac{\partial {Z}}{\partial {Y}}, \frac{\partial {Y}}{\partial {X}}\right)
+\pi=\frac{1}{n} \sum_{i=1}^n-\log p\left(x_t \mid x_{t-1}, \ldots\right)
 \]</div>
-<p>在这里，我们使用 <span class="arithmatex">\(\operatorname{prod}\)</span> 运算符在执行必要的操作（如换位和交换输入位置）后将其参数相乘。对于向量，这很简单，它只是矩阵-矩阵乘法。对于高维张量，我们使用适当的对应项。运算符 <span class="arithmatex">\(\operatorname{prod}\)</span> 指代了所有的这些符号。</p>
-<h2 id="encoder-decoder">Encoder &amp; Decoder 架构<a class="headerlink" href="#encoder-decoder" title="Permanent link">&para;</a></h2>
-<h3 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(p\)</span> 是语言模型的预测概率, <span class="arithmatex">\(x_t\)</span> 是真实词</p>
 <ul>
-<li>
-<p>一个模型被分为两块</p>
-<ul>
-<li>编码器处理输出</li>
+<li>历史原因NLP使用困惑度 <span class="arithmatex">\(\exp (\pi)\)</span> 来衡量, 是平均每次可能选项</li>
+<li><span class="arithmatex">\(1\)</span> 表示完美, 无穷大是最差情况</li>
 </ul>
+<h3 id="_6">梯度裁剪<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <ul>
-<li>解码器生成输出</li>
+<li>迭代中计算这 <span class="arithmatex">\(T\)</span> 个时间步上的梯度, 在反向传播过程中产 生长度为 <span class="arithmatex">\(O(T)\)</span> 的矩阵乘法链, 导致数值不稳定</li>
+<li>梯度裁剪能有效预防梯度爆炸<ul>
+<li>如果梯度长度超过 <span class="arithmatex">\(\theta\)</span>，那么投影回长度 <span class="arithmatex">\(\theta\)</span></li>
 </ul>
 </li>
 </ul>
-<p><img alt="../_images/encoder-decoder.svg" src="https://zh.d2l.ai/_images/encoder-decoder.svg" /></p>
-<h3 id="cnn">CNN<a class="headerlink" href="#cnn" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+\mathbf{g} \leftarrow \min \left(1, \frac{\theta}{\|\mathbf{g}\|}\right) \mathbf{g}
+\]</div>
+<h2 id="lstm">LSTM<a class="headerlink" href="#lstm" title="Permanent link">&para;</a></h2>
 <ul>
-<li>编码器：将输入编程成中间表达形式（特征）</li>
-<li>解码器：将中间表示解码成输出</li>
+<li>包含了长期记忆 <span class="arithmatex">\(c_t\)</span> 的 RNN，当前输出不仅仅由 <span class="arithmatex">\(x_{t-1}\)</span> 和 <span class="arithmatex">\(s_{t}\)</span> 得到，还由长期记忆 <span class="arithmatex">\(c_t\)</span> 控制</li>
 </ul>
-<p><img alt="image-20230627141642029" src="../assets/image-20230627141642029.png" /></p>
-<h3 id="rnn">RNN<a class="headerlink" href="#rnn" title="Permanent link">&para;</a></h3>
+<p><img alt="image-20230627110624920" src="../assets/image-20230627110624920.png" /></p>
 <ul>
-<li>编码器：将文本表示成向量</li>
-<li>解码器：向量表示成输出</li>
-</ul>
-<p><img alt="image-20230627141721844" src="../assets/image-20230627141721844.png" /></p>
-<h2 id="fine-tuning">微调 Fine-tuning<a class="headerlink" href="#fine-tuning" title="Permanent link">&para;</a></h2>
-<ul>
-<li>迁移学习，假设在源数据集上已经训练好的模型的特征提取部分在目标数据集上可以重用 </li>
-<li>微调通过使用在大数据上得到的预训练好的模型来初始化模型权重来完成提升精度（预训练模型质量很重要）</li>
-<li>微调通常速度更快、精度更高</li>
-<li>微调是一个目标数据集上的正常训练任务, 但使用更强的正则化<ul>
-<li>使用更小的学习率</li>
-<li>使用更少的数据迭代</li>
+<li>forget gate：删除长期记忆的过程<ul>
+<li>过滤重要特征，忽略无关信息</li>
 </ul>
 </li>
-<li>源数据集远复杂于目标数据，通常微调效果更好</li>
-</ul>
-<p><img alt="image-20230627143058057" src="../assets/image-20230627143058057.png" /></p>
-<ul>
-<li>微调架构<ul>
-<li>前面的权重使用预训练模型的权重</li>
-<li>输出层的参数随机，从头训练</li>
+<li>input gate：增添长期记忆的过程<ul>
+<li>sigmoid：对内容进行选择</li>
+<li>tanh: 相当于对信息进行整理</li>
 </ul>
 </li>
 </ul>
-<p><img alt="../_images/finetune.svg" src="https://zh.d2l.ai/_images/finetune.svg" /></p>
-<h3 id="_24">重用分类器权重<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<p><img alt="image-20230627110748935" src="../assets/image-20230627110748935.png" /></p>
+<h2 id="_7">深层循环神经网络<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <ul>
-<li>源数据集可能也有目标数据中的部分标号（如相同的类别）</li>
-<li>可以使用预训练好模型分类器中对应标号对应的向量来做初始化</li>
+<li>深度循环神经网络使用多个隐藏层来获得更多的非线性性</li>
 </ul>
-<h3 id="_25">固定一些层<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<p><img alt="image-20230627133639908" src="../assets/image-20230627133639908.png" /></p>
+<h2 id="_8">双向循环神经网络<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <ul>
-<li>神经网络通常学习有层次的特征表示<ul>
-<li>低层次的特征更加通用</li>
-<li>高层次的特征则更跟数据集相关</li>
+<li>动机：未来很重要，过去和未来的上下文不同，结果可能很不一样，截止目前 RNN 只看过去的信息</li>
+<li>双向 RNN：包含一个前向 RNN hidden layer、一个后向 RNN hidden layer，通过合并两个 hidden state 得到输出</li>
+<li><strong>不好做预测</strong>：双向循环神经网络通过反向更新的隐藏层来利用方向时间信息，通常用来对序列抽取特征、填空，而不是预测末来</li>
 </ul>
-</li>
-<li>可以固定底部一些层的参数，不参与更新<ul>
-<li>更强的正则</li>
-</ul>
-</li>
-</ul>
-<h1 id="concept-links">Concept Links<a class="headerlink" href="#concept-links" title="Permanent link">&para;</a></h1>
-<ul>
-<li><a href="https://www.cnblogs.com/luckyplj/p/13378293.html">nn.Module 类与前向传播函数 forward 的理解</a></li>
-<li><a href="https://towardsdatascience.com/learning-on-graphs-with-missing-features-dd34be61b06">Feature Propagation 特征传播</a></li>
-</ul>
+<p><img alt="../_images/birnn.svg" src="https://zh.d2l.ai/_images/birnn.svg" /></p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; \overrightarrow{\mathbf{H}}_t=\phi\left(\mathbf{X}_t \mathbf{W}_{x h}^{(f)}+\overrightarrow{\mathbf{H}}_{t-1} \mathbf{W}_{h h}^{(f)}+\mathbf{b}_h^{(f)}\right) \\
+&amp; \overleftarrow{\mathbf{H}}_t=\phi\left(\mathbf{X}_t \mathbf{W}_{x h}^{(b)}+\overleftarrow{\mathbf{H}}_{t+1} \mathbf{W}_{h h}^{(b)}+\mathbf{b}_h^{(b)}\right) \\
+&amp; \mathbf{H}_t=\left[\overrightarrow{\mathbf{H}}_t \overleftarrow{\mathbf{H}}_t\right] \\
+&amp; \mathbf{O}_t=\mathbf{H}_t \mathbf{W}_{h q}+\mathbf{b}_q
+\end{aligned}
+\]</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 27, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 17, 2023</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 24, 2023</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 27, 2023</span>
       
     
   </small>
@@ -7962,7 +7342,7 @@ h^t = f_t(h^{t-1}) \quad \text{and} \quad y=\ell \circ f_d \circ \ldots \circ f_
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.path", "navigation.tracking", "navigation.indexes", "navigation.top", "navigation.expand", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

@@ -9,13 +9,13 @@
       
       
       
-        <link rel="prev" href="../Conv/">
+        <link rel="prev" href="../Convolution%20%26%20CNN/">
       
       
-        <link rel="next" href="../RNN/">
+        <link rel="next" href="../Sequence%20%26%20RNN/">
       
       <link rel="icon" href="../../../images/snowman-circle.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
@@ -6197,6 +6197,8 @@ z"/>
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -6286,7 +6288,7 @@ z"/>
   
   
     <li class="md-nav__item">
-      <a href="../Attention/" class="md-nav__link">
+      <a href="../Attention%20%26%20Transformer/" class="md-nav__link">
         Attention & Transformer
       </a>
     </li>
@@ -6300,7 +6302,7 @@ z"/>
   
   
     <li class="md-nav__item">
-      <a href="../Concepts/" class="md-nav__link">
+      <a href="../Concepts%20in%20Deep%20Learning/" class="md-nav__link">
         Concepts in Deep Learning
       </a>
     </li>
@@ -6314,7 +6316,7 @@ z"/>
   
   
     <li class="md-nav__item">
-      <a href="../Conv/" class="md-nav__link">
+      <a href="../Convolution%20%26%20CNN/" class="md-nav__link">
         Convolution & CNN
       </a>
     </li>
@@ -6403,6 +6405,13 @@ z"/>
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#loss" class="md-nav__link">
+    训练时 loss 尖峰
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6418,8 +6427,62 @@ z"/>
   
   
     <li class="md-nav__item">
-      <a href="../RNN/" class="md-nav__link">
+      <a href="../Sequence%20%26%20RNN/" class="md-nav__link">
         Sequence & RNN
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          Paper Reading
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Paper Reading
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Paper%20Reading/%5BEG20%5D%20Integer-Grid%20Sketch%20Simplification%20and%20Vectorization/" class="md-nav__link">
+        [EG20] Integer Grid Sketch Simplification and Vectorization
       </a>
     </li>
   
@@ -6921,6 +6984,13 @@ z"/>
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#loss" class="md-nav__link">
+    训练时 loss 尖峰
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7015,13 +7085,15 @@ z"/>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">torch</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">profile</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">)</span> <span class="c1"># reset</span>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># prints the truncated tensor</span>
 </span></code></pre></div>
+<h3 id="loss">训练时 loss 尖峰<a class="headerlink" href="#loss" title="Permanent link">&para;</a></h3>
+<p>保持总数据量能够整除 batch_size 可以避免这一情况，在 batch 较小时，随机性增大，导致 loss 增大</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
       
         <br>
         Created:
@@ -7075,7 +7147,7 @@ z"/>
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.path", "navigation.tracking", "navigation.indexes", "navigation.top", "navigation.expand", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
