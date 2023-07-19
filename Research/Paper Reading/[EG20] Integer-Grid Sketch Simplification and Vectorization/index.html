@@ -7122,17 +7122,19 @@ z"/>
 <div class="arithmatex">\[
 \text { minimize } E[f]=E_{\text {field-aligned }}+\mu E_{\text {snap }}+\varepsilon E_{\text {reg }} \text { s.t. } f \text { is seamless }
 \]</div>
-<p>- <span class="arithmatex">\(E_{\text {field-aligned }}\)</span>: a frame should be mapped to the canonical frame, and have a parameter control how many strokes should be merged</p>
+<p><span class="arithmatex">\(E_{\text {field-aligned }}\)</span>: a frame should be mapped to the canonical frame, and have a parameter control how many strokes should be merged</p>
 <p><img alt="image-20230718174607307" src="../assets/image-20230718174607307.png" /></p>
 <div class="arithmatex">\[
 E_{\text {align }}=\sum_{T \in \mathcal{T}}\left\|\mathcal{J}_f \tilde{\phi}-\mathrm{I}\right\|_{\mathrm{F}}^2
 \]</div>
-<p>- <span class="arithmatex">\(\mu E_{\text {snap }}\)</span>: snapping grid to the isoline (intuition: nearby strokes can be grouped together by assigning them to the same, quantized isoline of the parametrization.)
-    - 每个三角面片都有两个 direction <span class="arithmatex">\(u, v\)</span> ，其中一个 direction 会被选择为 tangent direction
-    - 假设一个三角面片的 tangent direction 为 <span class="arithmatex">\(u ， u\)</span> 要尽可能的靠近参数空间中的 isoline，另一个 direction 会被施加约束
-    - Additional integer variable <span class="arithmatex">\((i, j)\)</span> : 表示参数空间中的 isoline
-    - 此项被定义为一个 soft constraint，使得 stroke 三角形的受约束参数受到其最近 integer variable 的吸引
-    - 注: 这里的 additional integer variable 并不是一个三角面片一个，而是决定好一个三角面片之后，周围的三角面片使用同样的 additional integer variable</p>
+<p><span class="arithmatex">\(\mu E_{\text {snap }}\)</span>: snapping grid to the isoline (intuition: nearby strokes can be grouped together by assigning them to the same, quantized isoline of the parametrization.)</p>
+<ul>
+<li>每个三角面片都有两个 direction <span class="arithmatex">\(u, v\)</span> ，其中一个 direction 会被选择为 tangent direction</li>
+<li>假设一个三角面片的 tangent direction 为 <span class="arithmatex">\(u ， u\)</span> 要尽可能的靠近参数空间中的 isoline，另一个 direction 会被施加约束</li>
+<li>Additional integer variable <span class="arithmatex">\((i, j)\)</span> : 表示参数空间中的 isoline</li>
+<li>此项被定义为一个 soft constraint，使得 stroke 三角形的受约束参数受到其最近 integer variable 的吸引</li>
+<li>注: 这里的 additional integer variable 并不是一个三角面片一个，而是决定好一个三角面片之后，周围的三角面片使用同样的 additional integer variable </li>
+</ul>
 <p><img alt="image-20230718174746682" src="../assets/image-20230718174746682.png" /></p>
 <div class="arithmatex">\[
 E_{\text {snap }}=\sum_{c \in \mathcal{C}_{\mathrm{c}}} w_{\text {snap }}\|u-\bar{u}\|^2+\sum_{c \in \mathcal{C}_t} w_{\text {snap }}\|v-\bar{v}\|^2
@@ -7147,7 +7149,7 @@ E_{\text {snap }}=\sum_{c \in \mathcal{C}_{\mathrm{c}}} w_{\text {snap }}\|u-\ba
 </li>
 </ul>
 <p><img alt="image-20230718175024482" src="../assets/image-20230718175024482.png" /></p>
-<p>- <span class="arithmatex">\(\varepsilon E_{r e g}:\)</span> L2 regression</p>
+<p><span class="arithmatex">\(\varepsilon E_{r e g}:\)</span> L2 regression</p>
 <h3 id="extraction-fitting">Extraction &amp; Fitting<a class="headerlink" href="#extraction-fitting" title="Permanent link">&para;</a></h3>
 <ul>
 <li>QEx [Ebke et al.: "QEx: Robust Quad Mesh Extraction", ACMIOG (SIGGRAPH Asia) 2013.]</li>
@@ -7163,7 +7165,7 @@ E_{\text {snap }}=\sum_{c \in \mathcal{C}_{\mathrm{c}}} w_{\text {snap }}\|u-\ba
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 18, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 19, 2023</span>
       
         <br>
         Created:
