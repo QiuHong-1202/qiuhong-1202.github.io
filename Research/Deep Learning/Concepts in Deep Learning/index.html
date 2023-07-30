@@ -7636,10 +7636,12 @@ z"/>
 \]</div>
 <blockquote>
 <ul>
-<li>这就是平方损失</li>
-</ul>
-<ul>
-<li>常数 <span class="arithmatex">\(\frac{1}{2}\)</span> 不会带来本质的差别，但这样在形式上稍微简单一些 （因为当我们对损失函数求导后常数系数为1）</li>
+<li>
+<p>这就是平方损失</p>
+</li>
+<li>
+<p>常数 <span class="arithmatex">\(\frac{1}{2}\)</span> 不会带来本质的差别，但这样在形式上稍微简单一些 （因为当我们对损失函数求导后常数系数为1）</p>
+</li>
 </ul>
 </blockquote>
 <h2 id="_6">训练数据<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
@@ -7738,17 +7740,15 @@ w_t = w_{t-1} - \eta\frac{\partial{\ell}}{\partial{w_{t-1}}}
 <ul>
 <li>模型容量：拟合各种函数的能力<ul>
 <li>低容量的模型难以拟合训练数据</li>
-<li>高容量的模型可以记住所有的训练数据       </li>
+<li>高容量的模型可以记住所有的训练数据     </li>
 </ul>
 </li>
 <li>估计模型容量<ul>
 <li>难以在不同种类的算法之间比较</li>
 <li>模型容量要匹配训练复杂度</li>
-<li>给定一个模型种类，将有两个主要因素<ul>
+<li>给定一个模型种类，将有两个主要因素</li>
 <li>参数的个数</li>
 <li>参数值的选择范围</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -7928,10 +7928,12 @@ h^t = f_t(h^{t-1}) \quad \text{and} \quad y=\ell \circ f_d \circ \ldots \circ f_
 </ul>
 <h2 id="_23">前向和反向传播<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h2>
 <ul>
-<li>前向传播（forward propagation或 forward pass） 指的是：<strong>按顺序（从输入层到输出层）计算和存储神经网络中每层的结果</strong></li>
-</ul>
-<ul>
-<li>反向传播（backward propagation或 backpropagation）指的是<strong>计算神经网络参数梯度的方法</strong>。简言之, 该方法根据微积分中的链式规则, 按相反 的顺序从输出层到输入层遍历网络。该算法存储了计算某些参数梯度时所需的任何中间变量（偏导数）。假设我们有函数 <span class="arithmatex">\(Y=f(X)\)</span> 和 <span class="arithmatex">\(Z =g(Y)\)</span> , 其中输入和输出 <span class="arithmatex">\(X, Y, Z\)</span> 是任意形状的张量。利用链式法则, 我们可以计算 <span class="arithmatex">\(Z\)</span> 关于 <span class="arithmatex">\(X\)</span> 的导数</li>
+<li>
+<p>前向传播（forward propagation或 forward pass） 指的是：<strong>按顺序（从输入层到输出层）计算和存储神经网络中每层的结果</strong></p>
+</li>
+<li>
+<p>反向传播（backward propagation或 backpropagation）指的是<strong>计算神经网络参数梯度的方法</strong>。简言之, 该方法根据微积分中的链式规则, 按相反 的顺序从输出层到输入层遍历网络。该算法存储了计算某些参数梯度时所需的任何中间变量（偏导数）。假设我们有函数 <span class="arithmatex">\(Y=f(X)\)</span> 和 <span class="arithmatex">\(Z =g(Y)\)</span> , 其中输入和输出 <span class="arithmatex">\(X, Y, Z\)</span> 是任意形状的张量。利用链式法则, 我们可以计算 <span class="arithmatex">\(Z\)</span> 关于 <span class="arithmatex">\(X\)</span> 的导数</p>
+</li>
 </ul>
 <div class="arithmatex">\[
 \frac{\partial {Z}}{\partial {X}}=\operatorname{prod}\left(\frac{\partial {Z}}{\partial {Y}}, \frac{\partial {Y}}{\partial {X}}\right)
@@ -7943,10 +7945,12 @@ h^t = f_t(h^{t-1}) \quad \text{and} \quad y=\ell \circ f_d \circ \ldots \circ f_
 <li>
 <p>一个模型被分为两块</p>
 <ul>
-<li>编码器处理输出</li>
-</ul>
-<ul>
-<li>解码器生成输出</li>
+<li>
+<p>编码器处理输出</p>
+</li>
+<li>
+<p>解码器生成输出</p>
+</li>
 </ul>
 </li>
 </ul>
@@ -8012,7 +8016,7 @@ h^t = f_t(h^{t-1}) \quad \text{and} \quad y=\ell \circ f_d \circ \ldots \circ f_
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 17, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 30, 2023</span>
       
         <br>
         Created:

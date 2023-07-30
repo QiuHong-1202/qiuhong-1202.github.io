@@ -7378,15 +7378,15 @@ z"/>
 <li>使用线性插值的方式插入一个点</li>
 </ol>
 <p><img alt="image-20221011161237411" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202210111612430.png" /></p>
-<ol>
+<ol start="2">
 <li>在另一条边等比例的插入另外一个点</li>
 </ol>
 <p><img alt="image-20221011161329061" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202210111613082.png" /></p>
-<ol>
+<ol start="3">
 <li>连接 <span class="arithmatex">\(b_0^1\)</span> 和 <span class="arithmatex">\(b_1^1\)</span> 得到 <span class="arithmatex">\(b_0^2\)</span></li>
 </ol>
 <p><img alt="image-20221011161417289" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202210111614307.png" /></p>
-<ol>
+<ol start="4">
 <li>枚举 <span class="arithmatex">\([0,1]\)</span> 中所有的参数 <span class="arithmatex">\(t\)</span> ，连接所有得到的 <span class="arithmatex">\(b_0^2\)</span> ，就获得了生成的曲线</li>
 </ol>
 <p><img alt="image-20221011161606160" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202210111616179.png" /></p>
@@ -7464,48 +7464,41 @@ i
 <li>连接原本三角形的三条边的中点，形成新的顶点</li>
 </ul>
 </li>
-</ul>
-<ul>
 <li>
 <p>让三角形的位置发生一些变化，让原来的物体变得更加光滑</p>
 <ul>
-<li>对于新的顶点</li>
-</ul>
-<ul>
-<li>下图中的<strong>白色</strong>顶点为生成的新的顶点且被两个原三角形共享，认为 <span class="arithmatex">\(A,B\)</span> 两点是距离白色点较近的两个点，<span class="arithmatex">\(C,D\)</span> 两点是距离白色点较远的两个点，实质是一种加权平均，使得新出现的白点可以达到平滑的效果</li>
-</ul>
-<ul>
+<li>
+<p>对于新的顶点</p>
+</li>
+<li>
+<p>下图中的<strong>白色</strong>顶点为生成的新的顶点且被两个原三角形共享，认为 <span class="arithmatex">\(A,B\)</span> 两点是距离白色点较近的两个点，<span class="arithmatex">\(C,D\)</span> 两点是距离白色点较远的两个点，实质是一种加权平均，使得新出现的白点可以达到平滑的效果</p>
+</li>
 <li>
 <p>Loop Subdivision 算法将白色顶点的坐标调整为 </p>
+</li>
+</ul>
 <div class="arithmatex">\[
 \frac{3}{8}(A+B) + \frac{1}{8}(C+D)
 \]</div>
 </li>
 </ul>
 <p><img alt="image-20221014184805017" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202210141848046.png" /></p>
-<ul>
-<li>对于旧的顶点（虚线表示拆出的新三角形，老的顶点是中间的<strong>白色</strong>点）</li>
-</ul>
-<ul>
-<li>Loop Subdivision 算法使得调整后的新顶点，一部分相信老的顶点的平均值，一部分受新的顶点的影响</li>
-</ul>
-<ul>
-<li>定义 <span class="arithmatex">\(n\)</span> 为白色顶点的度，下图中 <span class="arithmatex">\(n=6\)</span></li>
-</ul>
-<ul>
-<li>定义 <span class="arithmatex">\(u\)</span> 为与 <span class="arithmatex">\(n\)</span> 有关系的一个数。当 <span class="arithmatex">\(n=3\)</span> 时，<span class="arithmatex">\(u=\frac{3}{16}\)</span>，当 <span class="arithmatex">\(n\ne 3\)</span> 时，<span class="arithmatex">\(u = \frac{3}{8n}\)</span></li>
-</ul>
-<ul>
-<li>
-<p>Loop Subdivision 算法将白色顶点的坐标调整为 （可以这么理解，如果一个顶点连了很多三角形，说明这个顶点可以由别人来决定，如果一个顶点连接的三角形数目很少，说明这个顶点自身比较重要，要更多的相信自己的信息）</p>
-<div class="arithmatex">\[
+<div class="language-text highlight"><pre><span></span><code>- 对于旧的顶点（虚线表示拆出的新三角形，老的顶点是中间的**白色**点）
+
+- Loop Subdivision 算法使得调整后的新顶点，一部分相信老的顶点的平均值，一部分受新的顶点的影响
+
+- 定义 $n$ 为白色顶点的度，下图中 $n=6$
+
+- 定义 $u$ 为与 $n$ 有关系的一个数。当 $n=3$ 时，$u=\frac{3}{16}$，当 $n\ne 3$ 时，$u = \frac{3}{8n}$
+
+- Loop Subdivision 算法将白色顶点的坐标调整为 （可以这么理解，如果一个顶点连了很多三角形，说明这个顶点可以由别人来决定，如果一个顶点连接的三角形数目很少，说明这个顶点自身比较重要，要更多的相信自己的信息）
+
+
+$$
 (1-un)\times \text{original-position} + u\times\text{neighbor-position-sum}
-\]</div>
-</li>
-</ul>
+$$
+</code></pre></div>
 <p><img alt="image-20221014184824390" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202210141848421.png" /></p>
-</li>
-</ul>
 <p><img alt="image-20221014190546475" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202210141905544.png" /></p>
 <h4 id="catmull-clark-subdivision-general-mesh">Catmull-Clark Subdivision (General Mesh)<a class="headerlink" href="#catmull-clark-subdivision-general-mesh" title="Permanent link">&para;</a></h4>
 <ul>
@@ -7533,14 +7526,14 @@ i
 <div class="arithmatex">\[
 f=\frac{v_1+v_2+v_3+v_4}{4}
 \]</div>
-<ol>
+<ol start="2">
 <li>在边中心的新的点，设其为 <span class="arithmatex">\(e\)</span></li>
 </ol>
 <p><img alt="image-20221014191831998" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202210141918032.png" /></p>
 <div class="arithmatex">\[
 e=\frac{v_1+v_2+f_1+f_2}{4}
 \]</div>
-<ol>
+<ol start="3">
 <li>老的点，设其为 <span class="arithmatex">\(v\)</span>，定义 <span class="arithmatex">\(p\)</span> 为老的点，<span class="arithmatex">\(m\)</span> 为边的中点</li>
 </ol>
 <p><img alt="image-20221014192023362" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202210141920388.png" /></p>
@@ -7610,7 +7603,7 @@ v=\frac{f_1+f_2+f_3+f_4+2\left(m_1+m_2+m_3+m_4\right)+4 p}{16}
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 16, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 30, 2023</span>
       
         <br>
         Created:

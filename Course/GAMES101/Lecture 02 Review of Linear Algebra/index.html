@@ -7069,14 +7069,14 @@ z_{b}
 </ul>
 <p><img alt="image-20220720120249756" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2021/202207201202018.png" /></p>
 <h2 id="_2">叉积<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p><img alt="image-20220720122707966" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2021/202207201227176.png" />
-<span class="arithmatex">\(<span class="arithmatex">\(
+<p><img alt="image-20220720122707966" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2021/202207201227176.png" /></p>
+<div class="arithmatex">\[
 \vec{a} \times \vec{b}=\left(\begin{array}{c}
 y_{a} z_{b}-y_{b} z_{a} \\
 z_{a} x_{b}-x_{a} z_{b} \\
 x_{a} y_{b}-y_{a} x_{b}
 \end{array}\right)
-\)</span>\)</span></p>
+\]</div>
 <ul>
 <li>Later in this lecture</li>
 </ul>
@@ -7093,14 +7093,10 @@ z_{b}
 \]</div>
 <ul>
 <li>作用<ul>
-<li>判断向量的左右关系：<ul>
+<li>判断向量的左右关系：</li>
 <li>叉积为正在左侧，否则在右侧</li>
-</ul>
-</li>
-<li>判断一个点是否在三角形内：<span class="arithmatex">\(P\)</span> 点在三条边的同侧（正负号相同）<ul>
+<li>判断一个点是否在三角形内：<span class="arithmatex">\(P\)</span> 点在三条边的同侧（正负号相同）</li>
 <li>Corner Case：结果为0，自己定义在内侧还是外侧</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -7125,22 +7121,22 @@ z_{b}
 <li>
 <p>矩阵乘法：需要算第几行第几列，就去找第几行第几列，把两个向量点乘起来</p>
 <ul>
-<li>Element <span class="arithmatex">\((i, j)\)</span> in the product is the dot product of row <span class="arithmatex">\(i\)</span> from <span class="arithmatex">\(A\)</span> and column <span class="arithmatex">\(j\)</span> from <span class="arithmatex">\(B\)</span></li>
-</ul>
-<ul>
-<li>没有交换率</li>
-<li>有以下规律<ul>
+<li>
+<p>Element <span class="arithmatex">\((i, j)\)</span> in the product is the dot product of row <span class="arithmatex">\(i\)</span> from <span class="arithmatex">\(A\)</span> and column <span class="arithmatex">\(j\)</span> from <span class="arithmatex">\(B\)</span></p>
+</li>
+<li>
+<p>没有交换率</p>
+</li>
+<li>有以下规律</li>
 <li><span class="arithmatex">\((AB)C=A(BC)\)</span>  </li>
 <li><span class="arithmatex">\(A(B+C) = AB + AC\)</span> </li>
 <li><span class="arithmatex">\((A+B)C = AC + BC\)</span></li>
-</ul>
-</li>
 <li>向量可以当作列矩阵</li>
 </ul>
 </li>
-</ul>
+<li>
+<p>矩阵转置</p>
 <ul>
-<li>矩阵转置<ul>
 <li>交换行和列 <span class="arithmatex">\((ij \to ji)\)</span></li>
 <li>性质： <span class="arithmatex">\((A B)^{T}=B^{T} A^{T}\)</span></li>
 </ul>
@@ -7162,11 +7158,13 @@ z_{b}
 <li>
 <p>单位矩阵</p>
 <ul>
-<li>是一个对角阵，只有对角线上有非0元素</li>
-</ul>
-<ul>
+<li>
+<p>是一个对角阵，只有对角线上有非0元素</p>
+</li>
 <li>
 <p>来定义矩阵的逆</p>
+</li>
+</ul>
 <div class="arithmatex">\[
 I_{3 \times 3}=\left(\begin{array}{ccc}
 1 &amp; 0 &amp; 0 \\
@@ -7175,10 +7173,6 @@ I_{3 \times 3}=\left(\begin{array}{ccc}
 \end{array}\right)
 \]</div>
 </li>
-</ul>
-</li>
-</ul>
-<ul>
 <li>
 <p>矩阵的逆</p>
 <ul>
@@ -7224,7 +7218,7 @@ z_{b}
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 16, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 30, 2023</span>
       
         <br>
         Created:

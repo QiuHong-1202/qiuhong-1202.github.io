@@ -7518,16 +7518,18 @@ shear-x(s)=\left[\begin{array}{ll}1 &amp; s \\ 0 &amp; 1\end{array}\right], \\sh
 </ul>
 <h3 id="_2">齐次坐标下向量和点的操作<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
-<li>vector + vector = vector </li>
-</ul>
-<ul>
-<li>point – point = vector  </li>
-</ul>
-<ul>
-<li>point + vector = point （一个点沿着向量移动）</li>
-</ul>
-<ul>
-<li>point + point = 两个点的中点</li>
+<li>
+<p>vector + vector = vector </p>
+</li>
+<li>
+<p>point – point = vector  </p>
+</li>
+<li>
+<p>point + vector = point （一个点沿着向量移动）</p>
+</li>
+<li>
+<p>point + point = 两个点的中点</p>
+</li>
 </ul>
 <p>此外，当第三维为 <span class="arithmatex">\(w(w\ne 0)\)</span>时，定义 </p>
 <div class="arithmatex">\[
@@ -7636,14 +7638,14 @@ s_{x} &amp; 0 &amp; 0 &amp; 0 \\
 \]</div>
 <h3 id="rotation_2">? Rotation<a class="headerlink" href="#rotation_2" title="Permanent link">&para;</a></h3>
 <ul>
-<li>around <span class="arithmatex">\(x-, y-\)</span>, or <span class="arithmatex">\(z\)</span>-axis</li>
-</ul>
-<ul>
+<li>
+<p>around <span class="arithmatex">\(x-, y-\)</span>, or <span class="arithmatex">\(z\)</span>-axis</p>
+</li>
 <li>
 <p><span class="arithmatex">\(\sin \alpha\)</span> 的正负号由右手定则确定，顺序是 <span class="arithmatex">\(x\to z\)</span></p>
-<p><img src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2021/202208071716113.png" alt="image-20220807171648045" style="zoom:25%;" /></p>
 </li>
 </ul>
+<p><img src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2021/202208071716113.png" alt="image-20220807171648045" style="zoom:25%;" /></p>
 <div class="arithmatex">\[
 \begin{aligned}
 \mathbf{R}_{x}(\alpha) &amp;=\left(\begin{array}{cccc}
@@ -7725,12 +7727,10 @@ M_{\text {ortho }}=\left[\begin{array}{cccc}
 <h4 id="_9">透视投影的步骤<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
 <ul>
 <li>First “squish” the frustum into a cuboid <span class="arithmatex">\((n \to n, f \to f) (M_{persp\to ortho})\)</span> （将远平面挤压为与近平面相同的大小）<ul>
-<li>挤压规则<ul>
+<li>挤压规则</li>
 <li>近平面永远不变，任何点在近平面上不变</li>
 <li>远平面 <span class="arithmatex">\(z\)</span> 值不变，任何远平面上的点 <span class="arithmatex">\(z\)</span> 值不变</li>
 <li>远平面的中心不变</li>
-</ul>
-</li>
 </ul>
 </li>
 <li>Do orthographic projection (<span class="arithmatex">\(M_{ortho}\)</span>) （做正则投影）</li>
@@ -7768,7 +7768,7 @@ n &amp; 0 &amp; 0 &amp; 0 \\
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 16, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 30, 2023</span>
       
         <br>
         Created:

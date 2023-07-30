@@ -7520,14 +7520,14 @@ N_v=\frac{\sum_i N_i}{\left\|\sum_i N_i\right\|}
 <ul>
 <li><span class="arithmatex">\(\operatorname{lerp}\left(x, v_0, v_1\right)=v_0+x\left(v_1-v_0\right)\)</span></li>
 </ul>
-<ol>
+<ol start="2">
 <li>在水平方向插值得到两对点 helper lerps</li>
 </ol>
 <ul>
 <li><span class="arithmatex">\(u_0=\operatorname{lerp}\left(s, u_{00}, u_{10}\right)\)</span></li>
 <li><span class="arithmatex">\(u_1=\operatorname{lerp}\left(s, u_{01}, u_{11}\right)\)</span></li>
 </ul>
-<ol>
+<ol start="3">
 <li>使用插值得到的两个点做竖直插值，得到最终结果</li>
 </ol>
 <ul>
@@ -7582,10 +7582,12 @@ D=\log _2 L \quad L=\max \left(\sqrt{\left(\frac{d u}{d x}\right)^2+\left(\frac{
 <p><img alt="image-20221003180027206" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202210031800241.png" /></p>
 <blockquote>
 <ul>
-<li>各向异性过滤得到的效果图</li>
-</ul>
-<ul>
-<li><span class="arithmatex">\(nx\)</span> 各向异性过滤表示过滤 <span class="arithmatex">\(n\)</span> 次，当 <span class="arithmatex">\(n\to \infin\)</span> 时，空间开销会收敛为原本的三倍，对于显存有所要求，但在性能上影响很小</li>
+<li>
+<p>各向异性过滤得到的效果图</p>
+</li>
+<li>
+<p><span class="arithmatex">\(nx\)</span> 各向异性过滤表示过滤 <span class="arithmatex">\(n\)</span> 次，当 <span class="arithmatex">\(n\to \infin\)</span> 时，空间开销会收敛为原本的三倍，对于显存有所要求，但在性能上影响很小</p>
+</li>
 </ul>
 </blockquote>
 <h4 id="ewa-filtering">EWA filtering<a class="headerlink" href="#ewa-filtering" title="Permanent link">&para;</a></h4>
@@ -7627,9 +7629,9 @@ D=\log _2 L \quad L=\max \left(\sqrt{\left(\frac{d u}{d x}\right)^2+\left(\frac{
 <li>对于任何一个像素的法线进行扰动</li>
 <li>通过临近位置的高度差来重新计算法线，通过相对高度的变化改变法线</li>
 </ul>
-<p><img alt="image-20221005163117089" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202210051631115.png" /></p>
 </li>
 </ul>
+<p><img alt="image-20221005163117089" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202210051631115.png" /></p>
 <ul>
 <li>
 <p>计算凹凸贴图生成的新法线（二维情况）</p>
@@ -7642,18 +7644,18 @@ D=\log _2 L \quad L=\max \left(\sqrt{\left(\frac{d u}{d x}\right)^2+\left(\frac{
 </ul>
 <p><img alt="image-20221005163831853" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202210051644330.png" /></p>
 <ul>
-<li>计算凹凸贴图生成的新法线（三维情况）<ul>
+<li>
+<p>计算凹凸贴图生成的新法线（三维情况）</p>
+<ul>
 <li>构建局部坐标系，认为原本在 <span class="arithmatex">\(p\)</span> 点的法线是 <span class="arithmatex">\(n(p)=(0,0,1)\)</span></li>
-<li>求 <span class="arithmatex">\(p\)</span> 点在两个方向 <span class="arithmatex">\(u,v\)</span> 的切线<ul>
+<li>求 <span class="arithmatex">\(p\)</span> 点在两个方向 <span class="arithmatex">\(u,v\)</span> 的切线</li>
 <li><span class="arithmatex">\(dp/du = c_1 \times  [h(u+1) - h(u)]\)</span></li>
 <li><span class="arithmatex">\(dp/dv = c_2 \times [h(v+1) - h(v)]\)</span></li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
+<li>
+<p>Displacement mapping 位移贴图</p>
 <ul>
-<li>Displacement mapping 位移贴图<ul>
 <li>使用和凹凸贴图同样的材质</li>
 <li>三角形的顶点有真的位置移动</li>
 <li>位移贴图需要足够细致的三角形，三角形的频率要比纹理频率高</li>
@@ -7684,7 +7686,7 @@ D=\log _2 L \quad L=\max \left(\sqrt{\left(\frac{d u}{d x}\right)^2+\left(\frac{
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 16, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 30, 2023</span>
       
         <br>
         Created:

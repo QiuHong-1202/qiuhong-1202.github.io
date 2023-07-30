@@ -7225,14 +7225,16 @@ z"/>
 </ul>
 <h3 id="_4">步幅<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ul>
-<li>填充减小的输出大小与层数线性相关<ul>
+<li>
+<p>填充减小的输出大小与层数线性相关</p>
+<ul>
 <li>给定输入大小 <span class="arithmatex">\(224 \times 224\)</span>，在使用 <span class="arithmatex">\(5 \times 5\)</span> 卷积核的情况下，需要 <span class="arithmatex">\(55\)</span> 层才能将输出降低到 <span class="arithmatex">\(4 \times 4\)</span></li>
 <li>需要大量计算才能得到较小输出</li>
 </ul>
 </li>
-</ul>
+<li>
+<p>步幅是指行/列的滑动步长</p>
 <ul>
-<li>步幅是指行/列的滑动步长<ul>
 <li>例：高度 3，宽度 2 的步幅</li>
 </ul>
 </li>
@@ -7304,13 +7306,15 @@ z"/>
 </ul>
 <h2 id="pooling">池化/汇聚层 (Pooling)<a class="headerlink" href="#pooling" title="Permanent link">&para;</a></h2>
 <ul>
-<li>使用池化层的理由：卷积对位置敏感，需要降低卷积层对位置的敏感性、降低对空间降采样表示的敏感性<ul>
+<li>
+<p>使用池化层的理由：卷积对位置敏感，需要降低卷积层对位置的敏感性、降低对空间降采样表示的敏感性</p>
+<ul>
 <li>在检测垂直边缘不好，1像素移位就可能导致 0 输出</li>
 </ul>
 </li>
-</ul>
-<ul>
-<li>池化层返回窗口中最大或平均值</li>
+<li>
+<p>池化层返回窗口中最大或平均值</p>
+</li>
 <li>缓解卷积层对位置的敏感性</li>
 <li>同样有窗口大小、填充、和步幅作为超参数</li>
 </ul>
@@ -7343,7 +7347,7 @@ z"/>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 17, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 30, 2023</span>
       
         <br>
         Created:

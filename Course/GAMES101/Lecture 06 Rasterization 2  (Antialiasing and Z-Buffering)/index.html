@@ -7373,13 +7373,15 @@ z"/>
 <li>
 <p>Artifacts due to sampling - "Aliasing"</p>
 <ul>
-<li>Jaggies – sampling in space  </li>
-</ul>
-<ul>
-<li>Moire – under sampling images  </li>
-</ul>
-<ul>
-<li>Wagon wheel effect – sampling in time </li>
+<li>
+<p>Jaggies – sampling in space  </p>
+</li>
+<li>
+<p>Moire – under sampling images  </p>
+</li>
+<li>
+<p>Wagon wheel effect – sampling in time </p>
+</li>
 </ul>
 </li>
 </ul>
@@ -7437,12 +7439,10 @@ z"/>
 <li>Convolution in the spatial domain is <strong>equal to multiplication in the frequency domain</strong>, and vice versa </li>
 <li>作用<ul>
 <li>Option 1:  Filter by convolution in the spatial domain</li>
-<li>Option 2:  <ul>
+<li>Option 2:  </li>
 <li>Transform to frequency domain (Fourier transform)  </li>
 <li>Multiply by Fourier transform of convolution kernel  </li>
 <li>Transform back to spatial domain (inverse Fourier)</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -7478,18 +7478,18 @@ z"/>
 <li>
 <p><strong>求平均</strong>：Convolve <span class="arithmatex">\(f(x,y)\)</span> by a 1-pixel box-blur </p>
 <ul>
-<li>Recall: convolving = filtering = averaging  </li>
-</ul>
-<ul>
+<li>
+<p>Recall: convolving = filtering = averaging  </p>
+</li>
 <li>
 <p>通过边界占像素的比例来觉得像素亮度从而完成模糊过程</p>
+</li>
+</ul>
 <p><img alt="image-20220812154951937" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2021/202208121549076.png" /></p>
 </li>
-</ul>
+<li>
+<p><strong>采样</strong>：Then sample at every pixel’s center</p>
 </li>
-</ul>
-<ul>
-<li><strong>采样</strong>：Then sample at every pixel’s center</li>
 </ul>
 <h3 id="antialiasing-by-supersampling-msaa">Antialiasing By Supersampling  (MSAA)<a class="headerlink" href="#antialiasing-by-supersampling-msaa" title="Permanent link">&para;</a></h3>
 <ul>
@@ -7505,7 +7505,7 @@ z"/>
 <p><img src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2021/202208121554271.png" alt="image-20220812155445192" style="zoom:50%;" /></p>
 <p><img src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2021/202208121555039.png" alt="image-20220812155503964" style="zoom:50%;" /></p>
 <p><img src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2021/202208121555486.png" alt="image-20220812155522412" style="zoom:50%;" /></p>
-<ol>
+<ol start="2">
 <li>Sampling</li>
 </ol>
 <p>对图像根据模糊操作得到的值进行采样</p>
@@ -7528,35 +7528,35 @@ z"/>
 </ul>
 <h3 id="z-buffer">Z-Buffer 深度缓存<a class="headerlink" href="#z-buffer" title="Permanent link">&para;</a></h3>
 <ul>
-<li>现代使用的算法</li>
-</ul>
-<ul>
-<li>Store current <strong>min.</strong> z-value for <strong><em>each</em></strong> <strong>sample</strong> (pixel) <strong>此算法是针对像素的，操作针对像素，维护的是像素</strong></li>
-</ul>
-<ul>
+<li>
+<p>现代使用的算法</p>
+</li>
+<li>
+<p>Store current <strong>min.</strong> z-value for <strong><em>each</em></strong> <strong>sample</strong> (pixel) <strong>此算法是针对像素的，操作针对像素，维护的是像素</strong></p>
+</li>
 <li>
 <p>在生成图像时，同步生成两张图</p>
 <ul>
-<li>frame buffer（最后的结果） stores color values </li>
-</ul>
-<ul>
-<li>depth buffer (z-buffer 深度信息) stores depth </li>
-</ul>
+<li>
+<p>frame buffer（最后的结果） stores color values </p>
+</li>
+<li>
+<p>depth buffer (z-buffer 深度信息) stores depth </p>
 </li>
 </ul>
-<ul>
+</li>
 <li>
 <p>为了方便起见，假设</p>
 <ul>
 <li>z is always positive (smaller z <span class="arithmatex">\(\to\)</span> closer, larger z <span class="arithmatex">\(\to\)</span> further)</li>
 </ul>
 </li>
-</ul>
-<ul>
-<li>深度缓存算法和顺序无关（假设没有两个三角形在任何一个像素中没有相同深度，因为三角形的坐标基本都是使用浮点型存储，基本可以认为两个三角形没有相等的深度）</li>
-</ul>
-<ul>
-<li>无法处理透明物体的深度</li>
+<li>
+<p>深度缓存算法和顺序无关（假设没有两个三角形在任何一个像素中没有相同深度，因为三角形的坐标基本都是使用浮点型存储，基本可以认为两个三角形没有相等的深度）</p>
+</li>
+<li>
+<p>无法处理透明物体的深度</p>
+</li>
 </ul>
 <blockquote>
 <p>实际上，在生产环境还是有可能产生深度相同的情况，此课不讨论</p>
@@ -7579,7 +7579,7 @@ z"/>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 16, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 30, 2023</span>
       
         <br>
         Created:

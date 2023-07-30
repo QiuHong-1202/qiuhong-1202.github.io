@@ -7425,28 +7425,26 @@ R_0 &amp;=\left(\frac{n_1-n_2}{n_1+n_2}\right)^2
 </ul>
 <h3 id="isotropic-anisotropic-materials-brdfs">Isotropic / Anisotropic Materials (BRDFs)<a class="headerlink" href="#isotropic-anisotropic-materials-brdfs" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Isotropic 各向同性：微表面不存在方向性或者方向性很弱</li>
-</ul>
-<ul>
+<li>
+<p>Isotropic 各向同性：微表面不存在方向性或者方向性很弱</p>
+</li>
 <li>
 <p>Anisotropic 各向异性：微表面存在方向性</p>
 <ul>
-<li>识别：BRDF 在方位上旋转得到相同的 BRDF</li>
-</ul>
-<ul>
+<li>
+<p>识别：BRDF 在方位上旋转得到相同的 BRDF</p>
+</li>
 <li>
 <p>Reflection depends on azimuthal angle <span class="arithmatex">\(\phi\)</span></p>
+</li>
+</ul>
 <div class="arithmatex">\[
 f_r\left(\theta_i, \phi_i ; \theta_r, \phi_r\right) \neq f_r\left(\theta_i, \theta_r, \phi_r-\phi_i\right)
 \]</div>
-</li>
-</ul>
 <ul>
-<li>
-<p>Example</p>
-<p><img alt="image-20221119233620355" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202211192336436.png" /></p>
-</li>
+<li>Example</li>
 </ul>
+<p><img alt="image-20221119233620355" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202211192336436.png" /></p>
 </li>
 </ul>
 <p><img alt="image-20221119233353400" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202211192333449.png" /></p>
@@ -7486,22 +7484,20 @@ f_r\left(\omega_r \rightarrow \omega_i\right)=f_r\left(\omega_i \rightarrow \ome
 <ul>
 <li>
 <p>If isotropic, <span class="arithmatex">\(f_r\left(\theta_i, \phi_i ; \theta_r, \phi_r\right)=f_r\left(\theta_i, \theta_r, \phi_r-\phi_i\right)\)</span></p>
-<ul>
-<li>各向同性意味着 BRDF 之和相对的方位角有关，实际上此时 <span class="arithmatex">\(f_r\)</span> 为三维</li>
-</ul>
 </li>
-</ul>
-<ul>
+<li>
+<p>各向同性意味着 BRDF 之和相对的方位角有关，实际上此时 <span class="arithmatex">\(f_r\)</span> 为三维</p>
+</li>
 <li>
 <p>Then, from reciprocity,</p>
-<ul>
-<li>相对的方位角不用考虑正负 <span class="arithmatex">\(\to\)</span> BRDF 的测量与储存</li>
+</li>
+<li>
+<p>相对的方位角不用考虑正负 <span class="arithmatex">\(\to\)</span> BRDF 的测量与储存</p>
+</li>
 </ul>
 <div class="arithmatex">\[
 f_r\left(\theta_i, \theta_r, \phi_r-\phi_i\right)=f_r\left(\theta_r, \theta_i, \phi_i-\phi_r\right)=f_r\left(\theta_i, \theta_r,\left|\phi_r-\phi_i\right|\right)
 \]</div>
-</li>
-</ul>
 </li>
 </ul>
 <p><img alt="image-20221119234526364" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202211192345400.png" /></p>
@@ -7557,7 +7553,7 @@ f_r\left(\theta_i, \theta_r, \phi_r-\phi_i\right)=f_r\left(\theta_r, \theta_i, \
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 16, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 30, 2023</span>
       
         <br>
         Created:

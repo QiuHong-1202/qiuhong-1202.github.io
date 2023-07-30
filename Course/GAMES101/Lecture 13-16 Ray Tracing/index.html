@@ -7362,10 +7362,8 @@ z"/>
 <li>图形学上的光线定义<ul>
 <li>光线是沿直线传播的</li>
 <li>两个或多个光线不会发生碰撞</li>
-<li>光线一定会从光源出发到达我们的眼镜<ul>
+<li>光线一定会从光源出发到达我们的眼镜</li>
 <li>light reciprocity 光路的可逆性</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -7436,17 +7434,17 @@ z"/>
 <h3 id="ray-intersection-with-triangle-mesh">Ray Intersection With Triangle Mesh<a class="headerlink" href="#ray-intersection-with-triangle-mesh" title="Permanent link">&para;</a></h3>
 <h4 id="convert-it-to-ray-intersection-with-plane">Convert It to Ray Intersection With Plane<a class="headerlink" href="#convert-it-to-ray-intersection-with-plane" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Applications<ul>
+<li>
+<p>Applications</p>
+<ul>
 <li>Rendering: visibility, shadows, lighting</li>
-<li>Geometry: inside/outside test （计算是否一个点是否在形状内部或者是外部，封闭物体）<ul>
+<li>Geometry: inside/outside test （计算是否一个点是否在形状内部或者是外部，封闭物体）</li>
 <li>在形状上取一个点找一个光线求交点，如果是奇数个交点，那么点就一定在物体内，否则在物体外</li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
+<li>
+<p>Compute</p>
 <ul>
-<li>Compute<ul>
 <li>Simple idea: just intersect ray with each triangle [Simple, but slow (acceleration?) ]</li>
 <li><strong>Acceleration: 将光线和三角形求交转化为光线和平面求交，然后再判定交点是否在三角形内</strong></li>
 </ul>
@@ -7459,13 +7457,15 @@ z"/>
 <p><img alt="image-20221104152702897" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202211041527930.png" /></p>
 <h4 id="ray-intersection-with-plane">Ray Intersection With Plane<a class="headerlink" href="#ray-intersection-with-plane" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Ray equation:  <span class="arithmatex">\(\mathbf{r}(t)=\mathbf{o}+t \mathbf{d}, 0 \leq t&lt;\infty\)</span></li>
-</ul>
-<ul>
-<li>Plane equation: <span class="arithmatex">\(\mathbf{p}:\left(\mathbf{p}-\mathbf{p}^{\prime}\right) \cdot \mathbf{N}=0\)</span></li>
-</ul>
-<ul>
-<li>Solve for intersection</li>
+<li>
+<p>Ray equation:  <span class="arithmatex">\(\mathbf{r}(t)=\mathbf{o}+t \mathbf{d}, 0 \leq t&lt;\infty\)</span></p>
+</li>
+<li>
+<p>Plane equation: <span class="arithmatex">\(\mathbf{p}:\left(\mathbf{p}-\mathbf{p}^{\prime}\right) \cdot \mathbf{N}=0\)</span></p>
+</li>
+<li>
+<p>Solve for intersection</p>
+</li>
 </ul>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -7570,25 +7570,25 @@ t_{enter} &lt; t_{exit}\ \text{and}\ t_{exit}\ge0
 </li>
 </ol>
 <ul>
-<li><strong>Grid Resolution?</strong><ul>
-<li>Heuristic<ul>
+<li>
+<p><strong>Grid Resolution?</strong></p>
+<ul>
+<li>Heuristic</li>
 <li>#cells = C * #objs  </li>
 <li>C = 27 in 3D</li>
 </ul>
 </li>
-</ul>
+<li>
+<p><strong>Pros &amp; Cons</strong></p>
 </li>
-</ul>
-<ul>
-<li><strong>Pros &amp; Cons</strong></li>
 </ul>
 <p><img alt="image-20221109155132534" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202211091551583.png" /></p>
 <p><img alt="image-20221109155144381" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202211091551465.png" /></p>
 <h4 id="spatial-partitions">Spatial Partitions<a class="headerlink" href="#spatial-partitions" title="Permanent link">&para;</a></h4>
 <ul>
-<li>基于 Grid 方法的优化，物体稀疏的地方不需要用很多格子</li>
-</ul>
-<ul>
+<li>
+<p>基于 Grid 方法的优化，物体稀疏的地方不需要用很多格子</p>
+</li>
 <li>
 <p>Examples</p>
 <ul>
@@ -7596,9 +7596,9 @@ t_{enter} &lt; t_{exit}\ \text{and}\ t_{exit}\ge0
 <li><strong>KD-Tree</strong>: KD-Tree 永远是找到一个轴把空间分成两个部分，和维数无关，把空间划分成了类似二叉树的结构，水平划分和数值划分是交替的以保证空间的划分是均匀的，计算简单</li>
 <li><strong>BSP-Tree</strong>: 对空间的二分方法，每一次选择一个方向把节点的分开，和 KD-Tree 的区别是不是横平竖直的划分，会随着维度的升高计算变得复杂</li>
 </ul>
-<p><img alt="image-20221109155342166" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202211091553212.png" /></p>
 </li>
 </ul>
+<p><img alt="image-20221109155342166" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202211091553212.png" /></p>
 <ul>
 <li><strong>KD-Tree Pre-Processing</strong><ul>
 <li>此处只考虑每个格子划分了一次，实际中别的格子可能也需要划分</li>
@@ -7608,23 +7608,21 @@ t_{enter} &lt; t_{exit}\ \text{and}\ t_{exit}\ge0
 </ul>
 <p><img alt="image-20221109160116986" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202211091601017.png" /></p>
 <ul>
-<li><strong>Data Structure for KD-Trees</strong><ul>
-<li>Internal nodes store  <ul>
+<li>
+<p><strong>Data Structure for KD-Trees</strong></p>
+<ul>
+<li>Internal nodes store  </li>
 <li>split axis: x-, y-, or z-axis</li>
 <li>split position: coordinate of split plane along axis</li>
 <li>children: pointers to child nodes</li>
 <li><strong>No objects are stored in internal nodes</strong> </li>
-</ul>
-</li>
-<li>Leaf nodes store<ul>
+<li>Leaf nodes store</li>
 <li>list of objects</li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
+<li>
+<p><strong>Cons of KD-Tree</strong></p>
 <ul>
-<li><strong>Cons of KD-Tree</strong><ul>
 <li>很难判定一个三角形是否和一个立方体有交集，算法很难实现</li>
 <li>如果一个物体和多个盒子都有交集（出现在多个叶子节点中），KD-Tree 在这点上并不直观</li>
 </ul>
@@ -7657,40 +7655,32 @@ t_{enter} &lt; t_{exit}\ \text{and}\ t_{exit}\ge0
 <li>Store objects in each leaf node</li>
 </ul>
 </li>
-<li><strong>Methods to subdivide a node</strong><ul>
+<li>
+<p><strong>Methods to subdivide a node</strong></p>
+<ul>
 <li>Choose a dimension to split</li>
-<li>Heuristic #1: Always choose the longest axis in node<ul>
+<li>Heuristic #1: Always choose the longest axis in node</li>
 <li>让最长的轴变短，让最终的划分是比较均匀的</li>
-</ul>
-</li>
-<li>Heuristic #2: Split node at location of <strong>median</strong> object<ul>
+<li>Heuristic #2: Split node at location of <strong>median</strong> object</li>
 <li>取中间的物体指的是，如果有 <span class="arithmatex">\(n\)</span> 个三角形，找的是 <span class="arithmatex">\(\frac{n}{2}\)</span> 处的三角形，保证切分后的三角形数量差不多，以保证生成的树是平衡的，减少最终的搜索时间</li>
 <li>给任意一列无序的数，找到它第 <span class="arithmatex">\(i\)</span> 大的数，可以使用快速选择算法，在 <span class="arithmatex">\(O(n)\)</span> 内解决</li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
+<li>
+<p><strong>Termination criteria</strong></p>
 <ul>
-<li><strong>Termination criteria</strong><ul>
 <li>Heuristic: stop when node contains few elements (e.g. 5)</li>
 </ul>
 </li>
 <li><strong>Data Structure for BVHs</strong><ul>
-<li>Internal nodes store<ul>
+<li>Internal nodes store</li>
 <li>Bounding box</li>
 <li>Children: pointers to child nodes </li>
-</ul>
-</li>
-<li>Leaf nodes store<ul>
+<li>Leaf nodes store</li>
 <li>Bounding box</li>
 <li>List of objects </li>
-</ul>
-</li>
-<li>Nodes represent subset of primitives in scene<ul>
+<li>Nodes represent subset of primitives in scene</li>
 <li>All objects in subtree</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -7716,13 +7706,15 @@ t_{enter} &lt; t_{exit}\ \text{and}\ t_{exit}\ge0
 <ul>
 <li>在计算光强的时候，我们没有准确的物理定义</li>
 <li>辐射度量学：定义了一系列方法和单位去描述光照</li>
-<li>Accurately measure the spatial properties of light<ul>
+<li>
+<p>Accurately measure the spatial properties of light</p>
+<ul>
 <li>New terms: <strong>Radiant flux, intensity, irradiance, radiance</strong></li>
 </ul>
 </li>
-</ul>
-<ul>
-<li>Perform lighting calculations <strong>in a physically correct manner</strong></li>
+<li>
+<p>Perform lighting calculations <strong>in a physically correct manner</strong></p>
+</li>
 </ul>
 <p><img alt="image-20221109174929498" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202211091749534.png" /></p>
 <ul>
@@ -7740,10 +7732,12 @@ Q[\mathrm{~J}=\text { Joule }]
 <li>
 <p>Flux (Power): 光源辐射出的单位时间的能量，目的是分析和比较两个和多个能量（去除时间的影响）</p>
 <ul>
-<li>lm = lumen (Flux 的单位，翻译是<strong>流明</strong>)</li>
-</ul>
-<ul>
-<li>Flux 也可以理解为单位时间通过一个感光平面的光子数目</li>
+<li>
+<p>lm = lumen (Flux 的单位，翻译是<strong>流明</strong>)</p>
+</li>
+<li>
+<p>Flux 也可以理解为单位时间通过一个感光平面的光子数目</p>
+</li>
 </ul>
 </li>
 </ul>
@@ -7755,10 +7749,12 @@ Q[\mathrm{~J}=\text { Joule }]
 <li>
 <p>Radiant Intensity: The radiant (luminous) intensity is the power per unit <strong>solid angle</strong> (立体角) emitted by a point light source.</p>
 <ul>
-<li>可以理解为能量除以立体角</li>
-</ul>
-<ul>
-<li>定义了光源在任何一个方向上的亮度</li>
+<li>
+<p>可以理解为能量除以立体角</p>
+</li>
+<li>
+<p>定义了光源在任何一个方向上的亮度</p>
+</li>
 </ul>
 </li>
 </ul>
@@ -7771,14 +7767,16 @@ I(\omega) \equiv \frac{\mathrm{d} \Phi}{\mathrm{d} \omega} \\
 <p><img alt="image-20221110005225444" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202211100052482.png" /></p>
 <h3 id="angles-and-solid-angles">Angles and Solid Angles<a class="headerlink" href="#angles-and-solid-angles" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Angle</strong>: ratio of subtended arc length on circle to radius<ul>
+<li>
+<p><strong>Angle</strong>: ratio of subtended arc length on circle to radius</p>
+<ul>
 <li><span class="arithmatex">\(\theta=\frac{l}{r}\)</span></li>
 <li>Circle has <span class="arithmatex">\(2 \pi\)</span> radians</li>
 </ul>
 </li>
-</ul>
+<li>
+<p><strong>Solid angle</strong>: ratio of subtended area on sphere to radius squared</p>
 <ul>
-<li><strong>Solid angle</strong>: ratio of subtended area on sphere to radius squared<ul>
 <li>弧度制在三维空间中的延申，在三维空间中找一个球，从球出发形成某个大小的锥，锥会打到球面上，形成一个面积 <span class="arithmatex">\(A\)</span>，立体角是它除以半径的平方</li>
 <li>把任何一个物体投影到单位球上，在单位球上框出的范围就是立体角</li>
 <li>描述一个空间中角有多大</li>
@@ -7800,33 +7798,33 @@ I(\omega) \equiv \frac{\mathrm{d} \Phi}{\mathrm{d} \omega} \\
 <li>
 <p>对于一个均匀点光源，它的 Radiant Intensity 的相关计算是</p>
 <ul>
-<li>
-<p>对于所有方向上的 Intensity 积分起来可以得到 Flux</p>
+<li>对于所有方向上的 Intensity 积分起来可以得到 Flux</li>
+</ul>
 <div class="arithmatex">\[
 \begin{aligned}
 \Phi &amp;=\int_{S^2} I \mathrm{~d} \omega \\
 &amp;=4 \pi I
 \end{aligned}
 \]</div>
-</li>
-</ul>
 <ul>
 <li>对于任何一个方向上的 Intensity 有</li>
 </ul>
-<div class="arithmatex">\[
-I=\frac{\Phi}{4 \pi}
-\]</div>
 </li>
 </ul>
+<p><span class="arithmatex">\(<span class="arithmatex">\(
+  I=\frac{\Phi}{4 \pi}
+  \)</span>\)</span></p>
 <h2 id="irradiance">Irradiance<a class="headerlink" href="#irradiance" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p>The irradiance is the <strong>power per unit area</strong> incident on a surface point.</p>
 <ul>
-<li>Intensity: <strong>power per soild angle</strong></li>
-</ul>
-<ul>
-<li>注意，面需要和入射光线垂直</li>
+<li>
+<p>Intensity: <strong>power per soild angle</strong></p>
+</li>
+<li>
+<p>注意，面需要和入射光线垂直</p>
+</li>
 </ul>
 </li>
 </ul>
@@ -7850,14 +7848,16 @@ E(\mathbf{x}) \equiv \frac{\mathrm{d} \Phi(\mathbf{x})}{\mathrm{d} A} \\
 L(\mathrm{p}, \omega) \equiv \frac{\mathrm{d}^2 \Phi(\mathrm{p}, \omega)}{\mathrm{d} \omega \mathrm{d} A \cos \theta}
 \]</div>
 <ul>
-<li><strong>Recall</strong><ul>
+<li>
+<p><strong>Recall</strong></p>
+<ul>
 <li>Irradiance: power per projected unit area</li>
 <li>Intensity: power per solid angle</li>
 </ul>
 </li>
-</ul>
+<li>
+<p><strong>So</strong></p>
 <ul>
-<li><strong>So</strong><ul>
 <li>Radiance: Irradiance per solid angle  </li>
 <li>Radiance: Intensity per projected unit area</li>
 </ul>
@@ -7867,13 +7867,15 @@ L(\mathrm{p}, \omega) \equiv \frac{\mathrm{d}^2 \Phi(\mathrm{p}, \omega)}{\mathr
 <p><img alt="image-20221110151141904" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202211101511944.png" /></p>
 <h2 id="irradiance-vs-radiance">Irradiance vs. Radiance<a class="headerlink" href="#irradiance-vs-radiance" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Irradiance: total power received by area dA <ul>
+<li>
+<p>Irradiance: total power received by area dA </p>
+<ul>
 <li>某一个小区域内接收到的所以能量</li>
 </ul>
 </li>
-</ul>
+<li>
+<p>Radiance: power received by area dA from “direction” dω</p>
 <ul>
-<li>Radiance: power received by area dA from “direction” dω<ul>
 <li>某一个小区域的某一个方向上接受到的能量</li>
 </ul>
 </li>
@@ -8008,35 +8010,34 @@ L_o\left(p, \omega_o\right)=L_e\left(p, \omega_o\right)+\int_{\Omega^{+}} L_i\le
 <li>
 <p>如果随机变量均匀采样（均匀分布），Monte Carlo Integration 有以下形式</p>
 <ul>
-<li>
-<p>Definite integral </p>
+<li>Definite integral </li>
+</ul>
 <div class="arithmatex">\[
 \int_a^b f(x) d x
 \]</div>
-</li>
-</ul>
 <ul>
 <li><strong>Uniform</strong> random variable</li>
 </ul>
-<div class="arithmatex">\[
-X_i \sim p(x)=\frac{1}{b-a}
-\]</div>
-<ul>
-<li>Basic Monte Carlo estimator</li>
-</ul>
-<div class="arithmatex">\[
-F_N=\frac{b-a}{N} \sum_{i=1}^N f\left(X_i\right)
-\]</div>
 </li>
 </ul>
+<p><span class="arithmatex">\(<span class="arithmatex">\(
+  X_i \sim p(x)=\frac{1}{b-a}
+  \)</span>\)</span></p>
+<div class="language-text highlight"><pre><span></span><code>- Basic Monte Carlo estimator
+</code></pre></div>
+<p><span class="arithmatex">\(<span class="arithmatex">\(
+  F_N=\frac{b-a}{N} \sum_{i=1}^N f\left(X_i\right)
+  \)</span>\)</span></p>
 <h2 id="path-tracing">Path Tracing<a class="headerlink" href="#path-tracing" title="Permanent link">&para;</a></h2>
 <h3 id="motivation-problems-of-whitted-style-ray-tracing">Motivation: Problems of Whitted-Style Ray Tracing<a class="headerlink" href="#motivation-problems-of-whitted-style-ray-tracing" title="Permanent link">&para;</a></h3>
 <p>For Whitted-style ray tracing, it has some cons/ simplifications</p>
 <ul>
-<li>Always perform specular reflections / refractions</li>
-</ul>
-<ul>
-<li>Stop bouncing at diffuse surfaces </li>
+<li>
+<p>Always perform specular reflections / refractions</p>
+</li>
+<li>
+<p>Stop bouncing at diffuse surfaces </p>
+</li>
 </ul>
 <h4 id="whitted-style-ray-tracing-problem-1">Whitted-Style Ray Tracing: Problem 1<a class="headerlink" href="#whitted-style-ray-tracing-problem-1" title="Permanent link">&para;</a></h4>
 <ul>
@@ -8127,13 +8128,11 @@ L_o\left(p, \omega_o\right) &amp;=\int_{\Omega^{+}} L_i\left(p, \omega_i\right) 
 <ul>
 <li>但是在真实世界中，光线是不会停止弹射的，限制弹射次数并不合理，因为对于弹射次数的削减相当于直接削减了能量，这违背了能量守恒定律</li>
 <li><strong>Solution: Russian Roulette (RR)</strong> （俄罗斯轮盘赌）<ul>
-<li>在一定的概率下停止追踪，方法如下<ol>
-<li>假设得到的理想追踪结果为 <span class="arithmatex">\(L_o\)</span></li>
-<li>人工设定一个概率 <span class="arithmatex">\(P\ (0 &lt; P &lt; 1)\)</span></li>
-<li>以概率 <span class="arithmatex">\(P\)</span> shoot a ray，返回 the shading result divided by <span class="arithmatex">\(P: L_o/ P\)</span></li>
-<li>以概率 <span class="arithmatex">\(1-P\)</span> shoot a ray，返回 the shading result is <span class="arithmatex">\(0\)</span></li>
-</ol>
-</li>
+<li>在一定的概率下停止追踪，方法如下
+1. 假设得到的理想追踪结果为 <span class="arithmatex">\(L_o\)</span>
+2. 人工设定一个概率 <span class="arithmatex">\(P\ (0 &lt; P &lt; 1)\)</span>
+3. 以概率 <span class="arithmatex">\(P\)</span> shoot a ray，返回 the shading result divided by <span class="arithmatex">\(P: L_o/ P\)</span>
+4. 以概率 <span class="arithmatex">\(1-P\)</span> shoot a ray，返回 the shading result is <span class="arithmatex">\(0\)</span></li>
 <li>在这种情况下的期望 <span class="arithmatex">\(E= P \times (L_o / P) + (1 - P) \times 0 = L_o\)</span> </li>
 </ul>
 </li>
@@ -8159,44 +8158,42 @@ L_o\left(p, \omega_o\right) &amp;=\int_{\Omega^{+}} L_i\left(p, \omega_i\right) 
 <h4 id="solution-1-sampling-the-light-pure-math">Solution #1: Sampling the Light (pure math)<a class="headerlink" href="#solution-1-sampling-the-light-pure-math" title="Permanent link">&para;</a></h4>
 <p><img alt="image-20221113162538497" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202211131625528.png" /></p>
 <ul>
-<li>Assume uniformly sampling on the light: <span class="arithmatex">\(\text{pdf} = 1 / A\)</span> (because <span class="arithmatex">\(\int \text{pdf} \ \mathrm{d}A = 1\)</span>) </li>
-</ul>
-<ul>
+<li>
+<p>Assume uniformly sampling on the light: <span class="arithmatex">\(\text{pdf} = 1 / A\)</span> (because <span class="arithmatex">\(\int \text{pdf} \ \mathrm{d}A = 1\)</span>) </p>
+</li>
 <li>
 <p>But the rendering equation integrates on the solid angle: <span class="arithmatex">\(L_o = \int L_i fr cos \ \mathrm{d} \omega.\)</span> </p>
 <ul>
-<li>Recall Monte Carlo Integration: Sample on <span class="arithmatex">\(x\)</span> &amp; integrate on <span class="arithmatex">\(x\)</span></li>
-</ul>
-<ul>
-<li>we sample on the light, so we must integrate on the light</li>
-</ul>
-<ul>
+<li>
+<p>Recall Monte Carlo Integration: Sample on <span class="arithmatex">\(x\)</span> &amp; integrate on <span class="arithmatex">\(x\)</span></p>
+</li>
+<li>
+<p>we sample on the light, so we must integrate on the light</p>
+</li>
 <li>
 <p>我们只要知道 <span class="arithmatex">\(\mathrm{d} \omega\)</span> 和 <span class="arithmatex">\(\mathrm{d}A\)</span> 的关系即可</p>
-<ul>
-<li>Recall the alternative def. of solid angle: <strong>Projected area on the unit sphere</strong></li>
-</ul>
-<ul>
-<li>将 <span class="arithmatex">\(\mathrm{d}A\)</span> 往单位球上投影即可 ( <span class="arithmatex">\(\mathrm{d} A \cos \theta^{\prime}\)</span> 就是把面转到朝向中心的方向，根据立体角的定义来理解下面的式子)</li>
+</li>
+<li>
+<p>Recall the alternative def. of solid angle: <strong>Projected area on the unit sphere</strong></p>
+</li>
+<li>
+<p>将 <span class="arithmatex">\(\mathrm{d}A\)</span> 往单位球上投影即可 ( <span class="arithmatex">\(\mathrm{d} A \cos \theta^{\prime}\)</span> 就是把面转到朝向中心的方向，根据立体角的定义来理解下面的式子)</p>
+</li>
 </ul>
 <div class="arithmatex">\[
 \mathrm{d} \omega=\frac{\mathrm{d} A \cos \theta^{\prime}}{\left\|x^{\prime}-x\right\|^2}
 \]</div>
 </li>
-</ul>
-</li>
-</ul>
-<ul>
 <li>
 <p>我们重写渲染方程即可（变量替换，改变积分域）</p>
-<div class="arithmatex">\[
-\begin{aligned}
-L_o\left(x, \omega_o\right) &amp;=\int_{\Omega^{+}} L_i\left(x, \omega_i\right) f_r\left(x, \omega_i, \omega_o\right) \cos \theta \mathrm{d} \omega_i \\
-&amp;=\int_A L_i\left(x, \omega_i\right) f_r\left(x, \omega_i, \omega_o\right) \frac{\cos \theta \cos \theta^{\prime}}{\left\|x^{\prime}-x\right\|^2} \mathrm{~d} A
-\end{aligned}
-\]</div>
 </li>
 </ul>
+<p><span class="arithmatex">\(<span class="arithmatex">\(
+  \begin{aligned}
+  L_o\left(x, \omega_o\right) &amp;=\int_{\Omega^{+}} L_i\left(x, \omega_i\right) f_r\left(x, \omega_i, \omega_o\right) \cos \theta \mathrm{d} \omega_i \\
+  &amp;=\int_A L_i\left(x, \omega_i\right) f_r\left(x, \omega_i, \omega_o\right) \frac{\cos \theta \cos \theta^{\prime}}{\left\|x^{\prime}-x\right\|^2} \mathrm{~d} A
+  \end{aligned}
+  \)</span>\)</span></p>
 <p>Previously, we assume the light is “accidentally” shot by uniform hemisphere sampling </p>
 <p>Now we consider the radiance coming from two parts: </p>
 <ol>
@@ -8240,13 +8237,15 @@ L_o\left(x, \omega_o\right) &amp;=\int_{\Omega^{+}} L_i\left(x, \omega_i\right) 
 </span></code></pre></div>
 <h1 id="some-side-notes">Some Side Notes<a class="headerlink" href="#some-side-notes" title="Permanent link">&para;</a></h1>
 <ul>
-<li>Previous <ul>
+<li>
+<p>Previous </p>
+<ul>
 <li>Ray tracing == Whitted-style ray tracing</li>
 </ul>
 </li>
-</ul>
+<li>
+<p>Modern (my own definition) </p>
 <ul>
-<li>Modern (my own definition) <ul>
 <li>The general solution of light transport, including </li>
 <li>(Unidirectional &amp; bidirectional) path tracing </li>
 <li>Photon mapping </li>
@@ -8291,7 +8290,7 @@ L_o\left(x, \omega_o\right) &amp;=\int_{\Omega^{+}} L_i\left(x, \omega_i\right) 
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 16, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 30, 2023</span>
       
         <br>
         Created:

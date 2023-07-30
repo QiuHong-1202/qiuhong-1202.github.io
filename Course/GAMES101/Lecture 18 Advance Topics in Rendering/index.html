@@ -7460,14 +7460,16 @@ z"/>
 <h3 id="bidirectional-path-tracing-bdpt">Bidirectional Path Tracing (BDPT)<a class="headerlink" href="#bidirectional-path-tracing-bdpt" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Name: 双向路径追踪</li>
-<li>Recall: a path connects the camera and the light （生成一些半路径）<ul>
+<li>
+<p>Recall: a path connects the camera and the light （生成一些半路径）</p>
+<ul>
 <li>Traces sub-paths from both the camera and the light </li>
 <li>Connects the end points from both sub-paths</li>
 </ul>
 </li>
-</ul>
+<li>
+<p>Pros</p>
 <ul>
-<li>Pros<ul>
 <li>Suitable if the light transport is complex on the light’s side</li>
 <li>unbiased</li>
 </ul>
@@ -7496,20 +7498,16 @@ z"/>
 <p><img alt="image-20221121154954427" src="https://cdn.jsdelivr.net/gh/QiuHong-1202/FigureBed/2022/202211211549456.png" /></p>
 <ul>
 <li>Pros<ul>
-<li>Works great with difficult light paths <ul>
+<li>Works great with difficult light paths </li>
 <li>找到一条光线作为种子，可以在它周围找到其他的光线</li>
-</ul>
-</li>
 <li>unbiased</li>
 </ul>
 </li>
 <li>Cons<ul>
 <li>Difficult to estimate the convergence rate （收敛速率，也就是渲染速度难以分析）</li>
-<li>Does not guarantee equal convergence rate per pixel <ul>
+<li>Does not guarantee equal convergence rate per pixel </li>
 <li>usually produces “dirty” results</li>
 <li>usually not used to render animations</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -7590,15 +7588,17 @@ z"/>
 </ul>
 <h2 id="advanced-appearance-modeling">Advanced Appearance Modeling<a class="headerlink" href="#advanced-appearance-modeling" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Non-surface models <ul>
+<li>
+<p>Non-surface models </p>
+<ul>
 <li>Participating media </li>
 <li>Hair / fur / fiber (BCSDF) </li>
 <li>Granular material </li>
 </ul>
 </li>
-</ul>
+<li>
+<p>Surface models</p>
 <ul>
-<li>Surface models<ul>
 <li>Translucent material (BSSRDF)</li>
 <li>Cloth</li>
 <li>Detailed material (non-statistical BRDF) </li>
@@ -7769,7 +7769,7 @@ L\left(x_o, \omega_o\right)=\int_A \int_{H^2} S\left(x_i, \omega_i, x_o, \omega_
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 16, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 30, 2023</span>
       
         <br>
         Created:

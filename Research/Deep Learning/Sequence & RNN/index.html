@@ -7207,10 +7207,12 @@ p\left(x_t \mid x_1, \ldots x_{t-1}\right)=p\left(x_t \mid f\left(x_1, \ldots x_
 </ul>
 <h2 id="_3">语言模型<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul>
-<li>给定文本序列 <span class="arithmatex">\(x_1, \ldots, x_T\)</span>，语言模型的目标是估计联合概率 <span class="arithmatex">\(p\left(x_1, \ldots, x_T\right)\)</span>，使用统计方法时常采用 <span class="arithmatex">\(n\)</span> 元语法</li>
-</ul>
+<li>
+<p>给定文本序列 <span class="arithmatex">\(x_1, \ldots, x_T\)</span>，语言模型的目标是估计联合概率 <span class="arithmatex">\(p\left(x_1, \ldots, x_T\right)\)</span>，使用统计方法时常采用 <span class="arithmatex">\(n\)</span> 元语法</p>
+</li>
+<li>
+<p>它的应用包括：</p>
 <ul>
-<li>它的应用包括：<ul>
 <li>做预训练模型 (eg BERT, GPT-3)</li>
 <li>生成本文, 给定前面几个词, 不断的使用 <span class="arithmatex">\(x_t \sim p\left(x_t \mid x_1, \ldots, x_{t-1}\right)\)</span> 来 生成后续文本</li>
 <li>判断多个序列中哪个更常见, e.g. “to recognize speech” vs "to wreck a nice beach</li>
@@ -7336,7 +7338,7 @@ p\left(x_1, x_2, x_3, x_4\right)=p\left(x_1\right) p\left(x_2 \mid x_1\right) p\
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 17, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 30, 2023</span>
       
         <br>
         Created:

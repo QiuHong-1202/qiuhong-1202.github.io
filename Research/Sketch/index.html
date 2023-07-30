@@ -6990,44 +6990,46 @@ z"/>
 <li>架构：bidirectional RNN(LSTM) encoder，HyperLSTM decoder</li>
 </ul>
 </li>
-<li><code>[CVPR20]</code> <strong>Sketchformer</strong>: Transformer-based Representation for Sketched Structure<ul>
+<li>
+<p><code>[CVPR20]</code> <strong>Sketchformer</strong>: Transformer-based Representation for Sketched Structure</p>
+<ul>
 <li>功能：sketch 的分类、 sketch 重建、sketch based Image retrieval、sketch 的插值</li>
 <li>架构：Transformer encoder &amp; decoder</li>
 <li>为什么不使用 LSTM 而使用 Transformer 作为 decoder：作者认为 seq2seq 模型的有限时间范围可能会阻止这种表示法对长而复杂的草图进行建模</li>
 </ul>
 </li>
-</ul>
+<li>
+<p><code>[BMVC20]</code> <strong>SketchHealer</strong>: A Graph-to-Sequence Network for Recreating Partial Human Sketches</p>
 <ul>
-<li><code>[BMVC20]</code> <strong>SketchHealer</strong>: A Graph-to-Sequence Network for Recreating Partial Human Sketches<ul>
 <li>功能：sketch healing</li>
 <li>架构：GCN-based encoder，LSTM decoder</li>
 </ul>
 </li>
-</ul>
+<li>
+<p><code>[ICCV21]</code> <strong>SketchLattice</strong>: Latticed Representation for Sketch Manipulation</p>
 <ul>
-<li><code>[ICCV21]</code> <strong>SketchLattice</strong>: Latticed Representation for Sketch Manipulation<ul>
 <li>功能：sketch healing、基于图像的草图合成</li>
 <li>架构：利用一个网格图 (Lattice Graph) 对草图图像进行采样以生成草图的网格表示，GCN-based encoder，LSTM decoder</li>
 </ul>
 </li>
-</ul>
+<li>
+<p><code>[IJCV22]</code> <strong>SketchHealer-2.0</strong>: Generative Sketch Healing</p>
 <ul>
-<li><code>[IJCV22]</code> <strong>SketchHealer-2.0</strong>: Generative Sketch Healing<ul>
 <li>功能：sketch healing（对于随机缺失的笔画 <span class="arithmatex">\(p_{mask}\)</span> 进行重绘，作者特意强调了自己的任务是修复并且和 SketchRNN 不改变原有笔画的预测任务 <code>completion</code> 不同）</li>
 <li>架构：GCN encoder，LSTM decoder</li>
 <li>和 <code>SketchHealer1.0</code> 相比，增加了一个 <code>Perceptual Metric</code> </li>
 </ul>
 </li>
-</ul>
+<li>
+<p><code>[AAAI23]</code> <strong>SP-gra2seq</strong>: Linking Sketch Patches by Learning Synonymous Proximity for Graphic Sketch Representation</p>
 <ul>
-<li><code>[AAAI23]</code> <strong>SP-gra2seq</strong>: Linking Sketch Patches by Learning Synonymous Proximity for Graphic Sketch Representation<ul>
 <li>功能：sketch healing</li>
 <li>架构：使用 CNN encoder 获取 patch，GCN encoder 进行特征提取，RNN decoder 进行重建</li>
 </ul>
 </li>
-</ul>
+<li>
+<p><code>[ICLR23]</code> <strong>SketchKnitter</strong>: Vectorized Sketch Generation with Diffusion Models</p>
 <ul>
-<li><code>[ICLR23]</code> <strong>SketchKnitter</strong>: Vectorized Sketch Generation with Diffusion Models<ul>
 <li>功能：sketch 的无条件和有条件生成</li>
 <li>架构：diffusion</li>
 </ul>
@@ -7046,7 +7048,7 @@ z"/>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 18, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 30, 2023</span>
       
         <br>
         Created:
