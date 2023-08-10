@@ -7024,9 +7024,27 @@ z"/>
 <ul>
 <li>在终端关闭后代理就会失效</li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>set HTTP_PROXY=http://127.0.0.1:7890
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>set HTTP_PROXY=http://127.0.0.1:7890 
 </span></code></pre></div>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>set HTTPS_PROXY=http://127.0.0.1:7890
+</span></code></pre></div>
+<ul>
+<li>Windows</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>set HTTP_PROXY=http://127.0.0.1:7890 &amp;&amp; set HTTPS_PROXY=http://127.0.0.1:7890
+</span></code></pre></div>
+<blockquote>
+<p>Windows 一次执行多个命令 （“执行成功”的意思是返回的 <code>errorlevel=0</code>）</p>
+<ul>
+<li>aa &amp;&amp; bb：执行aa，成功后再执行bb</li>
+<li>aa || bb：先执行aa，若执行成功则不再执行bb，若失败则执行bb</li>
+<li>a &amp; b：表示执行a再执行b，无论a是否成功</li>
+</ul>
+</blockquote>
+<ul>
+<li>Linux</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>set HTTP_PROXY=http://127.0.0.1:7890 ; set HTTPS_PROXY=http://127.0.0.1:7890
 </span></code></pre></div>
 <h2 id="_2">设置非系统代理应用的代理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ol>
@@ -7037,8 +7055,8 @@ z"/>
 <ul>
 <li>例如对于 cmake-gui 使用代理，可以先设置好终端的临时代理，再执行以下命令</li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>cd C:\program files\cmake\bin\
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>cmake-gui.exe
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>cd C:\program files\cmake\bin\
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>cmake-gui.exe
 </span></code></pre></div>
 
   <hr>
