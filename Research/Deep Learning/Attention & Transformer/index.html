@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../../Sketch/">
+        <link rel="prev" href="../../Structural%20%26%20Hierarchical/">
       
       
         <link rel="next" href="../Concepts%20in%20Deep%20Learning/">
@@ -6203,6 +6203,8 @@ z"/>
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -6277,6 +6279,20 @@ z"/>
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../../Structural%20%26%20Hierarchical/" class="md-nav__link">
+        Structural & Hierarchical
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -6286,7 +6302,7 @@ z"/>
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" checked>
       
       
         
@@ -6302,13 +6318,13 @@ z"/>
         
       
       
-        <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
           Deep Learning
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_3_5">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_6">
           <span class="md-nav__icon md-icon"></span>
           Deep Learning
         </label>
@@ -6503,6 +6519,40 @@ z"/>
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#bert" class="md-nav__link">
+    BERT
+  </a>
+  
+    <nav class="md-nav" aria-label="BERT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bert_1" class="md-nav__link">
+    BERT 架构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bert_2" class="md-nav__link">
+    BERT 对输入的修改
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bert_3" class="md-nav__link">
+    BERT 训练时的任务
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6588,7 +6638,7 @@ z"/>
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
       
       
         
@@ -6596,13 +6646,13 @@ z"/>
         
       
       
-        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
           Paper Reading
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_6">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_7">
           <span class="md-nav__icon md-icon"></span>
           Paper Reading
         </label>
@@ -7257,6 +7307,40 @@ z"/>
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#bert" class="md-nav__link">
+    BERT
+  </a>
+  
+    <nav class="md-nav" aria-label="BERT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bert_1" class="md-nav__link">
+    BERT 架构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bert_2" class="md-nav__link">
+    BERT 对输入的修改
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bert_3" class="md-nav__link">
+    BERT 训练时的任务
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7477,13 +7561,51 @@ a\left(\mathbf{q}, \mathbf{k}_{\mathbf{i}}\right)=\left\langle\mathbf{q}, \mathb
 </li>
 </ul>
 <p><img alt="image-20230608144358885" src="../assets/image-20230608144358885.png" /></p>
+<h2 id="bert">BERT<a class="headerlink" href="#bert" title="Permanent link">&para;</a></h2>
+<ul>
+<li>基于微调的 NLP 模型</li>
+<li>预训练的模型抽取了足够多的信息</li>
+<li>新的任务只需要添加一个简单的输出层</li>
+</ul>
+<h3 id="bert_1">BERT 架构<a class="headerlink" href="#bert_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>只有编码器的 Transformer</p>
+</li>
+<li>
+<p>两个版本:</p>
+<ul>
+<li>
+<p>Base: <span class="arithmatex">\(\#\)</span> blocks = 12, hidden size = 768, #heads = 12, #parameters =110M</p>
+</li>
+<li>
+<p>Large: <span class="arithmatex">\(\#\)</span> blocks = 24, hidden size = 1024, #heads =1, #parameter = 340M</p>
+</li>
+</ul>
+</li>
+<li>
+<p>在大规模数据上训练 &gt; 3B 词</p>
+</li>
+</ul>
+<h3 id="bert_2">BERT 对输入的修改<a class="headerlink" href="#bert_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>每个样本是一个句子对</li>
+<li>加入额外的片段嵌入</li>
+<li>位置编码可以学习</li>
+</ul>
+<p><img alt="image-20230808095423468" src="../assets/image-20230808095423468.png" /></p>
+<h3 id="bert_3">BERT 训练时的任务<a class="headerlink" href="#bert_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>带掩码的语言模型（预测 mask）</li>
+<li>下一个句子预测</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 30, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 8, 2023</span>
       
         <br>
         Created:
