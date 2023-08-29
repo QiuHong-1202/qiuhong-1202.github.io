@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../../Course/Operation%20System/Lecture%209%20Processes/">
+        <link rel="prev" href="../Arxiv/">
       
       
-        <link rel="next" href="../Arxiv/">
+        <link rel="next" href="../Concepts%20in%20CG/">
       
       <link rel="icon" href="../../images/snowman-circle.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
-        <title>Abstraction & CAD - Hongliang's Wiki</title>
+        <title>Colmap - Hongliang's Wiki</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#abstraction-cad" class="md-skip">
+        <a href="#colmap" class="md-skip">
           Skip to content
         </a>
       
@@ -2911,7 +2911,7 @@ z"/>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Abstraction & CAD
+              Colmap
             
           </span>
         </div>
@@ -3028,7 +3028,7 @@ z"/>
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../Arxiv/" class="md-tabs__link md-tabs__link--active">
         Research
       </a>
     </li>
@@ -6389,10 +6389,6 @@ z"/>
         
           
         
-          
-        
-          
-        
       
       
         <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -6411,6 +6407,20 @@ z"/>
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../Arxiv/" class="md-nav__link">
+        Arxiv
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -6423,12 +6433,12 @@ z"/>
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Abstraction & CAD
+          Colmap
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Abstraction & CAD
+        Colmap
       </a>
       
         
@@ -6447,37 +6457,30 @@ z"/>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#design-metric" class="md-nav__link">
-    Design Metric
+  <a href="#colmap-sfm-pipeline" class="md-nav__link">
+    Colmap SFM pipeline
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#image-abstraction" class="md-nav__link">
-    Image Abstraction
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shape-deformation-abstraction" class="md-nav__link">
-    Shape Deformation &amp; Abstraction
-  </a>
-  
-    <nav class="md-nav" aria-label="Shape Deformation &amp; Abstraction">
+    <nav class="md-nav" aria-label="Colmap SFM pipeline">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#deform-art" class="md-nav__link">
-    Deform Art
+  <a href="#overview" class="md-nav__link">
+    Overview
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#wire-art" class="md-nav__link">
-    Wire Art
+  <a href="#correspondence-search" class="md-nav__link">
+    Correspondence Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incremental-reconstruction" class="md-nav__link">
+    Incremental Reconstruction
   </a>
   
 </li>
@@ -6488,37 +6491,58 @@ z"/>
 </li>
       
         <li class="md-nav__item">
-  <a href="#cad-art-computational-assemblies" class="md-nav__link">
-    CAD Art &amp; Computational Assemblies
+  <a href="#algorithm-detail" class="md-nav__link">
+    Algorithm Detail
   </a>
   
-    <nav class="md-nav" aria-label="CAD Art &amp; Computational Assemblies">
+    <nav class="md-nav" aria-label="Algorithm Detail">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#interlocking" class="md-nav__link">
-    Interlocking
+  <a href="#scale-invariant-feature-transform-sift" class="md-nav__link">
+    Scale-invariant feature transform (SIFT)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#dissection-puzzles" class="md-nav__link">
-    Dissection Puzzles
+  <a href="#matching" class="md-nav__link">
+    Matching
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#lego-design" class="md-nav__link">
-    LEGO Design
+  <a href="#geometric-verification" class="md-nav__link">
+    Geometric verification
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#computational-assemblies" class="md-nav__link">
-    Computational Assemblies
+  <a href="#initialization" class="md-nav__link">
+    Initialization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-registration" class="md-nav__link">
+    Image Registration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#triangulation" class="md-nav__link">
+    Triangulation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bundle-adjustment" class="md-nav__link">
+    Bundle Adjustment
   </a>
   
 </li>
@@ -6529,8 +6553,8 @@ z"/>
 </li>
       
         <li class="md-nav__item">
-  <a href="#maybe-related" class="md-nav__link">
-    Maybe Related
+  <a href="#reference-links" class="md-nav__link">
+    Reference Links
   </a>
   
 </li>
@@ -6539,20 +6563,6 @@ z"/>
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Arxiv/" class="md-nav__link">
-        Arxiv
-      </a>
     </li>
   
 
@@ -6578,50 +6588,8 @@ z"/>
   
   
     <li class="md-nav__item">
-      <a href="../Layout/" class="md-nav__link">
-        Layout
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../Scene%20Reconstruction/" class="md-nav__link">
-        Scene Reconstruction
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Sketch/" class="md-nav__link">
-        Sketch
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Structural%20%26%20Hierarchical/" class="md-nav__link">
-        Structural & Hierarchical
+        Scene
       </a>
     </li>
   
@@ -6641,7 +6609,7 @@ z"/>
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_8" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
       
       
         
@@ -6657,13 +6625,13 @@ z"/>
         
       
       
-        <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
           Deep Learning
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_8">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_5">
           <span class="md-nav__icon md-icon"></span>
           Deep Learning
         </label>
@@ -6759,7 +6727,7 @@ z"/>
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_9" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
       
       
         
@@ -6767,13 +6735,13 @@ z"/>
         
       
       
-        <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
           Paper Reading
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_9">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6">
           <span class="md-nav__icon md-icon"></span>
           Paper Reading
         </label>
@@ -6785,8 +6753,110 @@ z"/>
   
   
     <li class="md-nav__item">
-      <a href="../Paper%20Reading/%5BEG20%5D%20Integer-Grid%20Sketch%20Simplification%20and%20Vectorization/" class="md-nav__link">
-        [EG20] Integer Grid Sketch Simplification and Vectorization
+      <a href="../Paper%20Reading/%5BEG20%5D%20Integer-Grid%20Sketch/" class="md-nav__link">
+        [EG20] Integer Grid Sketch
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+          Topics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          Topics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Topics/Abstraction%20%26%20CAD/" class="md-nav__link">
+        Abstraction & CAD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Topics/Layout/" class="md-nav__link">
+        Layout
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Topics/Sketch/" class="md-nav__link">
+        Sketch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Topics/Structural%20%26%20Hierarchical/" class="md-nav__link">
+        Structural & Hierarchical
       </a>
     </li>
   
@@ -7311,37 +7381,30 @@ z"/>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#design-metric" class="md-nav__link">
-    Design Metric
+  <a href="#colmap-sfm-pipeline" class="md-nav__link">
+    Colmap SFM pipeline
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#image-abstraction" class="md-nav__link">
-    Image Abstraction
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shape-deformation-abstraction" class="md-nav__link">
-    Shape Deformation &amp; Abstraction
-  </a>
-  
-    <nav class="md-nav" aria-label="Shape Deformation &amp; Abstraction">
+    <nav class="md-nav" aria-label="Colmap SFM pipeline">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#deform-art" class="md-nav__link">
-    Deform Art
+  <a href="#overview" class="md-nav__link">
+    Overview
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#wire-art" class="md-nav__link">
-    Wire Art
+  <a href="#correspondence-search" class="md-nav__link">
+    Correspondence Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incremental-reconstruction" class="md-nav__link">
+    Incremental Reconstruction
   </a>
   
 </li>
@@ -7352,37 +7415,58 @@ z"/>
 </li>
       
         <li class="md-nav__item">
-  <a href="#cad-art-computational-assemblies" class="md-nav__link">
-    CAD Art &amp; Computational Assemblies
+  <a href="#algorithm-detail" class="md-nav__link">
+    Algorithm Detail
   </a>
   
-    <nav class="md-nav" aria-label="CAD Art &amp; Computational Assemblies">
+    <nav class="md-nav" aria-label="Algorithm Detail">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#interlocking" class="md-nav__link">
-    Interlocking
+  <a href="#scale-invariant-feature-transform-sift" class="md-nav__link">
+    Scale-invariant feature transform (SIFT)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#dissection-puzzles" class="md-nav__link">
-    Dissection Puzzles
+  <a href="#matching" class="md-nav__link">
+    Matching
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#lego-design" class="md-nav__link">
-    LEGO Design
+  <a href="#geometric-verification" class="md-nav__link">
+    Geometric verification
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#computational-assemblies" class="md-nav__link">
-    Computational Assemblies
+  <a href="#initialization" class="md-nav__link">
+    Initialization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-registration" class="md-nav__link">
+    Image Registration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#triangulation" class="md-nav__link">
+    Triangulation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bundle-adjustment" class="md-nav__link">
+    Bundle Adjustment
   </a>
   
 </li>
@@ -7393,8 +7477,8 @@ z"/>
 </li>
       
         <li class="md-nav__item">
-  <a href="#maybe-related" class="md-nav__link">
-    Maybe Related
+  <a href="#reference-links" class="md-nav__link">
+    Reference Links
   </a>
   
 </li>
@@ -7417,203 +7501,78 @@ z"/>
   
 
 
-<h1 id="abstraction-cad">Abstraction &amp; CAD<a class="headerlink" href="#abstraction-cad" title="Permanent link">&para;</a></h1>
+<h1 id="colmap">Colmap<a class="headerlink" href="#colmap" title="Permanent link">&para;</a></h1>
+<h2 id="colmap-sfm-pipeline">Colmap SFM pipeline<a class="headerlink" href="#colmap-sfm-pipeline" title="Permanent link">&para;</a></h2>
+<p><img alt="Incremental Structure-from-Motion pipeline" src="https://colmap.github.io/_images/incremental-sfm.png" /></p>
+<h3 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h3>
 <ul>
-<li>key words: shape deformation, abstraction, clip art, reconstruction, representation, interlocking, design, assisted design</li>
-<li>labs link<ul>
-<li><a href="https://sutd-cgl.github.io/publication.html">CGL SUTD</a></li>
-<li><a href="https://www.epfl.ch/labs/gcm/publications/">EPFL</a></li>
-<li><a href="https://cgv.cs.nthu.edu.tw/home">NTHU CGV LAB</a></li>
-<li><a href="https://www.cs.sfu.ca/~haoz/papers_by_cat.html">HaoZhang</a></li>
-</ul>
+<li>
+<p>SFM 通常首先进行<strong>特征提取/匹配</strong>以及后续的<strong>几何校验</strong>滤出外点，经过上述步骤可以得到所谓的场景图（Scene Graph），该场景图是后续的增量式的基础（提供数据关联等信息）</p>
+</li>
+<li>
+<p>增量式重建中需要非常仔细地挑选两帧进行重建，在图像进行注册（即定位当前帧在地图中的位姿）之前，需要进行三角化场景点/滤出外点以及 <strong>BA 优化</strong>当前的模型</p>
 </li>
 </ul>
-<h2 id="design-metric">Design Metric<a class="headerlink" href="#design-metric" title="Permanent link">&para;</a></h2>
+<h3 id="correspondence-search">Correspondence Search<a class="headerlink" href="#correspondence-search" title="Permanent link">&para;</a></h3>
+<p>输入：一系列图片；输出：经过几何校验后的图像匹配关系。</p>
+<p>为了得到尽可能准确的匹配关系，该步骤中涉及特征提取，匹配以及几何校验。</p>
 <ul>
-<li>Golden Ratio Arc</li>
-<li>Black &amp; White Abstraction (flat design: less is more)</li>
-<li>skeuomorphic (拟物化)</li>
-<li>字体设计</li>
+<li>特征匹配：可以是任何一种特异性较强的特征，如 SIFT（COLMAP默认用SIFT），主要为后续的特征匹配服务</li>
+<li>匹配阶段，将输入的图像两两之间进行匹配（可以发现，这一步的时间复杂度非常大），得到潜在的场景重合部分</li>
+<li>几何校验：初始匹配的外点势必很多，此时需要滤出外点。通常情况下会用到基础矩阵（未标定）/本质矩阵（已标定）以及单应矩阵（纯旋转/共面）。图像经过上述三个步骤之后的输出为 <strong>scene graph</strong>，即图像是节点，几何校验后的匹配对是边。</li>
 </ul>
-<h2 id="image-abstraction">Image Abstraction<a class="headerlink" href="#image-abstraction" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>[EG23]</code> Img2Logo: Generating Golden Ratio Logos from Images<ul>
-<li>page: <a href="https://cgv.cs.nthu.edu.tw/projects/img2Logo">https://cgv.cs.nthu.edu.tw/projects/img2Logo</a></li>
-</ul>
-</li>
-<li><code>[SIG11]</code> Abstraction of 2D Shapes in Terms of Parts<ul>
-<li>abstract: 对平面 2D 形状做抽象，减小形状的复杂程度</li>
-<li>paper: <a href="http://graphics.stanford.edu/~niloy/research/abstraction/paper_docs/abstraction_siga_09.pdf">http://graphics.stanford.edu/~niloy/research/abstraction/paper_docs/abstraction_siga_09.pdf</a></li>
-</ul>
-</li>
-<li><code>[CVM17]</code> User-Guided Line Abstraction Using Coherence and Structure Analysis<ul>
-<li>page: <a href="https://cgv.cs.nthu.edu.tw/projects/HCI/LineAbstraction">https://cgv.cs.nthu.edu.tw/projects/HCI/LineAbstraction</a></li>
-</ul>
-</li>
-<li><code>[SIG18]</code>  Scale-aware Black-and-White Abstraction of 3D Shapes<ul>
-<li>abstract: Given a 3D shape, generate 2D B&amp;W images </li>
-<li>project page: <a href="https://cgv.cs.nthu.edu.tw/projects/Shape_Analysis/BW_Abstraction">https://cgv.cs.nthu.edu.tw/projects/Shape_Analysis/BW_Abstraction</a></li>
-<li>code: <a href="https://github.com/unlin/libbwabstraction">https://github.com/unlin/libbwabstraction</a></li>
-<li>related work: <a href="https://dl.acm.org/doi/10.1145/1377980.1377990">Artistic thresholding</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="shape-deformation-abstraction">Shape Deformation &amp; Abstraction<a class="headerlink" href="#shape-deformation-abstraction" title="Permanent link">&para;</a></h2>
-<h3 id="deform-art">Deform Art<a class="headerlink" href="#deform-art" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>[SIG09]</code> Abstraction of Man-Made Shapes</li>
-<li><code>[SIG16]</code> Legible Compact Calligrams<ul>
-<li>abstract: 对字体做变形，生成文字画</li>
-<li>paper: <a href="https://www.cs.sfu.ca/~haoz/pubs/zou_sig16_calli.pdf">https://www.cs.sfu.ca/~haoz/pubs/zou_sig16_calli.pdf</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="wire-art">Wire Art<a class="headerlink" href="#wire-art" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>[SIGA18]</code> Multi-view Wire Art<ul>
-<li>page: <a href="https://cgv.cs.nthu.edu.tw/projects/recreational_graphics/MVWA">https://cgv.cs.nthu.edu.tw/projects/recreational_graphics/MVWA</a></li>
-</ul>
-</li>
-<li><code>[SIGA18]</code> FlexMaps: Computational Design of Flat Flexible Shells for Shaping 3D Objects<ul>
-<li>abstract: Given an input quad mesh, the FlexMaps framework first generates a coarse parametrized patch layout (a). Then, an optimization is performed to adjust the mechanical properties of a series of embedded spiral microstructures</li>
-<li>page: <a href="https://vcg.isti.cnr.it/Publications/2018/MPIPMCB18/">https://vcg.isti.cnr.it/Publications/2018/MPIPMCB18/</a></li>
-</ul>
-</li>
-<li><code>[SIGA18]</code> Fabricable Eulerian Wires for 3D Shape Abstraction<ul>
-<li>abstract: compute a small number of machine fabricable wires</li>
-<li>page: <a href="http://gruvi.cs.sfu.ca/project/eulerianwires/">http://gruvi.cs.sfu.ca/project/eulerianwires/</a></li>
-</ul>
-</li>
-<li><code>[SIGA15]</code> WrapIt: Computer-Assisted Crafting of Wire Wrapped Jewelry<ul>
-<li>abstract: Present a computational design tool that addresses the two main challenges of creating 2D wirewrapped jewelry: decomposing an input drawing into a set of wires, and bending the wires to give them shape</li>
-<li>page: <a href="http://www-sop.inria.fr/reves/Basilic/2015/ILB15/">http://www-sop.inria.fr/reves/Basilic/2015/ILB15/</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="cad-art-computational-assemblies">CAD Art &amp; Computational Assemblies<a class="headerlink" href="#cad-art-computational-assemblies" title="Permanent link">&para;</a></h2>
-<h3 id="interlocking">Interlocking<a class="headerlink" href="#interlocking" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p>互锁和互锁拼图</p>
-</blockquote>
 <ul>
-<li><code>[SIG22]</code> Computational Design of High-level Interlocking Puzzles <strong><em>(SIGGRAPH Technical Papers Award Honorable Mention)</em></strong><ul>
-<li>abstract: a computational approach to design high-level interlocking puzzles</li>
-<li>page: <a href="https://sutd-cgl.github.io/supp/Publication/projects/2022-SIGGRAPH-High-LevelPuzzle/index.html">https://sutd-cgl.github.io/supp/Publication/projects/2022-SIGGRAPH-High-LevelPuzzle/index.html</a></li>
-<li>code: <a href="https://github.com/Linsanity81/High-LevelPuzzle">https://github.com/Linsanity81/High-LevelPuzzle</a></li>
+<li>外点（Outliers）：在特征匹配过程中被错误地匹配的点或特征</li>
+<li>内点（Inliers）：内点指的是在特征匹配过程中被正确地匹配的点或特征</li>
 </ul>
-</li>
-<li><code>[SIGA19]</code> Design and Structural Optimization of Topological Interlocking Assemblies<ul>
-<li>page: <a href="https://kiki007.github.io/publication/topological_interlocking/">https://kiki007.github.io/publication/topological_interlocking/</a></li>
+</blockquote>
+<h3 id="incremental-reconstruction">Incremental Reconstruction<a class="headerlink" href="#incremental-reconstruction" title="Permanent link">&para;</a></h3>
+<p>输入：<strong>scene graph</strong>；输出：相机位姿以及3D路标点；</p>
+<p>为了完成增量重建，需要完成初始化，图像注册，三角化以及BA优化这些步骤。</p>
+<ul>
+<li>初始化：SfM在初始化时需要非常仔细的选择两帧进行重建；此时需要尽量选择<strong>scene graph</strong>中相机间可视区域多的两视角进行初始化，文中称这种选择增加了“redundancy”进而增加了重建的鲁棒性与精确性。</li>
+<li>图像注册：即根据已有的SfM模型估计图片的位姿（更准确的是估计拍摄该图像相机的位姿）；根据未知的图像与地图中图像的2D-2D匹配，进而得到二者之间的2D-3D匹配，然后利用RANSAC-PNP解算出该相机位姿，完成图像注册。为了提高位姿解算精度以及可靠的三角化，本文设计了新颖的鲁棒后续帧选择策略，后续章节进行介绍。</li>
+<li>三角化：新注册的图像需要对已有的场景点有足够多的观测，同时也可以通过三角化扩展场景点。现有的三角化方法鲁棒性不足且耗时严重。本文设计了一种全新的三角化策略，后续章节进行介绍。</li>
+<li>BA 优化：由于图像注册与三角化是分开进行的，但二者是强相关的两个过程：错误的位姿会导致错误的三角化点点产生，反之亦然。BA 能够同时优化相机位姿以及地图点，使模型的 redundancy 更强。优化目标是通过调整相机位姿与地图点位置使重投影误差最小</li>
 </ul>
-</li>
-<li><code>[SIGA18]</code> DESIA: A General Framework for Designing Interlocking Assemblies<ul>
-<li>page: <a href="https://kiki007.github.io/publication/desia/">https://kiki007.github.io/publication/desia/</a></li>
-</ul>
-</li>
-<li><code>[SIGA12]</code> Recursive Interlocking Puzzles<ul>
-<li>abstract: implement using Lego</li>
-<li>page: <a href="http://www.cse.cuhk.edu.hk/~cwfu/papers/recurpuzzle/index.htm">http://www.cse.cuhk.edu.hk/~cwfu/papers/recurpuzzle/index.htm</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="dissection-puzzles">Dissection Puzzles<a class="headerlink" href="#dissection-puzzles" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+E=\sum_j \rho_j\left(\left\|\pi\left(\mathbf{P}_c, \mathbf{X}_k\right)-\mathbf{x}_j\right\|_2^2\right)
+\]</div>
+<p>BA问题通常可以通过LM算法进行求解。但是，当SfM面对网络图像时，特别对于那些几乎一样的图像时，上述优化过程会占用极长的时间。</p>
 <blockquote>
-<p>分割拼图</p>
+<ul>
+<li>位姿：拍摄图像的相机在三维空间中d</li>
+</ul>
 </blockquote>
+<h2 id="algorithm-detail">Algorithm Detail<a class="headerlink" href="#algorithm-detail" title="Permanent link">&para;</a></h2>
+<h3 id="scale-invariant-feature-transform-sift">Scale-invariant feature transform (SIFT)<a class="headerlink" href="#scale-invariant-feature-transform-sift" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>[EG19]</code> Computational Design of Steady 3D Dissection Puzzles<ul>
-<li>abstract: Aim at computationally designing steady 3D dissection puzzles</li>
-<li>paper: <a href="https://sutd-cgl.github.io/supp/Publication/papers/2019-EG-3DDissection.pdf">https://sutd-cgl.github.io/supp/Publication/papers/2019-EG-3DDissection.pdf</a></li>
-<li>video: <a href="https://youtu.be/8UhUZh9fEMg">https://youtu.be/8UhUZh9fEMg</a></li>
+<li>SIFT 算法的实质是在不同的尺度空间上查找关键点(特征点)，并计算出关键点的方向。<ul>
+<li>P.S. SIFT 所查找到的关键点是一些十分突出，不会因光照，仿射变换和噪音等因素而变化的点，如角点、边缘点、暗区的亮点及亮区的暗点等</li>
+</ul>
+</li>
+<li>4 steps of SIFT<ul>
+<li>尺度空间极值检测：搜索所有尺度上的图像位置。通过高斯微分函数来识别潜在的对于尺度和旋转不变的兴趣点</li>
+<li>关键点定位：在每个候选的位置上，通过一个拟合精细的模型来确定位置和尺度。关键点的选择依据于它们的稳定程度</li>
+<li>方向确定：基于图像局部的梯度方向，分配给每个关键点位置一个或多个方向。所有后面的对图像数据的操作都相对于关键点的方向、尺度和位置进行变换，从而提供对于这些变换的不变性</li>
+<li>关键点描述：在每个关键点周围的邻域内，在选定的尺度上测量图像局部的梯度。这些梯度被变换成一种表示，这种表示允许比较大的局部形状的变形和光照变化</li>
 </ul>
 </li>
 </ul>
-<h3 id="lego-design">LEGO Design<a class="headerlink" href="#lego-design" title="Permanent link">&para;</a></h3>
+<h3 id="matching">Matching<a class="headerlink" href="#matching" title="Permanent link">&para;</a></h3>
+<h3 id="geometric-verification">Geometric verification<a class="headerlink" href="#geometric-verification" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> RANSAC</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 基础矩阵（未标定）/本质矩阵（已标定）以及单应矩阵（纯旋转/共面）</li>
+</ul>
+<h3 id="initialization">Initialization<a class="headerlink" href="#initialization" title="Permanent link">&para;</a></h3>
+<h3 id="image-registration">Image Registration<a class="headerlink" href="#image-registration" title="Permanent link">&para;</a></h3>
+<h3 id="triangulation">Triangulation<a class="headerlink" href="#triangulation" title="Permanent link">&para;</a></h3>
+<h3 id="bundle-adjustment">Bundle Adjustment<a class="headerlink" href="#bundle-adjustment" title="Permanent link">&para;</a></h3>
+<h2 id="reference-links">Reference Links<a class="headerlink" href="#reference-links" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>[SIGA19]</code> Computational LEGO Technic Design<ul>
-<li>abstract: automatically compute LEGO Technic models from user input sketches</li>
-<li>paper: <a href="https://arxiv.org/abs/2007.02245">https://arxiv.org/abs/2007.02245</a> </li>
-</ul>
-</li>
-<li><code>[SIGA15]</code> Legolization: Optimizing LEGO Designs<ul>
-<li>abstract: a layout refinement algorithm, iteratively improve the weak portion of structure, generate LEGO structure from 3D model</li>
-<li>paper: <a href="http://www.cs.columbia.edu/~yonghao/siga15/luo-Legolization.pdf">http://www.cs.columbia.edu/~yonghao/siga15/luo-Legolization.pdf</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="computational-assemblies">Computational Assemblies<a class="headerlink" href="#computational-assemblies" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>[EG21]</code> State of the Art on Computational Design of Assemblies with Rigid Parts<ul>
-<li>abstract: SOTA report about assembly(装配体部件)</li>
-<li>paper: <a href="https://sutd-cgl.github.io/supp/Publication/papers/2021-EG-AssemblySurvey.pdf">https://sutd-cgl.github.io/supp/Publication/papers/2021-EG-AssemblySurvey.pdf</a></li>
-<li>video: <a href="https://www.youtube.com/watch?v=4fOT2NiKI-8">https://www.youtube.com/watch?v=4fOT2NiKI-8</a></li>
-</ul>
-</li>
-<li><code>[SIGA22]</code> Exact 3D Path Generation via 3D Cam-Linkage Mechanisms<ul>
-<li>page: <a href="https://sutd-cgl.github.io/supp/Publication/projects/2022-SIGAsia-3DCamLinkage/index.html">https://sutd-cgl.github.io/supp/Publication/projects/2022-SIGAsia-3DCamLinkage/index.html</a></li>
-<li>code: <a href="https://github.com/chengcno/SpatialLinkageCam">https://github.com/chengcno/SpatialLinkageCam</a></li>
-</ul>
-</li>
-<li><code>[SIG21]</code> MOCCA: Modeling and Optimizing Cone-joints for Complex Assemblies<ul>
-<li>abstract: using cone joints to model and optimize complex assemblies</li>
-<li>page: <a href="https://infoscience.epfl.ch/record/288057">https://infoscience.epfl.ch/record/288057</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="maybe-related">Maybe Related<a class="headerlink" href="#maybe-related" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>[SIG22]</code> As-Locally-Uniform-As-Possible Reshaping of Vector Clip-Art<ul>
-<li>abstract: clip art reshape</li>
-<li>page: <a href="https://www.cs.ubc.ca/labs/imager/tr/2022/ALUP/">https://www.cs.ubc.ca/labs/imager/tr/2022/ALUP/</a></li>
-</ul>
-</li>
-<li><code>[SIG17]</code> Sketch-Based Implicit Blending<ul>
-<li>abstract: deform of shape</li>
-<li>paper: <a href="https://taiya.github.io/pubs/angles2017sketch.pdf">https://taiya.github.io/pubs/angles2017sketch.pdf</a></li>
-<li>video: <a href="https://www.youtube.com/watch?v=5lah1kdp-P8">https://www.youtube.com/watch?v=5lah1kdp-P8</a></li>
-</ul>
-</li>
-<li><code>[SIG18]</code> Full 3D Reconstruction of Transparent Objects<ul>
-<li>page: <a href="https://vcc.szu.edu.cn/research/2018/FRT">https://vcc.szu.edu.cn/research/2018/FRT</a></li>
-</ul>
-</li>
-<li><code>[SIGA18]</code> Construction and Fabrication of Reversible Shape Transforms<ul>
-<li>page: <a href="https://vcc.tech/research/2018/RIOT">https://vcc.tech/research/2018/RIOT</a></li>
-</ul>
-</li>
-<li><code>[SIGA19]</code> Design and Structural Optimization of Topological Interlocking Assemblies<ul>
-<li>page: <a href="https://lgg.epfl.ch/publications/2019/Topological_Interlocking/index.php">https://lgg.epfl.ch/publications/2019/Topological_Interlocking/index.php</a></li>
-<li>code: <a href="https://github.com/EPFL-LGG/TopoLite">https://github.com/EPFL-LGG/TopoLite</a></li>
-</ul>
-</li>
-<li><code>[SIGA15]</code> Generalized Cylinder Decomposition<ul>
-<li>复杂形状分解为几何简单的基元 (广义圆柱体)</li>
-<li>page: <a href="https://vcc.tech/research/2015/GCD">https://vcc.tech/research/2015/GCD</a></li>
-</ul>
-</li>
-<li><code>[SIG13]</code> Style and Abstraction in Portrait Sketching<ul>
-<li>paper: <a href="https://studios.disneyresearch.com/wp-content/uploads/2019/03/Style-and-Abstraction-in-Portrait-Sketching.pdf">https://studios.disneyresearch.com/wp-content/uploads/2019/03/Style-and-Abstraction-in-Portrait-Sketching.pdf</a></li>
-</ul>
-</li>
-<li><code>[SIG17]</code> Computational Design of Wind-up Toys<ul>
-<li>page: <a href="https://sutd-cgl.github.io/supp/Publication/projects/2017-SIGAsia-Wind-upToy/index.htm">https://sutd-cgl.github.io/supp/Publication/projects/2017-SIGAsia-Wind-upToy/index.htm</a></li>
-</ul>
-</li>
-<li><code>[SIGA15]</code> Interactive surface design with interlocking elements<ul>
-<li>paper: <a href="http://www-labs.iro.umontreal.ca/~bernhard/PDF/InterlockingElements.pdf">http://www-labs.iro.umontreal.ca/~bernhard/PDF/InterlockingElements.pdf</a></li>
-</ul>
-</li>
-<li><code>[SIG14]</code> Designing Inflatable Structures<ul>
-<li>abstract: 输入 3D 模型，制造可充气物体</li>
-<li>paper: <a href="https://studios.disneyresearch.com/wp-content/uploads/2019/03/Designing-Inflatable-Structures.pdf">https://studios.disneyresearch.com/wp-content/uploads/2019/03/Designing-Inflatable-Structures.pdf</a></li>
-</ul>
-</li>
-<li><code>[SIG07]</code> Plushie: An Interactive Design System for Plush Toys<ul>
-<li>abstract: 3D 模型制造毛绒玩具</li>
-<li>paper: <a href="https://www.is.ocha.ac.jp/~yuki/papers/plushie_siggraph07.pdf">https://www.is.ocha.ac.jp/~yuki/papers/plushie_siggraph07.pdf</a></li>
-</ul>
-</li>
-<li>EG Tutorial: <a href="https://sutd-cgl.github.io/supp/Publication/papers/2022-EG-AssemblyTutorial.pdf">Computational Assemblies: Analysis, Design, and Fabrication</a></li>
+<li><a href="https://vincentqin.tech/posts/colmap/">三维重建系列 COLMAP: Structure-from-Motion Revisited</a></li>
 </ul>
 
   <hr>
@@ -7621,11 +7580,11 @@ z"/>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 1, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 29, 2023</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 27, 2023</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 29, 2023</span>
       
     
   </small>
@@ -7675,7 +7634,7 @@ z"/>
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.path", "navigation.tracking", "navigation.indexes", "navigation.top", "navigation.expand", "content.code.copy"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
