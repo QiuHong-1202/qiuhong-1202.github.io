@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../Concepts%20in%20CG/">
+        <link rel="prev" href="../3D%20Scene%20Analysis/">
       
       
-        <link rel="next" href="../Deep%20Learning/Attention%20%26%20Transformer/">
+        <link rel="next" href="../Arxiv/">
       
       <link rel="icon" href="../../images/snowman-circle.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
-        <title>Scene - Hongliang's Wiki</title>
+        <title>3D Scene Reconstruction - Hongliang's Wiki</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#scene" class="md-skip">
+        <a href="#3d-scene-reconstruction" class="md-skip">
           Skip to content
         </a>
       
@@ -2911,7 +2911,7 @@ z"/>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Scene
+              3D Scene Reconstruction
             
           </span>
         </div>
@@ -6393,6 +6393,8 @@ z"/>
         
           
         
+          
+        
       
       
         
@@ -6421,36 +6423,8 @@ z"/>
   
   
     <li class="md-nav__item">
-      <a href="../Arxiv/" class="md-nav__link">
-        Arxiv
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Colmap/" class="md-nav__link">
-        Colmap
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Concepts%20in%20CG/" class="md-nav__link">
-        Concepts in CG
+      <a href="../3D%20Scene%20Analysis/" class="md-nav__link">
+        3D Scene Analysis
       </a>
     </li>
   
@@ -6473,12 +6447,12 @@ z"/>
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Scene
+          3D Scene Reconstruction
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Scene
+        3D Scene Reconstruction
       </a>
       
         
@@ -6511,22 +6485,104 @@ z"/>
 </li>
       
         <li class="md-nav__item">
-  <a href="#signed-distance-field" class="md-nav__link">
-    Signed distance field
+  <a href="#colmap-sfm-pipeline" class="md-nav__link">
+    Colmap SFM pipeline
   </a>
+  
+    <nav class="md-nav" aria-label="Colmap SFM pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correspondence-search" class="md-nav__link">
+    Correspondence Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incremental-reconstruction" class="md-nav__link">
+    Incremental Reconstruction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#marching-cube" class="md-nav__link">
-    Marching Cube
+  <a href="#colmap-algorithm-detail" class="md-nav__link">
+    Colmap Algorithm Detail
   </a>
+  
+    <nav class="md-nav" aria-label="Colmap Algorithm Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scale-invariant-feature-transform-sift" class="md-nav__link">
+    Scale-invariant feature transform (SIFT)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matching" class="md-nav__link">
+    Matching
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geometric-verification" class="md-nav__link">
+    Geometric verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initialization" class="md-nav__link">
+    Initialization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-registration" class="md-nav__link">
+    Image Registration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#triangulation" class="md-nav__link">
+    Triangulation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bundle-adjustment" class="md-nav__link">
+    Bundle Adjustment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#useful-links" class="md-nav__link">
-    Useful Links
+  <a href="#references" class="md-nav__link">
+    References
   </a>
   
 </li>
@@ -6545,6 +6601,48 @@ z"/>
   
   
   
+    <li class="md-nav__item">
+      <a href="../Arxiv/" class="md-nav__link">
+        Arxiv
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Concepts%20in%20CG/" class="md-nav__link">
+        Concepts in CG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Dataset/" class="md-nav__link">
+        Dataset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -6553,7 +6651,7 @@ z"/>
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
       
       
         
@@ -6569,13 +6667,13 @@ z"/>
         
       
       
-        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
           Deep Learning
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_6">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_7">
           <span class="md-nav__icon md-icon"></span>
           Deep Learning
         </label>
@@ -6671,7 +6769,7 @@ z"/>
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_8" >
       
       
         
@@ -6679,13 +6777,13 @@ z"/>
         
       
       
-        <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
           Paper Reading
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_7">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_8">
           <span class="md-nav__icon md-icon"></span>
           Paper Reading
         </label>
@@ -6725,7 +6823,7 @@ z"/>
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_8" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_9" >
       
       
         
@@ -6739,13 +6837,13 @@ z"/>
         
       
       
-        <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
           Topics
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_8">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_9">
           <span class="md-nav__icon md-icon"></span>
           Topics
         </label>
@@ -7339,22 +7437,104 @@ z"/>
 </li>
       
         <li class="md-nav__item">
-  <a href="#signed-distance-field" class="md-nav__link">
-    Signed distance field
+  <a href="#colmap-sfm-pipeline" class="md-nav__link">
+    Colmap SFM pipeline
   </a>
+  
+    <nav class="md-nav" aria-label="Colmap SFM pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correspondence-search" class="md-nav__link">
+    Correspondence Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incremental-reconstruction" class="md-nav__link">
+    Incremental Reconstruction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#marching-cube" class="md-nav__link">
-    Marching Cube
+  <a href="#colmap-algorithm-detail" class="md-nav__link">
+    Colmap Algorithm Detail
   </a>
+  
+    <nav class="md-nav" aria-label="Colmap Algorithm Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scale-invariant-feature-transform-sift" class="md-nav__link">
+    Scale-invariant feature transform (SIFT)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matching" class="md-nav__link">
+    Matching
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geometric-verification" class="md-nav__link">
+    Geometric verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initialization" class="md-nav__link">
+    Initialization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-registration" class="md-nav__link">
+    Image Registration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#triangulation" class="md-nav__link">
+    Triangulation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bundle-adjustment" class="md-nav__link">
+    Bundle Adjustment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#useful-links" class="md-nav__link">
-    Useful Links
+  <a href="#references" class="md-nav__link">
+    References
   </a>
   
 </li>
@@ -7377,11 +7557,7 @@ z"/>
   
 
 
-<h1 id="scene">Scene<a class="headerlink" href="#scene" title="Permanent link">&para;</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>start on: Aug 23, 2023</p>
-</div>
+<h1 id="3d-scene-reconstruction">3D Scene Reconstruction<a class="headerlink" href="#3d-scene-reconstruction" title="Permanent link">&para;</a></h1>
 <h2 id="multi-view-stereo">Multi View Stereo<a class="headerlink" href="#multi-view-stereo" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Current MVS pipeline for 3D reconstruction (2 stages)<ul>
@@ -7415,34 +7591,77 @@ z"/>
 </ul>
 </li>
 </ul>
-<h2 id="signed-distance-field">Signed distance field<a class="headerlink" href="#signed-distance-field" title="Permanent link">&para;</a></h2>
+<h2 id="colmap-sfm-pipeline">Colmap SFM pipeline<a class="headerlink" href="#colmap-sfm-pipeline" title="Permanent link">&para;</a></h2>
+<p><img alt="Incremental Structure-from-Motion pipeline" src="https://colmap.github.io/_images/incremental-sfm.png" /></p>
+<h3 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h3>
 <ul>
-<li>signed distance from the edge of a shape<ul>
-<li>inside shape: negative</li>
-<li>outside shape: positive</li>
-<li>exactly on the shape: 0</li>
+<li>
+<p>SFM 通常首先进行<strong>特征提取/匹配</strong>以及后续的<strong>几何校验</strong>滤出外点，经过上述步骤可以得到所谓的场景图（Scene Graph），该场景图是后续的增量式的基础（提供数据关联等信息）</p>
+</li>
+<li>
+<p>增量式重建中需要非常仔细地挑选两帧进行重建，在图像进行注册（即定位当前帧在地图中的位姿）之前，需要进行三角化场景点/滤出外点以及 <strong>BA 优化</strong>当前的模型</p>
+</li>
+</ul>
+<h3 id="correspondence-search">Correspondence Search<a class="headerlink" href="#correspondence-search" title="Permanent link">&para;</a></h3>
+<p>输入：一系列图片；输出：经过几何校验后的图像匹配关系。</p>
+<p>为了得到尽可能准确的匹配关系，该步骤中涉及特征提取，匹配以及几何校验。</p>
+<ul>
+<li>特征匹配：可以是任何一种特异性较强的特征，如 SIFT（COLMAP默认用SIFT），主要为后续的特征匹配服务</li>
+<li>匹配阶段，将输入的图像两两之间进行匹配（可以发现，这一步的时间复杂度非常大），得到潜在的场景重合部分</li>
+<li>几何校验：初始匹配的外点势必很多，此时需要滤出外点。通常情况下会用到基础矩阵（未标定）/本质矩阵（已标定）以及单应矩阵（纯旋转/共面）。图像经过上述三个步骤之后的输出为 <strong>scene graph</strong>，即图像是节点，几何校验后的匹配对是边。</li>
+</ul>
+<blockquote>
+<ul>
+<li>外点（Outliers）：在特征匹配过程中被错误地匹配的点或特征</li>
+<li>内点（Inliers）：内点指的是在特征匹配过程中被正确地匹配的点或特征</li>
+</ul>
+</blockquote>
+<h3 id="incremental-reconstruction">Incremental Reconstruction<a class="headerlink" href="#incremental-reconstruction" title="Permanent link">&para;</a></h3>
+<p>输入：<strong>scene graph</strong>；输出：相机位姿以及3D路标点；</p>
+<p>为了完成增量重建，需要完成初始化，图像注册，三角化以及BA优化这些步骤。</p>
+<ul>
+<li>初始化：SfM在初始化时需要非常仔细的选择两帧进行重建；此时需要尽量选择<strong>scene graph</strong>中相机间可视区域多的两视角进行初始化，文中称这种选择增加了“redundancy”进而增加了重建的鲁棒性与精确性。</li>
+<li>图像注册：即根据已有的SfM模型估计图片的位姿（更准确的是估计拍摄该图像相机的位姿）；根据未知的图像与地图中图像的2D-2D匹配，进而得到二者之间的2D-3D匹配，然后利用RANSAC-PNP解算出该相机位姿，完成图像注册。为了提高位姿解算精度以及可靠的三角化，本文设计了新颖的鲁棒后续帧选择策略，后续章节进行介绍。</li>
+<li>三角化：新注册的图像需要对已有的场景点有足够多的观测，同时也可以通过三角化扩展场景点。现有的三角化方法鲁棒性不足且耗时严重。本文设计了一种全新的三角化策略，后续章节进行介绍。</li>
+<li>BA 优化：由于图像注册与三角化是分开进行的，但二者是强相关的两个过程：错误的位姿会导致错误的三角化点点产生，反之亦然。BA 能够同时优化相机位姿以及地图点，使模型的 redundancy 更强。优化目标是通过调整相机位姿与地图点位置使重投影误差最小</li>
+</ul>
+<div class="arithmatex">\[
+E=\sum_j \rho_j\left(\left\|\pi\left(\mathbf{P}_c, \mathbf{X}_k\right)-\mathbf{x}_j\right\|_2^2\right)
+\]</div>
+<p>BA问题通常可以通过LM算法进行求解。但是，当SfM面对网络图像时，特别对于那些几乎一样的图像时，上述优化过程会占用极长的时间。</p>
+<blockquote>
+<ul>
+<li>位姿：拍摄图像的相机在三维空间中d</li>
+</ul>
+</blockquote>
+<h2 id="colmap-algorithm-detail">Colmap Algorithm Detail<a class="headerlink" href="#colmap-algorithm-detail" title="Permanent link">&para;</a></h2>
+<h3 id="scale-invariant-feature-transform-sift">Scale-invariant feature transform (SIFT)<a class="headerlink" href="#scale-invariant-feature-transform-sift" title="Permanent link">&para;</a></h3>
+<ul>
+<li>SIFT 算法的实质是在不同的尺度空间上查找关键点(特征点)，并计算出关键点的方向。<ul>
+<li>P.S. SIFT 所查找到的关键点是一些十分突出，不会因光照，仿射变换和噪音等因素而变化的点，如角点、边缘点、暗区的亮点及亮区的暗点等</li>
+</ul>
+</li>
+<li>4 steps of SIFT<ul>
+<li>尺度空间极值检测：搜索所有尺度上的图像位置。通过高斯微分函数来识别潜在的对于尺度和旋转不变的兴趣点</li>
+<li>关键点定位：在每个候选的位置上，通过一个拟合精细的模型来确定位置和尺度。关键点的选择依据于它们的稳定程度</li>
+<li>方向确定：基于图像局部的梯度方向，分配给每个关键点位置一个或多个方向。所有后面的对图像数据的操作都相对于关键点的方向、尺度和位置进行变换，从而提供对于这些变换的不变性</li>
+<li>关键点描述：在每个关键点周围的邻域内，在选定的尺度上测量图像局部的梯度。这些梯度被变换成一种表示，这种表示允许比较大的局部形状的变形和光照变化</li>
 </ul>
 </li>
 </ul>
-<p><img alt="image-20230824152525493" src="../assets/image-20230824152525493.png" /></p>
-<h2 id="marching-cube">Marching Cube<a class="headerlink" href="#marching-cube" title="Permanent link">&para;</a></h2>
-<blockquote>
-<ul>
-<li><a href="https://www.bilibili.com/video/BV1yJ411r73v/">游戏编程挑战：生成无边的水下世界 体绘制算法 | Coding Adventure: Marching Cubes</a></li>
+<h3 id="matching">Matching<a class="headerlink" href="#matching" title="Permanent link">&para;</a></h3>
+<h3 id="geometric-verification">Geometric verification<a class="headerlink" href="#geometric-verification" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> RANSAC</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 基础矩阵（未标定）/本质矩阵（已标定）以及单应矩阵（纯旋转/共面）</li>
 </ul>
-</blockquote>
-<p>使用 3D 空间中的一个点作为输入， 随后返回一个值</p>
-<div class="arithmatex">\[
-f(x,y,z) \to v
-\]</div>
-<p>假设在空间中的某个区域内，我们可以使用函数 <span class="arithmatex">\(f\)</span> 等间距的采样一些点</p>
-<p>不妨设函数 <span class="arithmatex">\(f\)</span> 的最大值为 <span class="arithmatex">\(16\)</span>，最小值为 <span class="arithmatex">\(-32\)</span>，如果存在一个表面阈值 <span class="arithmatex">\(sf\)</span>，当表面阈值从 <span class="arithmatex">\(-32\)</span> 增长到 <span class="arithmatex">\(16\)</span> 时，均匀采样点就会逐渐消失（视频 0:45）</p>
-<p>我们可以认为消失的点是空白的空间，而大于等于表面阈值的点，则处于形体的表面或者内部</p>
-<p>如果把这个问题简化到一个立方体内部，如果白色的点位于物体内部，它就被激活，这样我们就得到了一个三角面片</p>
-<p><img alt="image-20230828102922879" src="../assets/image-20230828102922879.png" /></p>
-<h2 id="useful-links">Useful Links<a class="headerlink" href="#useful-links" title="Permanent link">&para;</a></h2>
+<h3 id="initialization">Initialization<a class="headerlink" href="#initialization" title="Permanent link">&para;</a></h3>
+<h3 id="image-registration">Image Registration<a class="headerlink" href="#image-registration" title="Permanent link">&para;</a></h3>
+<h3 id="triangulation">Triangulation<a class="headerlink" href="#triangulation" title="Permanent link">&para;</a></h3>
+<h3 id="bundle-adjustment">Bundle Adjustment<a class="headerlink" href="#bundle-adjustment" title="Permanent link">&para;</a></h3>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://designreviews.com/digital-camera-sensor-size-chart/">Camera Sensor Size</a></li>
+<li><a href="https://vincentqin.tech/posts/colmap/">三维重建系列 COLMAP: Structure-from-Motion Revisited</a></li>
 </ul>
 
   <hr>
@@ -7450,11 +7669,11 @@ f(x,y,z) \to v
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 29, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 4, 2023</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 24, 2023</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 29, 2023</span>
       
     
   </small>
