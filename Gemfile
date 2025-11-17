@@ -31,3 +31,10 @@ gem "wdm", "~> 0.2" if Gem.win_platform?
 
 gem "webrick", "~> 1.7"
 gem "kramdown-parser-gfm"
+
+# Ruby 3.4+ compatibility
+gem "base64"
+gem "logger"
+gem "csv"
+gem "ostruct"
+gem "bigdecimal"

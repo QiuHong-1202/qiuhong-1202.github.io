@@ -4,36 +4,287 @@ title : Homepage
 navbar_title: Home
 ---
 
+<!-- 个人信息卡片 -->
 <div class="row">
-    <div class="col-lg-3 col-md-4">
-        {% include widgets/profile_card_mini.html %}
+    <div class="col">
+        <div class="card border-0 shadow-sm bg-white">
+            <div class="card-body p-5">
+                <div class="row">
+                    <div class="col">
+                        <div class="h1 font-weight-normal">
+                            {{ site.data.profile.primary_name }} <small>{{ site.data.profile.secondary_name }}</small>
+                        </div>
+                        <div class="text-profile-position">
+                            {% for position in site.data.profile.positions %}
+                            {% if position.logo %}
+                            <img src="{{ position.logo }}" alt="Logo" class="inline-badge"/>
+                            {% endif %}
+                            {{ position.name }}
+                            {% unless forloop.last %}<br/>{% endunless %}
+                            {% endfor %}
+                        </div>
+                        
+                        <div class="text-profile-bio mt-3">
+                            {{ site.data.profile.short_bio }}
+                        </div>
+                    </div>
+                    
+                    {% if site.data.profile.portrait_url %}
+                    <div class="col-md-auto">
+                        <figure class="figure">
+                            <img 
+                                src="{{ site.data.profile.portrait_url }}" 
+                                class="figure-img img-fluid img-thumbnail" 
+                                style="height: 200px; border-radius: 5%"
+                                data-toggle="tooltip" 
+                                data-placement="top"
+                                title="{{ site.data.profile.portrait_caption }}"
+                            >
+                        </figure>
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <hr />
+                
+                <div class="row">
+                    <div class="col">
+                        {% if site.data.profile.email %}
+                        <a class="pr-3 no-break" href="mailto:{{ site.data.profile.email }}">
+                            <i class="fa fa-envelope"></i> Email
+                        </a>
+                        {% endif %}
+                        
+                        {% if site.data.profile.gscholar %}
+                        <a class="pr-3 no-break" target="_blank" href="https://scholar.google.com/citations?user={{ site.data.profile.gscholar }}">
+                            <i class="fab fa-google-scholar"></i> Google Scholar
+                        </a>
+                        {% endif %}
+                        
+                        {% if site.data.profile.github %}
+                        <a class="pr-3 no-break" target="_blank" href="https://github.com/{{ site.data.profile.github }}">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>        
     </div>
-    <div class="col-lg-9 col-md-8">
+</div>
 
-        {% include widgets/profile_card_bio_only.html %}
-
-        <!-- Debugging widgets -->
-        {% include widgets/debug_repo_name.html %}
-        {% include widgets/debug_url.html %}
-
-        {% if site.data.display.homepage.show_experience %}
-            {% include widgets/experience_card.html %}
-        {% endif %}
-
-        {% if site.data.display.homepage.show_news %}
-        {% assign count_news = site.news | size %}
-        {% if count_news > 0 %}
-        {% include widgets/news_card.html limit=site.data.display.homepage.num_news %}
-        {% endif %}
-        {% endif %}
-
-        {% if site.data.display.homepage.show_selected_publications %}
-        {% assign pubs = site.publications | sort: "date" | reverse | where: "selected", true %}
-        {%
-        include widgets/publication_card.html
-        publications=pubs
-        title='<i class="fas fa-star"></i> Selected Publications'
-        %}
-        {% endif %}
+<!-- 教育背景和工作经历 -->
+<div class="row mt-3">
+    <div class="col">
+        <div class="card border-0 shadow-sm bg-white">
+            <div class="card-body p-4">
+                <div class="row">
+                    {% if site.data.profile.education %}
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-12 mx-2 my-1">
+                                <h6>Education</h6>
+                                <ul class="list-unstyled mb-1">
+                                    {% for edu in site.data.profile.education %}
+                                    <li class="media mb-1">
+                                        {% if edu.logo %}
+                                        <img src="{{ edu.logo }}" alt="{{ edu.name }}" style="width: 18px;" class="mr-1 mt-1">
+                                        {% endif %}
+                                        <div class="media-body">
+                                            <div>{{ edu.name }}</div>
+                                            <div class="small d-flex">
+                                                <div>{{ edu.position }}</div>
+                                                <div class="mt-auto ml-auto no-break"><em>{{ edu.date }}</em></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                    {% if site.data.profile.experience %}
+                    <div class="col-md-6">
+                        <div class="mx-2 my-1">
+                            <h6>Experience</h6>
+                            <ul class="list-unstyled mb-1">
+                                {% for exp in site.data.profile.experience %}
+                                <li class="media mb-1">
+                                    {% if exp.logo %}
+                                    <img src="{{ exp.logo }}" alt="{{ exp.name }}" style="width: 18px;" class="mr-1 mt-1">
+                                    {% endif %}
+                                    <div class="media-body">
+                                        <div>{{ exp.name }}</div>
+                                        <div class="small d-flex">
+                                            <div>{{ exp.position }}</div>
+                                            <div class="mt-auto ml-auto no-break"><em>{{ exp.date }}</em></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+
+<!-- Publications 部分 -->
+<!-- Selected Publications -->
+<div class="my-3 p-0 bg-white shadow-sm rounded-sm">
+    <h4 class="border-bottom border-gray p-3 mb-0" id="Publications">
+        Selected Publications
+    </h4>
+    
+    {% assign selected_pubs = site.publications | where: 'selected', true %}
+    {% assign years = selected_pubs | map: 'year' | uniq | sort | reverse %}
+    
+    {% for year in years %}
+    <h5 class="pt-3 px-3 mb-0">{{ year }}</h5>
+    
+    {% assign year_pubs = selected_pubs | where: 'year', year | sort: 'date' | reverse %}
+    {% for pub in year_pubs %}
+    
+    <!-- 桌面版布局 -->
+    <div class="d-none d-md-block">
+        <div class="row no-gutters border-bottom border-gray">
+            {% if pub.cover %}
+            <div class="col-md-3 col-xl-2 mb-md-0 p-md-3">
+                <img data-src="{{ pub.cover }}" alt="{{ pub.title }}" class="lazy w-100 rounded-sm" src="/assets/images/empty_300x200.png">
+            </div>
+            {% endif %}
+            
+            <div class="{% if pub.cover %}col-md-9 col-xl-10{% else %}col-12{% endif %} p-3 {% if pub.cover %}pl-md-0{% endif %}">
+                <h6 class="mt-0 mb-1 font-weight-normal">{{ pub.title }}</h6>
+                
+                <p class="mt-0 mb-0 small">{% include widgets/author_list.html authors=pub.authors %}</p>
+                
+                <p class="mt-0 mb-0 small">{{pub.pub_pre}}<i>{{ pub.pub }}</i>{{ pub.pub_post }} {{ pub.pub_date }} {{ pub.pub_last }}</p>
+                
+                {% if pub.links %}
+                <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
+                    {% for link in pub.links %}
+                    {% if link[1].url %}
+                    <a target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}">[{{ link[0] }}]</a>
+                    {% else %}
+                    <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
+                    {% endif %}
+                    {% endfor %}
+                </p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <!-- 移动版布局 -->
+    <div class="card w-100 d-md-none border-top-0 border-right-0 border-left-0 rounded-0" style="overflow-y: scroll;">
+        {% if pub.cover %}
+        <img data-src="{{ pub.cover }}" alt="{{ pub.title }}" class="lazy card-img w-100" src="/assets/images/empty_300x200.png">
+        {% endif %}
+        <div class="card-img-overlay d-flex align-items-start flex-column" style="background-color: rgba(255, 255, 255, 0.85);">
+            <div class="mb-auto"></div>
+            <div>
+                <h6 class="mt-0 mb-1 font-weight-normal">{{ pub.title }}</h6>
+                <p class="mt-0 mb-0 small">{% include widgets/author_list.html authors=pub.authors %}</p>
+                <p class="mt-0 mb-0 small">{{pub.pub_pre}}<i>{{ pub.pub }}</i>{{ pub.pub_post }} {{ pub.pub_date }} {{ pub.pub_last }}</p>
+                
+                {% if pub.links %}
+                <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
+                    {% for link in pub.links %}
+                    {% if link[1].url %}
+                    <a target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}">[{{ link[0] }}]</a>
+                    {% else %}
+                    <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
+                    {% endif %}
+                    {% endfor %}
+                </p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    {% endfor %}
+    {% endfor %}
+</div>
+
+<!-- Other Publications -->
+<div class="my-3 p-0 bg-white shadow-sm rounded-sm">
+    <h4 class="border-bottom border-gray p-3 mb-0">
+        Other Publications
+    </h4>
+    
+    {% assign other_pubs = site.publications | where: 'selected', false %}
+    {% assign years = other_pubs | map: 'year' | uniq | sort | reverse %}
+    
+    {% for year in years %}
+    <h5 class="pt-3 px-3 mb-0">{{ year }}</h5>
+    
+    {% assign year_pubs = other_pubs | where: 'year', year | sort: 'date' | reverse %}
+    {% for pub in year_pubs %}
+    
+    <!-- 桌面版布局 -->
+    <div class="d-none d-md-block">
+        <div class="row no-gutters border-bottom border-gray">
+            {% if pub.cover %}
+            <div class="col-md-3 col-xl-2 mb-md-0 p-md-3">
+                <img data-src="{{ pub.cover }}" alt="{{ pub.title }}" class="lazy w-100 rounded-sm" src="/assets/images/empty_300x200.png">
+            </div>
+            {% endif %}
+            
+            <div class="{% if pub.cover %}col-md-9 col-xl-10{% else %}col-12{% endif %} p-3 {% if pub.cover %}pl-md-0{% endif %}">
+                <h6 class="mt-0 mb-1 font-weight-normal">{{ pub.title }}</h6>
+                
+                <p class="mt-0 mb-0 small">{% include widgets/author_list.html authors=pub.authors %}</p>
+                
+                <p class="mt-0 mb-0 small">{{pub.pub_pre}}<i>{{ pub.pub }}</i>{{ pub.pub_post }} {{ pub.pub_date }} {{ pub.pub_last }}</p>
+                
+                {% if pub.links %}
+                <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
+                    {% for link in pub.links %}
+                    {% if link[1].url %}
+                    <a target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}">[{{ link[0] }}]</a>
+                    {% else %}
+                    <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
+                    {% endif %}
+                    {% endfor %}
+                </p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <!-- 移动版布局 -->
+    <div class="card w-100 d-md-none border-top-0 border-right-0 border-left-0 rounded-0" style="overflow-y: scroll;">
+        {% if pub.cover %}
+        <img data-src="{{ pub.cover }}" alt="{{ pub.title }}" class="lazy card-img w-100" src="/assets/images/empty_300x200.png">
+        {% endif %}
+        <div class="card-img-overlay d-flex align-items-start flex-column" style="background-color: rgba(255, 255, 255, 0.85);">
+            <div class="mb-auto"></div>
+            <div>
+                <h6 class="mt-0 mb-1 font-weight-normal">{{ pub.title }}</h6>
+                <p class="mt-0 mb-0 small">{% include widgets/author_list.html authors=pub.authors %}</p>
+                <p class="mt-0 mb-0 small">{{pub.pub_pre}}<i>{{ pub.pub }}</i>{{ pub.pub_post }} {{ pub.pub_date }} {{ pub.pub_last }}</p>
+                
+                {% if pub.links %}
+                <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
+                    {% for link in pub.links %}
+                    {% if link[1].url %}
+                    <a target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}">[{{ link[0] }}]</a>
+                    {% else %}
+                    <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
+                    {% endif %}
+                    {% endfor %}
+                </p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    {% endfor %}
+    {% endfor %}
 </div>
