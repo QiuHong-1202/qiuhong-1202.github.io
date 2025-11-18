@@ -4,7 +4,7 @@ date:           2025-11-17 00:01:00 +0800
 selected:       true
 pub:            "IEEE International Symposium on Mixed and Augmented Reality"
 pub_date:       "2025"
-cover:          /assets/images/covers/MRPilot.png
+cover:          /assets/images/covers/2025_MRPilot.png
 authors:
 - Hongliang Yang
 - Jin Zhou
