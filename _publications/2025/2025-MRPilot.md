@@ -15,5 +15,6 @@ links:
   Project: https://qiuhong-1202.github.io/MRPilot/
   Paper: https://qiuhong-1202.github.io/MRPilot/static/pdfs/MRPilot.pdf
   Supplementary: https://qiuhong-1202.github.io/MRPilot/static/pdfs/MRPilot-supp.pdf
+  IEEE Xplore: https://ieeexplore.ieee.org/document/11220436
   Video: https://www.youtube.com/watch?v=iWZrl6M6hk4
 ---
