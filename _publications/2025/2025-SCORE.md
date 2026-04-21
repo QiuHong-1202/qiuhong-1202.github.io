@@ -11,5 +11,5 @@ authors:
 - Hongliang Yang
 - Pengfei Xu#
 links:
-  # Arxiv: https://arxiv.org/abs/2503.23752
+  Proceedings: https://ojs.aaai.org/index.php/AAAI/article/view/37185
 ---

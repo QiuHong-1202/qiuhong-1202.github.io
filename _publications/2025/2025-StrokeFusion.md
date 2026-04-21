@@ -13,4 +13,6 @@ authors:
 - Hui Huang
 links:
   Arxiv: https://arxiv.org/abs/2503.23752
+  Proceedings: https://ojs.aaai.org/index.php/AAAI/article/view/38372
+  Code: https://github.com/doudin404/StrokeFusion
 ---
