@@ -12,6 +12,7 @@ authors:
 - Pengfei Xu#
 - Hui Huang
 links:
+  Project: https://doudin404.github.io/StrokeFusion-page/
   Arxiv: https://arxiv.org/abs/2503.23752
   Proceedings: https://ojs.aaai.org/index.php/AAAI/article/view/38372
   Code: https://github.com/doudin404/StrokeFusion
