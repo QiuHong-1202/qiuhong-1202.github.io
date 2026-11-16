@@ -288,3 +288,14 @@ navbar_title: Home
     {% endfor %}
     {% endfor %}
 </div>
+
+{% if site.data.profile.service %}
+<section class="my-3 p-0 bg-white shadow-sm rounded-xl overflow-hidden" id="Service" aria-labelledby="service-heading">
+    <h4 class="border-bottom border-gray p-3 mb-0" id="service-heading">Service</h4>
+    <ul class="list-unstyled p-3 mb-0">
+        {% for item in site.data.profile.service %}
+        <li>{{ item.role }}, {{ item.venue }}</li>
+        {% endfor %}
+    </ul>
+</section>
+{% endif %}

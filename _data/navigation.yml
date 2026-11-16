@@ -4,3 +4,5 @@ pages:
   url: /
 - name: Publications
   url: /#Publications
+- name: Service
+  url: /#Service
