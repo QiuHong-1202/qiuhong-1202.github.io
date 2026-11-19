@@ -13,6 +13,7 @@ authors:
 links:
   Project: https://doudin404.github.io/SketchFlow/
   Paper: /assets/pdfs/2026_SketchFlow.pdf
+  ACM DL: https://dl.acm.org/doi/10.1145/3829340.3842307
   Supplementary: /assets/pdfs/2026_SketchFlow-supp.pdf
   Arxiv: https://arxiv.org/abs/2608.21659
   Code: https://github.com/doudin404/SketchFlow
